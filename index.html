@@ -11,19 +11,21 @@
   <link rel="stylesheet" href="style/mobile.css">
 </head>
 <body>
-    <header>
+
+  <div class="global">
     <div class="apla">
-        <a class="logo_sygnet" href="index.html" title="KRESKY">
-          <img src="images/sygnet_logo.svg" alt="KRESKY">
-        </a>
-        <span>Miło, że jesteś.</span>
-        </div>
-      <button class="menuBtn">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="logo_sygnet" href="index.html" title="KRESKY">
+        <img src="assets/icons/sygnet logo.svg" alt="KRESKY">
       </button>
-      <nav>
+      <span>Miło, że jesteś.</span>
+      </div>
+    <button class="menuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav>
+      <div class="links">
         <a class="int scroll" href="#1" title="Wstęp">Wstęp</a>
         <a class="sho scroll" href="#2" title="Showroom">Portfolio</a>
         <a class="tea scroll" href="#3" title="Kim jesteśmy">Kim jesteśmy</a>
@@ -32,16 +34,653 @@
         <hr class="black" />
         <hr class="blue" />
         <hr class="blue-bottom" />
-      </nav>
-      <div class="container">
-        <h1 class="mobile"><p class="first">Każdy prooooooooojekt zaczyna się od</p><img src="images/logo_kresky.svg" alt="KRESKY"></h1>
-        <p class="text">Jesteśmy tu ponieważ Ty jesteś.</p>
-        <a href="#1" type="button" class="to-bottom to-top scroll" title="W dół">
-          <img class ="down-arrowLine" src="images/algiz_line.svg">
-          <img class ="down-arrowTwo" src="images/algiz_arrow.svg">
-          <img class ="down-arrowLines" src="images/algiz3line.svg">
-        </a>
       </div>
+    </nav>
+  </div>
+
+
+    <header id="0">
+      <div class="container">
+        <h1>Każdy projekt<br> zaczyna się od <img src="assets/icons/logo_kresky.svg" alt="KRESKY"></h1>
+        <p>Jesteśmy tu ponieważ Ty jesteś.</p>
+      </div>
+      <a href="#1" type="button" class="runicBtn scroll" title="W dół">
+        <img class ="down-arrowLine" src="assets/icons/algiz_line.svg">
+        <img class ="down-arrowTwo" src="assets/icons/algiz_arrow.svg">
+        <img class ="down-arrowLines" src="assets/icons/algiz3line.svg">
+      </a>
     </header>
 
+
+    <section id="1" class="intro">
+      <div class="heading-text">
+        <span>Wstęp</span>
+        <h2>Oferujemy skuteczne metody</h2>
+      </div>
+      <div class="flexbox">
+        <div>
+          <h3>Analiza</h3>
+          <p>Poznając Twoje potrzeby oraz specyfikę projektu, dostosowujemy obszar działań i realizujemy usługi zorientowane na potrzeby użytkownika.</p>
+        </div>
+        <div>
+          <h3>Projektowanie</h3>
+          <p>Realizujemy projekty do internetu i druku.<br>
+            Strony i aplikacje internetowe, identyfikacja wizualna, reklama, ilustracja, animacja 2D.</p>
+        </div>
+        <div>
+          <h3>Implementacja</h3>
+          <p>Tworzymy gotowe produkty. Dostarczamy<br>funkcjonalne rozwiązania dostosowane<br>
+            do archetypu grupy odbiorczej.</p>
+        </div>
+      </div>
+      <a href="#2" type="button" class="runicBtn" title="W dół">
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: none;
+                stroke: #00ffea;
+                stroke-linejoin: round;
+                stroke-width: 3px;
+                fill-rule: evenodd;
+              }
+            </style>
+          </defs>
+          <path id="line" class="cls-1" d="M13.5,0V27"/>
+        </svg>        
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: none;
+                stroke: #00ffea;
+                stroke-linejoin: round;
+                stroke-width: 2.7px;
+                fill-rule: evenodd;
+              }
+            </style>
+          </defs>
+          <path id="d-l" class="cls-1" d="M13.464,20.247L3,13"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: none;
+                stroke: #00ffea;
+                stroke-linejoin: round;
+                stroke-width: 2.7px;
+                fill-rule: evenodd;
+              }
+            </style>
+          </defs>
+          <path id="d-r" class="cls-1" d="M24,13L13.464,20.247"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: none;
+                stroke: #00ffea;
+                stroke-linejoin: round;
+                stroke-width: 2.7px;
+                fill-rule: evenodd;
+              }
+            </style>
+          </defs>
+          <path id="up-r" class="cls-1" d="M24,14L13.464,6.753"/>
+        </svg>
+      </a>
+    </section>
+
+
+    <section class="showroom" id="2">
+      <h1 class="main lazyUp">Wybrane projekty</h1>
+        <div class="gallery">
+          <div>
+            <img src="assets/images/miniatures/1.jpg" alt="project 1 miniature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eyelash {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path data-name="1" class="eyelash" d="M13,18L7,11"/>
+              <path data-name="2" class="eyelash" d="M40,10V0"/>
+              <path data-name="3" class="eyelash" d="M68,19l5-8"/>
+              <path data-name="4" class="eyelash" d="M14,54l-4,7"/>
+              <path data-name="5" class="eyelash" d="M40,61V71"/>
+              <path data-name="6" class="eyelash" d="M67,53l5,7"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eye {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path class="eye" d="M42,36s-3.825-1.2-3-5c1.659-5.8,11.842-2.867,12,3s-5.158,12.8-15,9c-14.341-6.132-5.325-24.367,6-24,15.159,0.7,35,15,35,15S62.175,52.3,41,53C17.827,53.767,3,34,3,34S21.008,19,40,19"/>
+            </svg>
+            <div class="info">
+              <h5>Wiosna Ludów</h5>
+              <p>LOGO / IDENTYFIKACJA WIZUALNA,  WWW</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/images/miniatures/2.jpg"  alt="project 2 miniature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eyelash {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path data-name="1" class="eyelash" d="M13,18L7,11"/>
+              <path data-name="2" class="eyelash" d="M40,10V0"/>
+              <path data-name="3" class="eyelash" d="M68,19l5-8"/>
+              <path data-name="4" class="eyelash" d="M14,54l-4,7"/>
+              <path data-name="5" class="eyelash" d="M40,61V71"/>
+              <path data-name="6" class="eyelash" d="M67,53l5,7"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eye {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path class="eye" d="M42,36s-3.825-1.2-3-5c1.659-5.8,11.842-2.867,12,3s-5.158,12.8-15,9c-14.341-6.132-5.325-24.367,6-24,15.159,0.7,35,15,35,15S62.175,52.3,41,53C17.827,53.767,3,34,3,34S21.008,19,40,19"/>
+            </svg>
+            <div class="info">
+              <h5>Wiosna Ludów</h5>
+              <p>LOGO / IDENTYFIKACJA WIZUALNA,  WWW</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/images/miniatures/3.jpg"  alt="project 3 miniature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eyelash {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path data-name="1" class="eyelash" d="M13,18L7,11"/>
+              <path data-name="2" class="eyelash" d="M40,10V0"/>
+              <path data-name="3" class="eyelash" d="M68,19l5-8"/>
+              <path data-name="4" class="eyelash" d="M14,54l-4,7"/>
+              <path data-name="5" class="eyelash" d="M40,61V71"/>
+              <path data-name="6" class="eyelash" d="M67,53l5,7"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eye {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path class="eye" d="M42,36s-3.825-1.2-3-5c1.659-5.8,11.842-2.867,12,3s-5.158,12.8-15,9c-14.341-6.132-5.325-24.367,6-24,15.159,0.7,35,15,35,15S62.175,52.3,41,53C17.827,53.767,3,34,3,34S21.008,19,40,19"/>
+            </svg>
+            <div class="info">
+              <h5>Wiosna Ludów</h5>
+              <p>LOGO / IDENTYFIKACJA WIZUALNA,  WWW</p>
+            </div>
+          </div>
+          <div>
+            <img src="/assets/icons/prostokat.svg" alt="project 4 miniature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eyelash {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path data-name="1" class="eyelash" d="M13,18L7,11"/>
+              <path data-name="2" class="eyelash" d="M40,10V0"/>
+              <path data-name="3" class="eyelash" d="M68,19l5-8"/>
+              <path data-name="4" class="eyelash" d="M14,54l-4,7"/>
+              <path data-name="5" class="eyelash" d="M40,61V71"/>
+              <path data-name="6" class="eyelash" d="M67,53l5,7"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eye {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path class="eye" d="M42,36s-3.825-1.2-3-5c1.659-5.8,11.842-2.867,12,3s-5.158,12.8-15,9c-14.341-6.132-5.325-24.367,6-24,15.159,0.7,35,15,35,15S62.175,52.3,41,53C17.827,53.767,3,34,3,34S21.008,19,40,19"/>
+            </svg>
+            <div class="info">
+              <h5>Wiosna Ludów</h5>
+              <p>LOGO / IDENTYFIKACJA WIZUALNA,  WWW</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/icons/prostokat.svg" alt="project 5 miniature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eyelash {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path data-name="1" class="eyelash" d="M13,18L7,11"/>
+              <path data-name="2" class="eyelash" d="M40,10V0"/>
+              <path data-name="3" class="eyelash" d="M68,19l5-8"/>
+              <path data-name="4" class="eyelash" d="M14,54l-4,7"/>
+              <path data-name="5" class="eyelash" d="M40,61V71"/>
+              <path data-name="6" class="eyelash" d="M67,53l5,7"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eye {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path class="eye" d="M42,36s-3.825-1.2-3-5c1.659-5.8,11.842-2.867,12,3s-5.158,12.8-15,9c-14.341-6.132-5.325-24.367,6-24,15.159,0.7,35,15,35,15S62.175,52.3,41,53C17.827,53.767,3,34,3,34S21.008,19,40,19"/>
+            </svg>
+            <div class="info">
+              <h5>Wiosna Ludów</h5>
+              <p>LOGO / IDENTYFIKACJA WIZUALNA,  WWW</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/icons/prostokat.svg" alt="project 6 miniature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eyelash {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path data-name="1" class="eyelash" d="M13,18L7,11"/>
+              <path data-name="2" class="eyelash" d="M40,10V0"/>
+              <path data-name="3" class="eyelash" d="M68,19l5-8"/>
+              <path data-name="4" class="eyelash" d="M14,54l-4,7"/>
+              <path data-name="5" class="eyelash" d="M40,61V71"/>
+              <path data-name="6" class="eyelash" d="M67,53l5,7"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eye {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path class="eye" d="M42,36s-3.825-1.2-3-5c1.659-5.8,11.842-2.867,12,3s-5.158,12.8-15,9c-14.341-6.132-5.325-24.367,6-24,15.159,0.7,35,15,35,15S62.175,52.3,41,53C17.827,53.767,3,34,3,34S21.008,19,40,19"/>
+            </svg>
+            <div class="info">
+              <h5>Wiosna Ludów</h5>
+              <p>LOGO / IDENTYFIKACJA WIZUALNA,  WWW</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/icons/prostokat.svg" alt="project 7 miniature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eyelash {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path data-name="1" class="eyelash" d="M13,18L7,11"/>
+              <path data-name="2" class="eyelash" d="M40,10V0"/>
+              <path data-name="3" class="eyelash" d="M68,19l5-8"/>
+              <path data-name="4" class="eyelash" d="M14,54l-4,7"/>
+              <path data-name="5" class="eyelash" d="M40,61V71"/>
+              <path data-name="6" class="eyelash" d="M67,53l5,7"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eye {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path class="eye" d="M42,36s-3.825-1.2-3-5c1.659-5.8,11.842-2.867,12,3s-5.158,12.8-15,9c-14.341-6.132-5.325-24.367,6-24,15.159,0.7,35,15,35,15S62.175,52.3,41,53C17.827,53.767,3,34,3,34S21.008,19,40,19"/>
+            </svg>
+            <div class="info">
+              <h5>Wiosna Ludów</h5>
+              <p>LOGO / IDENTYFIKACJA WIZUALNA,  WWW</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/icons/prostokat.svg" alt="project 8 miniature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eyelash {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path data-name="1" class="eyelash" d="M13,18L7,11"/>
+              <path data-name="2" class="eyelash" d="M40,10V0"/>
+              <path data-name="3" class="eyelash" d="M68,19l5-8"/>
+              <path data-name="4" class="eyelash" d="M14,54l-4,7"/>
+              <path data-name="5" class="eyelash" d="M40,61V71"/>
+              <path data-name="6" class="eyelash" d="M67,53l5,7"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eye {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path class="eye" d="M42,36s-3.825-1.2-3-5c1.659-5.8,11.842-2.867,12,3s-5.158,12.8-15,9c-14.341-6.132-5.325-24.367,6-24,15.159,0.7,35,15,35,15S62.175,52.3,41,53C17.827,53.767,3,34,3,34S21.008,19,40,19"/>
+            </svg>
+            <div class="info">
+              <h5>Wiosna Ludów</h5>
+              <p>LOGO / IDENTYFIKACJA WIZUALNA,  WWW</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/icons/prostokat.svg" alt="project 9 miniature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eyelash {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path data-name="1" class="eyelash" d="M13,18L7,11"/>
+              <path data-name="2" class="eyelash" d="M40,10V0"/>
+              <path data-name="3" class="eyelash" d="M68,19l5-8"/>
+              <path data-name="4" class="eyelash" d="M14,54l-4,7"/>
+              <path data-name="5" class="eyelash" d="M40,61V71"/>
+              <path data-name="6" class="eyelash" d="M67,53l5,7"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eye {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path class="eye" d="M42,36s-3.825-1.2-3-5c1.659-5.8,11.842-2.867,12,3s-5.158,12.8-15,9c-14.341-6.132-5.325-24.367,6-24,15.159,0.7,35,15,35,15S62.175,52.3,41,53C17.827,53.767,3,34,3,34S21.008,19,40,19"/>
+            </svg>
+            <div class="info">
+              <h5>Wiosna Ludów</h5>
+              <p>LOGO / IDENTYFIKACJA WIZUALNA,  WWW</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/icons/prostokat.svg" alt="project 10 miniature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eyelash {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path data-name="1" class="eyelash" d="M13,18L7,11"/>
+              <path data-name="2" class="eyelash" d="M40,10V0"/>
+              <path data-name="3" class="eyelash" d="M68,19l5-8"/>
+              <path data-name="4" class="eyelash" d="M14,54l-4,7"/>
+              <path data-name="5" class="eyelash" d="M40,61V71"/>
+              <path data-name="6" class="eyelash" d="M67,53l5,7"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eye {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path class="eye" d="M42,36s-3.825-1.2-3-5c1.659-5.8,11.842-2.867,12,3s-5.158,12.8-15,9c-14.341-6.132-5.325-24.367,6-24,15.159,0.7,35,15,35,15S62.175,52.3,41,53C17.827,53.767,3,34,3,34S21.008,19,40,19"/>
+            </svg>
+            <div class="info">
+              <h5>Wiosna Ludów</h5>
+              <p>LOGO / IDENTYFIKACJA WIZUALNA,  WWW</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/icons/prostokat.svg" alt="project 11 miniature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eyelash {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path data-name="1" class="eyelash" d="M13,18L7,11"/>
+              <path data-name="2" class="eyelash" d="M40,10V0"/>
+              <path data-name="3" class="eyelash" d="M68,19l5-8"/>
+              <path data-name="4" class="eyelash" d="M14,54l-4,7"/>
+              <path data-name="5" class="eyelash" d="M40,61V71"/>
+              <path data-name="6" class="eyelash" d="M67,53l5,7"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eye {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path class="eye" d="M42,36s-3.825-1.2-3-5c1.659-5.8,11.842-2.867,12,3s-5.158,12.8-15,9c-14.341-6.132-5.325-24.367,6-24,15.159,0.7,35,15,35,15S62.175,52.3,41,53C17.827,53.767,3,34,3,34S21.008,19,40,19"/>
+            </svg>
+            <div class="info">
+              <h5>Wiosna Ludów</h5>
+              <p>LOGO / IDENTYFIKACJA WIZUALNA,  WWW</p>
+            </div>
+          </div>
+          <div>
+            <img src="assets/icons/prostokat.svg" alt="project 12 miniature">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eyelash {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path data-name="1" class="eyelash" d="M13,18L7,11"/>
+              <path data-name="2" class="eyelash" d="M40,10V0"/>
+              <path data-name="3" class="eyelash" d="M68,19l5-8"/>
+              <path data-name="4" class="eyelash" d="M14,54l-4,7"/>
+              <path data-name="5" class="eyelash" d="M40,61V71"/>
+              <path data-name="6" class="eyelash" d="M67,53l5,7"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="71" viewBox="0 0 80 71">
+              <defs>
+                <style>
+                  .eye {
+                    fill: none;
+                    stroke: #fff;
+                    stroke-linejoin: round;
+                    stroke-width: 1.5px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path class="eye" d="M42,36s-3.825-1.2-3-5c1.659-5.8,11.842-2.867,12,3s-5.158,12.8-15,9c-14.341-6.132-5.325-24.367,6-24,15.159,0.7,35,15,35,15S62.175,52.3,41,53C17.827,53.767,3,34,3,34S21.008,19,40,19"/>
+            </svg>
+            <div class="info">
+              <h5>Wiosna Ludów</h5>
+              <p>LOGO / IDENTYFIKACJA WIZUALNA,  WWW</p>
+            </div>
+          </div>
+        </div>
+        <!-- <a href="#3" type="button" class="to-bottom-B scroll" title="W dół">
+          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: #00ffea;
+                  stroke-linejoin: round;
+                  stroke-width: 3px;
+                  fill-rule: evenodd;
+                }
+              </style>
+            </defs>
+            <path id="line" class="cls-1" d="M13.5,0V27"></path>
+          </svg>        
+          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: #00ffea;
+                  stroke-linejoin: round;
+                  stroke-width: 2.7px;
+                  fill-rule: evenodd;
+                }
+              </style>
+            </defs>
+            <path id="d-l" class="cls-1" d="M13.464,20.247L3,13"></path>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: #00ffea;
+                  stroke-linejoin: round;
+                  stroke-width: 2.7px;
+                  fill-rule: evenodd;
+                }
+              </style>
+            </defs>
+            <path id="d-r" class="cls-1" d="M24,13L13.464,20.247"></path>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: #00ffea;
+                  stroke-linejoin: round;
+                  stroke-width: 2.7px;
+                  fill-rule: evenodd;
+                }
+              </style>
+            </defs>
+            <path id="up-r" class="cls-1" d="M24,14L13.464,6.753"></path>
+          </svg>
+          </a> -->
+    </section>
+
+
+    <script src="script/jquery.js"></script> 
+    <script src="script/script.js"></script>
+    <script src="script/contact.php"></script>
+    <!-- <iframe name="frame"></iframe> -->
 </body>

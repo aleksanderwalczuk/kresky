@@ -10,6 +10,38 @@
   ::-webkit-scrollbar-thumb {
     background: #00ffea;
   }
+
+  .global {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 2;
+  }
+
+  .apla span {
+    opacity: 0;
+  }
+
+  .flexbox {
+    display: flex;
+  }
+
+  nav a {
+    text-decoration: none;
+    transition: .36s ease;
+  }
+
+  nav a.active {
+    color: #00ffea;
+  }
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
   
   /* Fonts */
   @font-face {
@@ -52,21 +84,36 @@
   }
   
   p {
-    font-size: 16px;
+    font-size: 17px;
     font-family: 'OpenSans Light';
-    line-height: 26px;
+    line-height: 27px;
   }
   
-  h1 {
-    font-size: 47px;
+  h1, h2 {
+    font-size: 74px;
   }
 
-  h2 {
-    font-size: 27px;
+  h1 {
+    line-height: 107px;
+  }
+
+  h3 {
+    font-size: 34px;
   }
   
-  h1 ,h2 {
+  h1 ,h2, h3, nav a {
     font-family: 'Butler Bold';
+    color:  #0c3c3a;;
+  }
+
+  h5 {
+    margin: 0;
+  }
+
+  nav a {
+    font-size: 22px;
+    text-align: right;
+    height: 44px;
   }
   
   /* ---------- Styles --------- */
@@ -76,6 +123,7 @@
     color: #0c3c3a;
     font-family: 'OpenSans Light', serif;
     background-color: #fff;
+    margin: 0;
   }
   
   html {
@@ -84,8 +132,6 @@
 
   header, section {
       display: flex;
-  }
-  
-  svg {
-    z-index: -10;
+      position: relative;
+      flex-direction: column;
   }
