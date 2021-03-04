@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.499" height="26.333" viewBox="0 0 26.499 26.333">
+  <g id="mail" transform="translate(-0.334 -0.5)">
+    <path id="e-mail" d="M26.333,10V23.458c0,2.117-.767,2.875-2.91,2.875H3.72c-2.125,0-2.886-.758-2.886-2.875V10A40.633,40.633,0,0,1,5.915,6.194C9.478,3.782,14,1,14,1S24.19,7.791,26.333,10Z" fill="#0c3c3a" stroke="#0c3c3a" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" fill-rule="evenodd"/>
+    <path id="e-mailX" d="M5,12,22,23" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7" fill-rule="evenodd"/>
+    <path id="e-mailX-2" data-name="e-mailX" d="M22,12,5,23" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.7" fill-rule="evenodd"/>
+  </g>
+</svg>

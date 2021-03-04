@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00ffea;
+        stroke: #00ffea;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="insta" class="cls-1" d="M4.583,0.75h16.75a4.024,4.024,0,0,1,4,4.048V22.527a3.946,3.946,0,0,1-4,3.89H4.583a3.946,3.946,0,0,1-4-3.89V4.8A4.024,4.024,0,0,1,4.583.75Zm9.01,7.344A5.406,5.406,0,1,1,8.187,13.5,5.406,5.406,0,0,1,13.594,8.094Zm7.375-4.031A1.969,1.969,0,1,1,19,6.031,1.969,1.969,0,0,1,20.969,4.062Z"/>
+</svg>

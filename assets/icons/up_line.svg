@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="5" height="60" viewBox="0 0 5 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #0c3c3a;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Kształt_3_kopia" data-name="Kształt 3 kopia" class="cls-1" d="M2.5,0V60"/>
+</svg>

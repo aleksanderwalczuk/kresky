@@ -1,0 +1,26 @@
+{
+  "name": "kresky",
+  "version": "1.0.0",
+  "description": "kresky static website",
+  "main": "index.html",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asztonski/kresky.git"
+  },
+  "keywords": [
+    "kresky"
+  ],
+  "author": "Dominik Supiński & Łukasz Chełchowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asztonski/kresky/issues"
+  },
+  "homepage": "https://github.com/asztonski/kresky#readme"
+}

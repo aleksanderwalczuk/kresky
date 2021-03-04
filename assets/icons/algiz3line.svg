@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #00ffea;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="left_kopia" data-name="left kopia" class="cls-1" d="M3.5,2V9"/>
+  <path id="right_kopia" data-name="right kopia" class="cls-1" d="M23.5,2V9"/>
+  <path id="center_kopia" data-name="center kopia" class="cls-1" d="M13.5,6v7"/>
+</svg>

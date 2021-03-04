@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="14" viewBox="0 0 23 14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #0c3c3a;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Kształt_6" data-name="Kształt 6" class="cls-1" d="M1.819,12.04l9.692-9.4,9.669,9.419"/>
+</svg>

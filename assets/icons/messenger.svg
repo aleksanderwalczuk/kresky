@@ -1,0 +1,25 @@
+<svg id="Messenger_kopia" data-name="Messenger kopia" xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00ffea;
+        stroke: #00ffea;
+        stroke-width: 1px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2.7px;
+      }
+    </style>
+  </defs>
+  <path id="messenger" class="cls-1" d="M13.5,25.375A12.131,12.131,0,0,1,7.7,23.91L3,26l0.7-5.591A12.177,12.177,0,1,1,13.5,25.375Z"/>
+  <path id="ico_messenger" data-name="ico messenger" class="cls-2" d="M6.911,15.846s3.851-4.344,4.065-4.252,3.782,4.048,4.557,4.065,4.557-3.573,4.557-3.573"/>
+</svg>

@@ -1,0 +1,91 @@
+::selection {
+    background-color: #00ffea;
+    color: #fff;
+  }
+  ::-moz-selection {
+    background-color: #00ffea;
+    color: #fff;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #00ffea;
+  }
+  
+  /* Fonts */
+  @font-face {
+    font-family: 'Butler Bold';
+    src: url(../fonts/Butler_Bold.otf);
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: 'Butler Light';
+    src: url(../fonts/Butler_Light.otf);
+    font-weight: 300;
+  }
+  
+  @font-face {
+    font-family: 'OpenSans Light';
+    src: url(../fonts/OpenSans_Light.ttf);
+    font-weight: 300;
+  }
+  
+  /* Variables */
+  .green {
+    color: #0c3c3a;
+  }
+  
+  .blue {
+    color: #00ffea;
+  }
+  
+  .blue-bg {
+    background-color: #00ffea;
+  }
+  
+  .white-bg {
+    background-color: #fff;
+  }
+
+  .bold {
+      font-weight: bold;
+  }
+  
+  p {
+    font-size: 16px;
+    font-family: 'OpenSans Light';
+    line-height: 26px;
+  }
+  
+  h1 {
+    font-size: 47px;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+  
+  h1 ,h2 {
+    font-family: 'Butler Bold';
+  }
+  
+  /* ---------- Styles --------- */
+  
+  html,
+  body {
+    color: #0c3c3a;
+    font-family: 'OpenSans Light', serif;
+    background-color: #fff;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  header, section {
+      display: flex;
+  }
+  
+  svg {
+    z-index: -10;
+  }

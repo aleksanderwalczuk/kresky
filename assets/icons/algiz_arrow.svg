@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="11" viewBox="0 0 27 11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #00ffea;
+        stroke-linejoin: round;
+        stroke-width: 2.7px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="algiz_arrow" class="cls-1" d="M24,2L13.464,9.248,3,2"/>
+</svg>
