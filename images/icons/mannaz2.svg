@@ -1,0 +1,17 @@
+<svg id="_M_annaz" data-name="[M]annaz" xmlns="http://www.w3.org/2000/svg" width="23" height="27" viewBox="0 0 23 27">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #00ffea;
+        stroke-linejoin: round;
+        stroke-width: 2.7px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Kształt_3_kopia_7" data-name="Kształt 3 kopia 7" class="cls-1" d="M11.464,8.246L1,1"/>
+  <path id="Kształt_3_kopia_9" data-name="Kształt 3 kopia 9" class="cls-1" d="M22,1L11.464,8.246"/>
+  <path id="Kształt_3_kopia_7-2" data-name="Kształt 3 kopia 7" class="cls-1" d="M22,16L11.464,8.754"/>
+  <path id="Kształt_3_kopia_8" data-name="Kształt 3 kopia 8" class="cls-1" d="M11.464,8.754L1,16"/>
+</svg>

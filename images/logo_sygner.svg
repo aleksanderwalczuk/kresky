@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="41" viewBox="0 0 45 41">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0c3c3a;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Prostokąt_1" data-name="Prostokąt 1" class="cls-1" d="M45,41H0V0H45V41ZM19.944,34.167h5.079V23.916H19.944v10.25ZM13.955,6.833H6.772l10.9,11,3.591-3.623Zm17.058,0L23.7,14.21l3.591,3.623,10.9-11H31.013Z"/>
+</svg>

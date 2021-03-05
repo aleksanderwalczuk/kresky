@@ -1,0 +1,26 @@
+<svg id="E-mail" xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00ffea;
+        stroke: #00ffea;
+        stroke-width: 1px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2.7px;
+      }
+    </style>
+  </defs>
+  <path id="e-mail-2" data-name="e-mail" class="cls-1" d="M26.333,10V23.458c0,2.117-.767,2.875-2.91,2.875H3.72c-2.125,0-2.886-.758-2.886-2.875V10C2.959,7.791,14,1,14,1S24.19,7.791,26.333,10Z"/>
+  <path id="e-mailX" class="cls-2" d="M5,12L22,23"/>
+  <path id="e-mailX-2" data-name="e-mailX" class="cls-2" d="M22,12L5,23"/>
+</svg>

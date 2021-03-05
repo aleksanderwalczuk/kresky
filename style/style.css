@@ -1,6 +1,10 @@
 /* Navigation */
 
 
+.global {
+  z-index: 4;
+}
+
 nav .links,
 nav .bars {
     display: flex;

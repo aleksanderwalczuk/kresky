@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="413" height="413" viewBox="0 0 413 413">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #00ffea;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Kształt_2" data-name="Kształt 2" class="cls-1" d="M1,21S18,77,72,77,127,1,64,1-9,116,80,127c97.006,11.989,197.162-115.617,307-50,77,46-36,185-194,132S-11.386,251.983,23,299c49,67,147,0,219-15s112,49,65,77-114.494-60.444-158-7c-13,15.97-12.434,47.16,15,58"/>
+</svg>

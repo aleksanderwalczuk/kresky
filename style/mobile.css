@@ -2,6 +2,26 @@
 
     /* HEADER */
 
+    .lineWrapper {
+        position: relative;
+    }
+
+    .bg-top {
+        position: absolute;
+        left: -10px;
+        width: 85vw;
+        bottom: -6vw;
+    }
+
+    .bg-top path {
+        fill: none;
+        stroke: #00ffea;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+    }
+
     .apla {
         margin: 29px 24px;
     }
