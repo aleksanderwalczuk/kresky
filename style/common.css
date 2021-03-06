@@ -84,21 +84,22 @@
   }
   
   p {
-    font-size: 17px;
+    font-size: .875vw;
     font-family: 'OpenSans Light';
-    line-height: 27px;
+    line-height: 1.45vw;
+    margin: 0;
   }
   
   h1, h2 {
-    font-size: 74px;
+    font-size: 3.85vw;
   }
 
   h1 {
-    line-height: 107px;
+    line-height: 5.65vw
   }
 
   h3 {
-    font-size: 34px;
+    font-size: 1.75vw;
   }
   
   h1 ,h2, h3, nav a {
@@ -111,9 +112,9 @@
   }
 
   nav a {
-    font-size: 22px;
+    font-size: calc(0.88vw + 5px);
     text-align: right;
-    height: 44px;
+    height:calc(1.775vw + 10px);
   }
   
   /* ---------- Styles --------- */

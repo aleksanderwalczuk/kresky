@@ -1,16 +1,90 @@
+@media (min-width: 1920px) and (min-height: 1200px) {
+    .bg-top {
+        position: absolute;
+        left: -10px;
+        width: 85vw;
+        bottom: -6vw;
+    }
+}
+
+@media (max-width: 1920px) and (max-height: 1080px) {
+    .bg-top {
+        position: absolute;
+        left: -20px;
+        width: 85vw;
+        bottom: -6vw;
+    }
+}
+
+@media (max-width: 1680px) and (max-height: 1050px) {
+    .bg-top {
+        position: absolute;
+        left: -10px;
+        width: 85vw;
+        bottom: -6vw;
+    }
+}
+
+@media (max-width: 1680px) and (max-height: 1050px) {
+    .bg-top {
+        position: absolute;
+        left: -146px;
+        width: 96vw;
+        bottom: -4vw;
+    }
+}
+
+@media (max-width: 1440px) and (max-height: 900px) {
+    .bg-top {
+        position: absolute;
+        left: -108px;
+        width: 95vw;
+        bottom: -12vw;
+    }
+}
+
+@media (max-width: 1366px) and (max-height: 768px) {
+    .bg-top {
+        position: absolute;
+        left: -22px;
+        width: 85vw;
+        bottom: -20.5vw;
+    }
+}
+
+@media (max-width: 1280px) and (max-height: 800px) {
+    .bg-top {
+        position: absolute;
+        left: -120px;
+        width: 97vw;
+        bottom: -20vw;
+    }
+}
+
+@media (max-width: 1024px) and (max-height: 768px) {
+    .bg-top {
+        position: absolute;
+        left: -10px;
+        width: 85vw;
+        bottom: -6vw;
+    }
+}
+
+@media (max-width: 1024px) and (max-height: 600px) {
+    .bg-top {
+        position: absolute;
+        left: -18px;
+        width: 85vw;
+        bottom: -37.5vw;
+    }
+}
+
 @media (min-width: 1024px) {
 
     /* HEADER */
 
     .lineWrapper {
         position: relative;
-    }
-
-    .bg-top {
-        position: absolute;
-        left: -10px;
-        width: 85vw;
-        bottom: -6vw;
     }
 
     .bg-top path {
@@ -20,7 +94,24 @@
         stroke-linejoin: round;
         stroke-width: 1px;
         fill-rule: evenodd;
+        animation: drawtop 2s;
+        /* animation-delay: 3s; */
+        stroke-dasharray: 12357.5;
+        stroke-dashoffset: 10794.5;
+        opacity: 0;
+        transform: translate3d(0,0,0);
     }
+
+    @keyframes drawtop {
+        from {
+          stroke-dasharray: 10000;
+          stroke-dashoffset: 10000;
+        }
+        to {
+          stroke-dasharray: 12357.5;
+          stroke-dashoffset: 10794.5;
+        }
+      }
 
     .apla {
         margin: 29px 24px;
@@ -57,7 +148,7 @@
 
 
     header a {
-        bottom: 87px;
+        bottom: 4.6vw;
     }
 
     section {
@@ -108,13 +199,14 @@
     }
 
     .intro a {
-        bottom: 115px;
+        bottom: 6.2vw;
     }
 
     /* Gallery */
 
     .showroom {
         align-items: center;
+        padding-top: 4.75vw;
     }
 
     .showroom .gallery {
@@ -141,14 +233,7 @@
     }
 
     .showroom .info {
-        /* height: 30%; */
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        z-index: 1;
-        position: absolute;
-        bottom: 70px;
+        bottom: -10px;
     }
 
     .showroom .info p {

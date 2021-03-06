@@ -185,10 +185,18 @@ window.requestAnimationFrame(() => {
       (document.documentElement.scrollHeight -
         document.documentElement.clientHeight);
 
-    const draw = lengthSvgTop * scrollpercent * 7;
-    const drawMobile = lengthSvgTopMobile * scrollpercent * 5.785;
-    svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - draw;
-    svgTopMobile.style.strokeDashoffset = (lengthSvgTopMobile +1000) - drawMobile;
+    const draw = lengthSvgTop * scrollpercent;
+    // if (window.innerWidth > 1200) {
+    //   svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * -5);
+    //   console.log('>1200', draw)
+    // }
+    if (window.innerWidth > 1300) {
+      svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * 1.75);
+      console.log('>1600', draw)
+    }
+    else svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * 4.75);
+    // const drawMobile = lengthSvgTopMobile * scrollpercent * 5.785;
+    // svgTopMobile.style.strokeDashoffset = (lengthSvgTopMobile +1000) - drawMobile;
   });
 });
 
