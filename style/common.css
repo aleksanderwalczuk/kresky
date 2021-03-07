@@ -19,7 +19,7 @@
     z-index: 2;
   }
 
-  .apla span {
+  .apla p {
     opacity: 0;
   }
 
@@ -100,6 +100,7 @@
 
   h3 {
     font-size: 1.75vw;
+    margin: 0;
   }
   
   h1 ,h2, h3, nav a {
@@ -135,5 +136,38 @@
       display: flex;
       position: relative;
       flex-direction: column;
-      z-index: 2;
+      /* z-index: 2; */
   }
+
+  .runicBtn svg {
+    position: absolute;
+    transition: .5s ease;
+    display: block;
+  }
+  
+  .runicBtn svg path {
+    stroke-width: 2.7px;
+  }
+
+  .runicBtn svg:nth-child(1) {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 0%;
+  }
+
+  .runicBtn svg:nth-child(2) {
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+  }
+
+  .runicBtn:hover svg:nth-child(1) {
+    stroke-dashoffset: -70%;
+  }
+
+  .runicBtn svg:nth-child(4) {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 0%;
+  }
+  .runicBtn:hover svg:nth-child(4) {
+    stroke-dashoffset: 105%;
+  }
+  
