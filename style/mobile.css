@@ -81,6 +81,14 @@
 
 @media (min-width: 1024px) {
 
+    h1,h2 {
+        text-align: center;
+    }
+
+    .mobile {
+        display: none;
+    }
+
     section {
         align-items: center;
     }
@@ -241,7 +249,7 @@
     /* About */
 
     .about {
-        padding-top: 20vh;
+        padding: 20vh 0;
     }
 
     .about .wrapper {
@@ -255,8 +263,9 @@
         align-self: flex-start;
         margin-top: 4vh;
     }
-
-    .about svg {
+    
+    .bg-about,
+    .angel {
         width: 75vw;
         transform: translate(-5.75vw, -10px);
         align-self: flex-start;
@@ -264,20 +273,23 @@
 
     .about .content {
         width: 70vw;
-        justify-content: space-between;
         align-self: flex-start;
         margin-top: 3vh;
     }
 
-    .about .content p {
+    .about .content div p {
         margin-top: 1.4vw;
         line-height: 2.75vh;
     }
 
+    .about .author:first-of-type {
+        margin: 5vh 0 2vh;  
+    }
+
     .angel {
         position: absolute;
-        left: 1.35vw;
-        bottom: 37.35vh;
+        right: 12vw;
+        top: -6.35vh;
     }
 
     .passion {
@@ -293,6 +305,7 @@
 
     .passion .title h2 {
         line-height: 10.75vh;
+        text-align: left;
     }
 
     .passion .title p {
@@ -342,6 +355,14 @@
 
     .about .cursive {
         margin-top: 4vh;
+    }
+
+    .about article {
+        align-items: center;
+    }
+
+    .about article:first-of-type {
+        margin-top: 15vh;
     }
 
     

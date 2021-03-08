@@ -187,6 +187,10 @@ header .container p {
     100% {opacity: 1;}
   }
 
+.heading-text {
+  position: relative;
+}
+
 .heading-text p {
     font-size: 17px;
 }
@@ -301,10 +305,225 @@ header .container p {
 
 /* About */
 
-.about .content {
+.about .content,
+.about article,
+.passion,
+.quotebox,
+.quote,
+.first,
+.second,
+.charts {
   display: flex;
 }
 
+.about .wrapper .content {
+  justify-content: space-around;
+}
+
 .passion {
+  position: relative;
+}
+
+.about article {
+  flex-direction: column;
+}
+
+.about .quotebox {
+  width: 65vw;
+  justify-content: space-around;
+  margin-top: 5vh;
+}
+
+.about .quotebox img {
+  width: 3.75%;
+  margin-right: 1vw;
+}
+
+.about .first .quote .content p {
+  width: 54%;
+}
+
+.about .quote {
+  width: 30vw;
+  position: relative;
+}
+
+.about .first,
+.about .second {
+  width: 42.5vw;
+  align-items: center;
+}
+.about .first .quote:nth-child(1) {
+  margin-bottom: 5vh;
+}
+
+.about .first .quote:nth-child(2) {
+  margin-bottom: 15vh;
+}
+
+.about .second .quote {
+  margin-bottom: 13vh;
+}
+
+
+.about .quote .name {
+  position: absolute;
+  transform: rotate(-90deg);
   display: flex;
+  flex-direction: column;
+}
+
+.about .first .quote:nth-child(1) .name {
+  left: -7.5vw;
+  bottom: 5vh;
+}
+
+.about .first .quote:nth-child(2) .name {
+  left: -8.5vw;
+  bottom: 1vh;
+}
+
+
+.about .first .quote:nth-child(3) .name {
+  left: -11.5vw;
+  bottom: -2.5vh;
+}
+
+.about .second .quote:nth-child(1) .name {
+  left: -10vw;
+  bottom: 3vh;
+}
+
+.about .second .quote:nth-child(2) .name {
+  left: -7vw;
+  bottom: 14.5vh;
+}
+
+.about .quote .name p {
+  align-self: flex-end;
+}
+
+/* .about .quote p {
+  width: 12vw;
+} */
+
+.about .first,
+.about .second {
+  flex-direction: column;
+}
+
+.about .numbers {
+  margin: 20vh 0 7.5vh;
+}
+
+.about .numbers h2 {
+  width: 75%;
+}
+
+.about article:last-child {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15vh;
+}
+
+.about article:last-child h2 {
+  font-size: 3.85vw;
+  margin-bottom: 4vh;
+  transform: translateY(5px);
+  width: 75%;
+}
+
+.charts {
+  margin-top: 10vh;
+  width: 75vw;
+  justify-content: space-around;
+}
+
+.charts div {
+  position: relative;
+  width: 50vw;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.charts div h3 {
+  font-size: 3.85vw;
+}
+
+.charts svg {
+  position: absolute;
+  bottom: -4vh;
+  width: 20vw;
+}
+
+.charts div:first-child svg,
+.charts div:last-child svg {
+  left: 4vw;
+}
+
+.charts div:nth-child(2) svg {
+  left: 2.5vw;
+}
+
+.about .runicBtn {
+  bottom: 3vh;
+}
+
+.about .runicBtn:hover svg:nth-child(1) {
+  stroke-dashoffset: -70%;
+}
+
+.about .runicBtn svg:nth-child(2) {
+  stroke-dasharray: 16px;
+  stroke-dashoffset: -16px;
+}
+
+.about .runicBtn:hover svg:nth-child(2) {
+  stroke-dashoffset: 0;
+}
+
+.about .runicBtn:hover svg:nth-child(4) {
+  stroke-dashoffset: -90%;
+}
+
+/* Offer */
+
+.offer .heading-text {
+  z-index: 3;
+}
+
+.offer .heading-text svg {
+  position: absolute;
+  top: 28.25vh;
+  left: 7.25vw;
+}
+
+.offer .heading-text p {
+  margin-top: 7vh;
+}
+
+.offer .offers {
+  width: 75vw;
+  display: flex;
+  margin-top: 30vh;
+  flex-flow: wrap;
+  justify-content: space-around;
+  row-gap: 5vh;
+  /* column-gap: 20px; */
+}
+
+.offer .offers div {
+  display: flex;
+  flex-direction: column;
+  width: 26%;
+}
+
+.offers h3 {
+  width: 44.5%;
+}
+
+.offers p {
+  width: 65%;
 }
