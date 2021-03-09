@@ -89,6 +89,11 @@
     line-height: 1.45vw;
     margin: 0;
   }
+
+  button {
+    position: relative;
+    font-size: .75vw;
+  }
   
   h1, h2 {
     font-size: 3.85vw;

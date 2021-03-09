@@ -93,6 +93,10 @@
         align-items: center;
     }
 
+    section:not(.showroom) {
+        margin: 0 13vw;
+    }
+
     /* HEADER */
 
     .lineWrapper {

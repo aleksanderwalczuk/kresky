@@ -505,25 +505,177 @@ header .container p {
 }
 
 .offer .offers {
-  width: 75vw;
+  width: 78vw;
   display: flex;
-  margin-top: 30vh;
+  margin: 30vh 0 20vh;
   flex-flow: wrap;
   justify-content: space-around;
-  row-gap: 5vh;
+  row-gap: 12vh;
   /* column-gap: 20px; */
 }
 
-.offer .offers div {
+.offerbox {
+  display: flex;
+  width: 26%;
+  justify-content: space-around;
+}
+
+.offer .offerbox div {
   display: flex;
   flex-direction: column;
-  width: 26%;
 }
 
-.offers h3 {
-  width: 44.5%;
+.offerbox p {
+  margin-top: 3.5vh;
 }
 
-.offers p {
-  width: 65%;
+.offerbox h3 {
+  width: 90%;
+}
+
+.offerbox div:last-child {
+  width: 51%;
+}
+
+.offer a {
+  bottom: 0;
+}
+
+
+/* Contact */
+
+.contact {
+  padding-top: 15vh;
+}
+
+.contact h2 {
+  margin: 1.5vh 0 5vh;
+}
+
+.contact div
+.contact button {
+  display: flex;
+}
+
+.contact .boxes {
+  margin: 15vh 0 35vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact .boxes p {
+  margin: 2.5vh 0;
+}
+
+.contact .boxes div {
+  flex-direction: column;
+  width: 28.5%;
+}
+
+.contact .boxes button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0;
+}
+
+.contact .boxes button img {
+  margin-right: 1vw;
+}
+
+.contact .boxes div button::after {
+  font-family: 'OpenSans Light';
+  transition: .36s ease;
+}
+
+.contact .boxes div button:hover:after {
+  text-shadow: #00ffea -3px 0px;
+}
+
+.contact .boxes div:nth-child(1) button::after {
+  content: 'NAPISZ NA MESSENGER';
+}
+
+.contact .boxes div:nth-child(2) button::after {
+  content: 'WYBIERZ NUMER TELEFONU';
+}
+
+.contact .boxes div:nth-child(3) button::after {
+  content: 'NAPISZ WIADOMOŚĆ E-MAIL';
+}
+
+.contact svg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  width: 10vw;
+}
+
+/* Footer */
+
+footer {
+  border-top: 1px solid #E7E9F0;
+}
+
+footer p {
+  font-size: .7275vw;
+}
+
+footer .wrapper {
+  margin: 2vh 2.5vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .wrapper div {
+  display: flex;
+  align-items: center;
+}
+
+footer img {
+  width: fit-content;
+  height: fit-content;
+}
+
+
+footer .wrapper div:nth-child(1) {
+  width: 20%;
+}
+
+footer .wrapper div:nth-child(1) img {
+  margin-right: 2.75vw;
+}
+
+footer .wrapper div:nth-child(2) {
+  justify-content: space-around;
+  width: 25%;
+}
+
+footer .wrapper .arrowUp {
+  width: 27px;
+  height: 47px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  place-items: flex-end;
+  place-content: center;
+}
+
+footer .wrapper .arrowUp img {
+  transition: .34s ease;
+}
+
+footer .wrapper .arrowUp:hover img:first-child {
+  transform: translateY(-8px);
+}
+
+footer .wrapper .arrowUp:hover img:last-child {
+  transform: translateY(-36px);
+}
+
+
+footer .wrapper .arrowUp img:first-child {
+  position: absolute;
+  top: 16px;
 }
