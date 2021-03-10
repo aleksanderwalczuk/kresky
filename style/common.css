@@ -79,32 +79,20 @@
     background-color: #fff;
   }
 
-  .bold {
-      font-weight: bold;
+  .bg-top {
+    position: absolute;
   }
   
   p {
-    font-size: .875vw;
     font-family: 'OpenSans Light';
-    line-height: 1.45vw;
     margin: 0;
   }
 
   button {
     position: relative;
-    font-size: .75vw;
-  }
-  
-  h1, h2 {
-    font-size: 3.85vw;
-  }
-
-  h1 {
-    line-height: 5.65vw
   }
 
   h3 {
-    font-size: 1.75vw;
     margin: 0;
   }
   

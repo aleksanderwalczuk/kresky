@@ -1,6 +1,5 @@
 @media (min-width: 1920px) and (min-height: 1200px) {
     .bg-top {
-        position: absolute;
         left: -10px;
         width: 85vw;
         bottom: -6vw;
@@ -9,7 +8,6 @@
 
 @media (max-width: 1920px) and (max-height: 1080px) {
     .bg-top {
-        position: absolute;
         left: -20px;
         width: 85vw;
         bottom: -6vw;
@@ -18,7 +16,6 @@
 
 @media (max-width: 1680px) and (max-height: 1050px) {
     .bg-top {
-        position: absolute;
         left: -10px;
         width: 85vw;
         bottom: -6vw;
@@ -27,7 +24,6 @@
 
 @media (max-width: 1680px) and (max-height: 1050px) {
     .bg-top {
-        position: absolute;
         left: -146px;
         width: 96vw;
         bottom: -4vw;
@@ -36,7 +32,6 @@
 
 @media (max-width: 1440px) and (max-height: 900px) {
     .bg-top {
-        position: absolute;
         left: -108px;
         width: 95vw;
         bottom: -12vw;
@@ -45,7 +40,6 @@
 
 @media (max-width: 1366px) and (max-height: 768px) {
     .bg-top {
-        position: absolute;
         left: -22px;
         width: 85vw;
         bottom: -20.5vw;
@@ -54,7 +48,6 @@
 
 @media (max-width: 1280px) and (max-height: 800px) {
     .bg-top {
-        position: absolute;
         left: -120px;
         width: 97vw;
         bottom: -20vw;
@@ -63,7 +56,6 @@
 
 @media (max-width: 1024px) and (max-height: 768px) {
     .bg-top {
-        position: absolute;
         left: -10px;
         width: 85vw;
         bottom: -6vw;
@@ -72,7 +64,6 @@
 
 @media (max-width: 1024px) and (max-height: 600px) {
     .bg-top {
-        position: absolute;
         left: -18px;
         width: 85vw;
         bottom: -37.5vw;
@@ -80,6 +71,28 @@
 }
 
 @media (min-width: 1024px) {
+
+    p {
+        font-size: .875vw;
+        line-height: 1.45vw;
+      }
+    
+      button {
+        font-size: .75vw;
+      }
+      
+      h1, h2 {
+        font-size: 3.85vw;
+      }
+    
+      h1 {
+        line-height: 5.65vw
+      }
+    
+      h3 {
+        font-size: 1.75vw;
+      }
+
 
     h1,h2 {
         text-align: center;
@@ -137,13 +150,10 @@
         margin: 27px 41px;
     }
 
-    .menuBtn {
-        display: none;
-    }
-
     header {
         justify-content: center;
         align-items: center;
+        height: 100vh;
     }
 
     header .container {
@@ -169,6 +179,10 @@
 
     h2 {
         margin: 1.5vh 0;
+    }
+
+    header .container p {
+        font-size: 17px;
     }
 
     .heading-text {
@@ -275,6 +289,12 @@
         align-self: flex-start;
     }
 
+    .about .first,
+    .about .second {
+        width: 42.5vw;
+        align-items: center;
+    }
+
     .about .content {
         width: 70vw;
         align-self: flex-start;
@@ -367,8 +387,217 @@
 
     .about article:first-of-type {
         margin-top: 15vh;
+    }   
+}
+
+
+/* MOBILE */
+
+
+@media (max-width: 1024px) {
+    /* Header */
+
+
+    .apla button {
+        margin: 4.5vh 0 0 6.75vw;
     }
 
+    .menuBtn {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        width: 27px;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .menuBtn span {
+        height: 3px;
+        width: 27px;
+        background-color: #00ffea;
+        display: block;
+    }
+
+    .lineWrapper .bg-top {
+        left: -82px;
+        width: 137.25%;
+        top: 24.6vh;
+    }
+
+    .lineWrapper path {
+        fill: none;
+        stroke: #00FFEA;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    p {
+       font-size: 4.45vw;
+       line-height: 4.15vh;
+       margin-top: 1.75vh;
+    }
+
+    button {
+       font-size: .75vw;
+    }
+     
+    h1, h2 {
+       font-size: 13.05vw;
+    }
+
+    h1, h2 {
+       line-height: 9.25vh;
+    }
+
+    h3 {
+       font-size: 8vw;
+    }
     
+    .desktop {
+        display: none;
+    }
+
+    header, section {
+        margin: 0 29px 0 29px;
+    }
+
+    header {
+        place-items: center;
+        padding-bottom: 24.5vh;
+    }
+
+    header .container {
+        margin-top: 11.75vh;
+        align-self: flex-start;
+    }
+
+    header .container img {
+        margin-left: .75vw;
+    }
+
+    header p {
+        margin: 9vh 0 0 1px;
+    }
+
+    header a {
+        bottom: 5vh;
+    }
+
+    /* Intro */
+
+    .intro .heading-text {
+        margin-top: 10vh;
+        padding-bottom: 1vh;
+    }
+
+    .intro h2 {
+        margin: 0;
+    }
+
+    .intro .flexbox {
+        flex-direction: column;
+        margin-top: 45vh;
+    }
+
+    .intro .flexbox div:first-child {
+        margin-bottom: 45vh;
+    }
+
+    .intro .flexbox div:nth-child(2) {
+        margin-bottom: 42.5vh;
+    }
+
+    .intro a {
+        bottom: -19vh;
+    }
+
+    /* Showroom */
+
+    .showroom {
+        padding-top: 17vh;
+        align-items: center;
+    }
+
+    .showroom h1 {
+        margin-top: 30vh;
+    }
+
+    .showroom .gallery {
+        margin-bottom: 10vh;
+    }
+
+    .showroom .gallery img {
+        width: 100%;
+    }
+
+    .showroom .info {
+        margin: 5vh 0;
+    }
+
+    .showroom a {
+        bottom: -5vh;
+    }
+
+    /* About */
+
+    .about {
+        padding-top: 17vh;
+    }
+
+    .about h2,
+    .about p {
+        z-index: 2;
+    }
+
+    .about .wrapper {
+        position: relative;
+    }
+
+    .about .wrapper .content {
+        flex-direction: column;
+        margin-top: 50vh;
+    }
+
+    .about .wrapper .content div:first-child {
+        margin-bottom: 50vh;
+    }
+
+    .about .wrapper .content div:nth-child(2) {
+        margin-bottom: 50vh;
+    }
+
+    .about .bg-about {
+        position: absolute;
+    }
+
+    .about .first {
+        top: -55vh;
+        width: 100%;
+        left: -50px;
+    }
+
+    .about .second {
+        top: 112vh;
+        left: -85px
+    }
+
+    .about .third {
+        top: 170vh;
+        left: -50px;
+    }
+
+    .about .flexbox {
+        align-items: flex-start;
+    }
+
+    .about .flexbox p {
+        width: 100%;
+        margin: 0;
+    }
+
+    .passion {
+        flex-direction: column;
+    }
+
 
 }

@@ -123,11 +123,6 @@ nav a.con.active ~ hr.black {
 
 header {
     flex-direction: column;
-    height: 100vh;
-}
-
-header .container p {
-    font-size: 17px;
 }
 
 .logo_sygnet {
@@ -152,6 +147,7 @@ header .container p {
     display: block;
     overflow: hidden;
     position: absolute;
+    z-index: 4;
 }
 
 .runicBtn img {
@@ -350,7 +346,6 @@ header .container p {
 
 .about .first,
 .about .second {
-  width: 42.5vw;
   align-items: center;
 }
 .about .first .quote:nth-child(1) {
