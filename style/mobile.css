@@ -111,10 +111,86 @@
     }
 
     /* HEADER */
+    
+    nav hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        margin: 1em 0;
+        padding: 0;
+    }
+    
+    nav hr.black {
+        width: 5px;
+        right: -20px;
+        top: -30px;
+    }
+    
+    nav hr.blue {
+        width: 5px;
+        right: -20px;
+        top: -30px;
+        /* max-height: 0; */
+    }
+    
+    nav.open hr.black {
+        max-height: 210px;
+    }
+      
+    
+    nav a.int.active ~ hr.black,
+    nav a.int:hover ~ hr.blue {
+      height: 40px;
+    }
+    
+    nav a.sho.active ~ hr.black,
+    nav a.sho:hover ~ hr.blue {
+      height: 60px;
+    }
+    
+    nav a.tea.active ~ hr.black,
+    nav a.tea:hover ~ hr.blue {
+      height: 106px;
+    }
+    
+    nav a.off.active ~ hr.black,
+    nav a.off:hover ~ hr.blue {
+      height: 145px;
+    }
+    
+    nav a.con.active ~ hr.black,
+    nav a.con:hover ~ hr.blue {
+      height: 190px;
+    }
+    
+    nav a.int.active ~ hr.black {
+      max-height: 40px;
+    }
+    
+    nav a.sho.active ~ hr.black {
+      max-height: 60px;
+    }
+    
+    nav a.tea.active ~ hr.black {
+      max-height: 106px;
+    }
+    
+    nav a.off.active ~ hr.black {
+      max-height: 145px;
+    }
+    
+    nav a.blo.active ~ hr.black {
+      max-height: 195px;
+    }
+    
+    nav a.con.active ~ hr.black {
+      max-height: 233px;
+    }
 
     .lineWrapper {
         position: relative;
     }
+
 
     .bg-top path {
         fill: none;
@@ -149,6 +225,7 @@
     nav {
         margin: 27px 41px;
     }
+    
 
     header {
         justify-content: center;
@@ -388,6 +465,242 @@
     .about article:first-of-type {
         margin-top: 15vh;
     }   
+
+    .about .quotebox {
+        width: 65vw;
+        justify-content: space-around;
+        margin-top: 5vh;
+      }
+      
+      .about .quotebox img {
+        width: 3.75%;
+        margin-right: 1vw;
+      }
+      
+      .about .first .quote .content p {
+        width: 54%;
+      }
+      
+      .about .quote {
+        width: 30vw;
+      }
+      
+      .about .first,
+      .about .second {
+        align-items: center;
+      }
+      .about .first .quote:nth-child(1) {
+        margin-bottom: 5vh;
+      }
+      
+      .about .first .quote:nth-child(2) {
+        margin-bottom: 15vh;
+      }
+      
+      .about .second .quote {
+        margin-bottom: 13vh;
+      }
+      
+      
+      
+      .about .quote .name {
+        flex-direction: column;
+      }
+      
+      .about .first .quote:nth-child(1) .name {
+        left: -7.5vw;
+        bottom: 5vh;
+      }
+      
+      .about .first .quote:nth-child(2) .name {
+        left: -8.5vw;
+        bottom: 1vh;
+      }
+      
+      
+      .about .first .quote:nth-child(3) .name {
+        left: -11.5vw;
+        bottom: -2.5vh;
+      }
+      
+      .about .second .quote:nth-child(1) .name {
+        left: -10vw;
+        bottom: 3vh;
+      }
+      
+      .about .second .quote:nth-child(2) .name {
+        left: -7vw;
+        bottom: 14.5vh;
+      }
+      
+      .about .quote .name p {
+        align-self: flex-end;
+      }
+
+      .about .numbers {
+        margin: 20vh 0 7.5vh;
+      }
+
+      .about .numbers h2 {
+        width: 75%;
+      }
+
+      .charts {
+        margin-top: 10vh;
+        width: 75vw;
+        justify-content: space-around;
+      }
+      
+      .charts div {
+        width: 50vw;
+        justify-content: space-between;
+      }
+
+      
+      .charts div h3 {
+        font-size: 3.85vw;
+      }
+      
+      .charts svg {
+        bottom: -4vh;
+        width: 20vw;
+      }
+      
+      .charts div:first-child svg,
+      .charts div:last-child svg {
+        left: 4vw;
+      }
+      
+      .charts div:nth-child(2) svg {
+        left: 2.5vw;
+      }
+      
+      .about .runicBtn {
+        bottom: 3vh;
+      }
+
+      /* Offer */
+
+      .offer .heading-text svg {
+        top: 28.25vh;
+        left: 7.25vw;
+      }
+
+      .offer .heading-text {
+        z-index: 3;
+      }
+      
+      
+      .offer .heading-text p {
+        margin-top: 7vh;
+      }
+      
+      .offer .offers {
+        width: 78vw;
+        margin: 30vh 0 20vh;
+        row-gap: 12vh;
+      }
+      
+      .offerbox {
+        width: 26%;
+        justify-content: space-around;
+      }
+      
+      
+      .offerbox p {
+        margin-top: 3.5vh;
+      }
+      
+      .offerbox h3 {
+        width: 90%;
+      }
+      
+      .offerbox div:last-child {
+        width: 51%;
+      }
+
+      /* Contact */
+
+      .contact svg {
+        right: 0;
+        bottom: 0;
+        height: auto;
+        width: 10vw;
+      }
+
+      .contact .boxes {
+        margin: 15vh 0 35vh;
+        justify-content: space-between;
+      }
+
+      /* Footer */
+
+      footer {
+        border-top: 1px solid #E7E9F0;
+      }
+      
+      footer p {
+        font-size: .7275vw;
+      }
+      
+      footer .wrapper {
+        margin: 2vh 2.5vw;
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      footer .wrapper div {
+        display: flex;
+        align-items: center;
+      }
+      
+      footer img {
+        width: fit-content;
+        height: fit-content;
+      }
+      
+      
+      footer .wrapper div:nth-child(1) {
+        width: 20%;
+      }
+      
+      footer .wrapper div:nth-child(1) img {
+        margin-right: 2.75vw;
+      }
+      
+      footer .wrapper div:nth-child(2) {
+        justify-content: space-around;
+        width: 25%;
+      }
+      
+      footer .wrapper .arrowUp {
+        width: 27px;
+        height: 47px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        place-items: flex-end;
+        place-content: center;
+      }
+      
+      footer .wrapper .arrowUp img {
+        transition: .34s ease;
+      }
+      
+      footer .wrapper .arrowUp:hover img:first-child {
+        transform: translateY(-8px);
+      }
+      
+      footer .wrapper .arrowUp:hover img:last-child {
+        transform: translateY(-36px);
+      }
+      
+      
+      footer .wrapper .arrowUp img:first-child {
+        position: absolute;
+        top: 16px;
+      }
+      
 }
 
 
@@ -397,25 +710,154 @@
 @media (max-width: 1024px) {
     /* Header */
 
+    body {
+        position: relative;
+    }
+
+    .global {
+        height: 7vh;
+        z-index: 6;
+    }
+
+    nav:after {
+        transition: .36s ease-in-out;
+        left: 0;
+        position: fixed;
+        content: '';
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 3;
+    }
+
+    .open nav::after {
+        background-color: rgba(255, 255, 255, 0.87);
+    }
+
+    .open header,
+    .open section {
+        z-index: 0;
+    }
+
+    .open .runicBtn {
+        z-index: 0;
+    }
+
+    .lineWrapper {
+        position: relative;
+        /* overflow: hidden; */
+    }
+
+    .svgbox {
+        position: absolute;
+        overflow: hidden;
+        height: 375vh;
+        width: 100vw;
+    }
+
+    .apla {
+        z-index: 7;
+    }
+
 
     .apla button {
         margin: 4.5vh 0 0 6.75vw;
     }
 
     .menuBtn {
+        z-index: 7;
+    }
+
+    .menuBtn span::after {
+        content: '';
+    }
+
+    nav {
+        display: contents;
+        z-index: -1;
+    }
+
+    .open nav {
+        z-index: 2;
+    }
+
+    nav a {
+        font-size: 13.05vw;
+        line-height: 9.25vh;
+        height: 11.25vh;
+        text-align: left;
+        z-index: 6;
+        text-shadow: 1.5px 1.5px #00ffea;
+        transition: .34s ease-in-out;
+    }
+
+    .links {
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 0 0 5vh 6vw;
         position: fixed;
-        top: 30px;
-        right: 30px;
+        left: 100vw;
+        z-index: 6;
+    }
+
+    .open nav a {
+        transform: translateX(-100vw);
+    }
+
+    .menuBtn {
+        position: fixed;
+        top: 18px;
+        right: 15px;
         width: 27px;
-        height: auto;
+        height: 40px;
         overflow: hidden;
+        box-sizing: content-box;
+        padding: 0;
+        z-index: 10;
+        transition: .2s ease;
+    }
+
+    .after .menuBtn {
+        transform: translateY(-15px);
     }
 
     .menuBtn span {
         height: 3px;
-        width: 27px;
+        width: 100%;
         background-color: #00ffea;
         display: block;
+        position: absolute;
+        top: 20px;
+    }
+
+    .menuBtn span:after,
+    .menuBtn span::before {
+        width: 100%;
+        content: '';
+        height: 3px;
+        background-color: #00ffea;
+        display: block;
+        position: absolute;
+        transition: .36s ease-in;
+    }
+
+    .menuBtn span:before {
+        top: -8px;
+    }
+
+    .menuBtn span:after {
+        top: 8px;
+        transform: translateX(100%);
+    }
+
+    .open .menuBtn span:after {
+        transform: translateX(0);
+    }
+
+    .open .menuBtn span:before {
+        transform: translateX(100%);
     }
 
     .lineWrapper .bg-top {
@@ -542,6 +984,7 @@
 
     .about {
         padding-top: 17vh;
+        align-items: center;
     }
 
     .about h2,
@@ -551,6 +994,7 @@
 
     .about .wrapper {
         position: relative;
+        overflow-x: hidden;
     }
 
     .about .wrapper .content {
@@ -599,5 +1043,222 @@
         flex-direction: column;
     }
 
+    .about .passion img {
+        width: 100%;
+    }
 
+    .about .passion .author:first-child {
+        margin: 20vh 0 10vh;
+    }
+
+    .customers {
+        margin-top: 20vh;
+    }
+
+    .customers h2 {
+        margin-bottom: 20vh;
+    }
+
+    .quotebox {
+        flex-direction: column;
+    }
+
+    .quote .content {
+        width: 75%;
+        flex-direction: column;
+    }
+
+    .quote .content img {
+        width: 8%;
+    }
+
+    .quote {
+        justify-content: flex-end
+    }
+
+    .quote .name p {
+        margin: 0;
+        font-size: 4vw;
+    }
+
+    .quote .name h3 {
+        font-size: 7.5vw;
+        margin-bottom: 1vw;
+    }
+
+    .about .first {
+        margin-bottom: 20vh;
+    }
+
+    .about .first .quote:nth-child(1) .name {
+        left: -11.5vw;
+        bottom: 28.5vh;
+      }
+      
+      .about .first .quote:nth-child(2) .name {
+        left: -14.5vw;
+        bottom: 14vh;
+      }
+      
+      
+      .about .first .quote:nth-child(3) .name {
+        left: -27.5vw;
+        bottom: 15vh;
+      }
+      
+      .about .quotebox button {
+        font-size: 19px;
+        width: 140px;
+        padding-bottom: 17px;
+        align-self: center;
+        position: relative;
+        font-family: 'Butler Bold';
+        color: #0c3c3a;
+        padding-bottom: 5px;
+        display: none;
+      }
+
+      .about .quotebox button span {
+          background-color: #0c3c3a;
+          width: 100%;
+          display: block;
+          height: 1px;
+          margin-top: 15px;
+      }
+
+      .about .quotebox button span::after {
+          width: 0%;
+          background-color: #00ffea;
+          height: 1px;
+          display: block;
+          transition: .74s ease-in-out;
+          content: '';
+      }
+
+      .about .quotebox button:hover span:after {
+          width: 100%;
+      }
+
+      .about .second {
+          /* display: none; */
+      }
+      
+      .about .second .quote:nth-child(1) .name {
+        left: -22vw;
+        bottom: 63vh;
+      }
+      
+      .about .second .quote:nth-child(2) .name {
+        left: -10vw;
+        bottom: 86vh;
+      }
+
+      .about .charts {
+          flex-direction: column;
+          align-items: center;
+      }
+
+      .about .numbers h2 {
+          margin-bottom: 20vh;
+      }
+
+      .about .charts div h3 {
+          font-size: 15vw;
+      }
+
+      .charts div svg {
+          top: -8vh;
+      }
+
+      .charts div {
+          margin-bottom: 30vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+
+      .about a {
+        bottom: 0;
+      }
+
+
+      /* Offer */
+
+      .offer {
+          padding-top: 4vh;
+          align-items: center;
+      }
+
+      .offer .heading-text  {
+          margin-bottom: 15vh;
+      }
+
+      .offer h3 {
+          font-size: 7.5vw;
+          line-height: 5.85vh;
+          margin-bottom: 1vh;
+      }
+
+      .offerbox {
+          margin-bottom: 12.5vh;
+          justify-content: space-between;
+      }
+
+      .offerbox div:last-child {
+          width: 50%;
+      }
+
+      .reverse {
+          flex-direction: row-reverse;
+      }
+
+
+      /* Contact */
+
+      .contact {
+          align-items: center;
+      }
+
+      .contact h2 {
+          width: 101%;
+      }
+
+      .contact svg {
+          top: 53vh;
+          width: 43.21%;
+          transform: scaleX(-1);
+      }
+
+      .contact .boxes {
+          flex-direction: column;
+          margin-top: 45vh;
+      }
+
+      .contact .boxes div {
+          width: auto;
+          margin-bottom: 10vh;
+      }
+
+      .contact .boxes button {
+          font-size: 2.2vh;
+      }
+
+
+      /* Footer */
+
+      footer {
+        height: 18.595vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      footer img {
+          width: 43.9%;
+          margin-top: 6vh;
+      }
+
+      footer p {
+          font-size: 2.25vh;
+      }
 }

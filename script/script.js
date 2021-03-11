@@ -1,4 +1,23 @@
 // Menu
+const body = document.querySelector('body');
+const menuBtn = document.querySelector('.menuBtn');
+// const nav = document.querySelector('nav');
+
+const open = () => {
+  if (!body.classList.contains('open')) {
+    body.classList.add('open')
+  } else 
+  {
+    body.classList.remove('open')
+  }
+  console.log('działam')
+}
+
+menuBtn.addEventListener('click', open);
+
+
+
+
 let oldx = 0;
 let oldy = 0;
 
@@ -105,7 +124,7 @@ document.addEventListener('mousemove', mousemovemethod);
   links.forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
-        // burger.classList.remove('click');
+        body.classList.remove('open');
         setTimeout(function() {
         window.location = link.href;
         }, 600)
@@ -203,19 +222,31 @@ window.requestAnimationFrame(() => {
 const sygnet = document.querySelector('.logo_sygnet img');
 
 $(window).scroll(function(){
-    if (window.innerWidth > 1024) {
-    if ($(this).scrollTop() >= 5)
-    {
-      $('body').addClass('after')
-      $('body').removeClass('start')
-      $('body').removeClass('rewind')
+    if ($(this).scrollTop() >= 5) {
+      if (window.innerWidth > 1024) {
+        console.log('dupa')
+      }
       sygnet.src ="assets/icons/sygnet-open.svg";
+      body.classList.add('after')
     } else {
-      $('body').removeClass('after');
-      $('body').addClass('rewind');
-      // $('body').removeClass('start');
     sygnet.src ="assets/icons/sygnet_logo.svg";
-    }}
+    body.classList.remove('after');
+    };
+ })
+
+
+$(window).scroll(function(){
+  if (window.innerWidth > 1024) {
+  if ($(this).scrollTop() >= 5)
+  {
+    $('body').addClass('after')
+    $('body').removeClass('start')
+    $('body').removeClass('rewind')
+  } else {
+    $('body').removeClass('after');
+    $('body').addClass('rewind');
+    // $('body').removeClass('start');
+  }}
 })
 
 // SVG Animation
