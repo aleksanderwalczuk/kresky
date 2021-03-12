@@ -388,7 +388,6 @@
     }
 
     .angel {
-        position: absolute;
         right: 12vw;
         top: -6.35vh;
     }
@@ -712,6 +711,7 @@
 
     body {
         position: relative;
+        overflow-x: hidden;
     }
 
     .global {
@@ -728,6 +728,7 @@
         bottom: 0;
         right: 0;
         z-index: 3;
+        display: none;
     }
 
     .open nav::after {
@@ -754,6 +755,24 @@
         height: 375vh;
         width: 100vw;
     }
+
+    #bgTopMobile {
+        animation: drawtop 2s;
+        /* animation-delay: 3s; */
+        stroke-dasharray: 14357.5;
+        stroke-dashoffset: 13194.5;
+      }
+    
+      @keyframes drawtop {
+        from {
+          stroke-dasharray: 10000;
+          stroke-dashoffset: 10000;
+        }
+        to {
+          stroke-dasharray: 13357.5;
+          stroke-dashoffset: 12194.5;
+        }
+      }
 
     .apla {
         z-index: 7;
@@ -994,7 +1013,6 @@
 
     .about .wrapper {
         position: relative;
-        overflow-x: hidden;
     }
 
     .about .wrapper .content {
@@ -1041,6 +1059,12 @@
 
     .passion {
         flex-direction: column;
+        margin-top: 100vw;
+    }
+
+    .angel {
+        top: -80vw;
+        left: -20vw;
     }
 
     .about .passion img {

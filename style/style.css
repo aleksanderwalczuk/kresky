@@ -250,6 +250,10 @@ header {
   position: relative;
 }
 
+.angel {
+  position: absolute;
+}
+
 .about article {
   flex-direction: column;
 }

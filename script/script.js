@@ -207,16 +207,11 @@ window.requestAnimationFrame(() => {
         document.documentElement.clientHeight);
 
     const draw = lengthSvgTop * scrollpercent;
-    // if (window.innerWidth > 1200) {
-    //   svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * -5);
-    //   console.log('>1200', draw)
-    // }
     if (window.innerWidth > 1300) {
-      svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * 1.75);
-    }
-    else svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * 4.75);
-    // const drawMobile = lengthSvgTopMobile * scrollpercent * 5.785;
-    // svgTopMobile.style.strokeDashoffset = (lengthSvgTopMobile +1000) - drawMobile;
+      svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * 6);
+    } else svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * 4.75);
+    const drawMobile = lengthSvgTopMobile * scrollpercent * 7.25;
+    svgTopMobile.style.strokeDashoffset = (lengthSvgTopMobile + 1000) - drawMobile;
   });
 
 const sygnet = document.querySelector('.logo_sygnet img');
@@ -252,7 +247,7 @@ $(window).scroll(function(){
 // SVG Animation
 
 
-// const border = document.querySelectorAll('#border')
+const border = document.querySelectorAll('#border')
 const borderDesk = document.querySelectorAll('#border-desk')
 let dashoffset = 0;
 let strokeLength = 860;
@@ -260,79 +255,60 @@ let strokeLengthBig = 2150;
 let strokeLengthBigger = 950;
 let speed = 2;
 let pathLength = borderDesk[0].getTotalLength();
-// let pathLengthBig = border[6].getTotalLength();
-// let pathLengthBigger = border[4].getTotalLength();
-// border[0].style.strokeDashoffset = dashoffset;
-// border[0].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength}`;
-// border[1].style.strokeDashoffset = dashoffset;
-// border[1].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength}`;
-// border[2].style.strokeDashoffset = dashoffset;
-// border[2].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength}`;
-// border[3].style.strokeDashoffset = dashoffset;
-// border[3].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength}`;
-// border[4].style.strokeDashoffset = dashoffset;
-// border[4].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 270}`;
-// border[5].style.strokeDashoffset = dashoffset;
-// border[5].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength}`;
-// border[6].style.strokeDashoffset = dashoffset;
-// border[6].style.strokeDasharray = `${strokeLengthBig -500},${pathLengthBig - strokeLength - 700}`;
-// border[7].style.strokeDashoffset = dashoffset;
-// border[7].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 300}`;
-// border[8].style.strokeDashoffset = dashoffset;
-// border[8].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 300}`;
-// border[9].style.strokeDashoffset = dashoffset;
-// border[9].style.strokeDasharray = `${strokeLengthBig -500},${pathLengthBig - strokeLength - 700}`;
-// border[10].style.strokeDashoffset = dashoffset;
-// border[10].style.strokeDasharray = `${strokeLengthBig -500},${pathLengthBig - strokeLength - 700}`;
-// border[11].style.strokeDashoffset = dashoffset;
-// border[11].style.strokeDasharray = `${strokeLengthBig -500},${pathLengthBig - strokeLength - 700}`;
-// border[12].style.strokeDashoffset = dashoffset;
-// border[12].style.strokeDasharray = `${strokeLengthBig -500},${pathLengthBig - strokeLength - 700}`;
+let pathLengthBig = border[6].getTotalLength();
+let pathLengthBigger = border[4].getTotalLength();
+border[0].style.strokeDashoffset = dashoffset;
+border[0].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3000}`;
+border[1].style.strokeDashoffset = dashoffset;
+border[1].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3000}`;
+border[2].style.strokeDashoffset = dashoffset;
+border[2].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 4000}`;
+border[3].style.strokeDashoffset = dashoffset;
+border[3].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3000}`;
+border[4].style.strokeDashoffset = dashoffset;
+border[4].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3200}`;
+border[5].style.strokeDashoffset = dashoffset;
+border[5].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3000}`;
+border[6].style.strokeDashoffset = dashoffset;
+border[6].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3000}`;
+border[7].style.strokeDashoffset = dashoffset;
+border[7].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3000}`;
+border[8].style.strokeDashoffset = dashoffset;
+border[8].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3000}`;
+border[9].style.strokeDashoffset = dashoffset;
+border[9].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3000}`;
 borderDesk[0].style.strokeDashoffset = dashoffset;
-borderDesk[0].style.strokeDasharray = `${strokeLengthBigger + 350},${pathLength - strokeLength + 100}`;
-// borderDesk[1].style.strokeDashoffset = dashoffset;
-// borderDesk[1].style.strokeDasharray = `${strokeLengthBigger + 350},${pathLength - strokeLength + 100}`;
-// borderDesk[2].style.strokeDashoffset = dashoffset;
-// borderDesk[2].style.strokeDasharray = `${strokeLength +3500},${pathLength - strokeLength}`;
-// borderDesk[3].style.strokeDashoffset = dashoffset;
-// borderDesk[3].style.strokeDasharray = `${strokeLength +1400},${pathLength - strokeLength}`;
-// borderDesk[4].style.strokeDashoffset = dashoffset;
-// borderDesk[4].style.strokeDasharray = `${strokeLength +1400},${pathLength - strokeLength}`;
+borderDesk[0].style.strokeDasharray = `${strokeLengthBigger + 450},${pathLength - strokeLength - 4000}`;
+borderDesk[1].style.strokeDashoffset = dashoffset;
+borderDesk[1].style.strokeDasharray = `${strokeLengthBigger + 350},${pathLength - strokeLength - 4000}`;
+borderDesk[2].style.strokeDashoffset = dashoffset;
+borderDesk[2].style.strokeDasharray = `${strokeLength + 1000},${pathLength - strokeLength - 3000}`;
 function Animate() {
   window.requestAnimationFrame(Animate);
   dashoffset -= speed;
-  // border[0].style.strokeDashoffset = dashoffset * 2.3;
-  // border[1].style.strokeDashoffset = dashoffset * 2.5;
-  // border[2].style.strokeDashoffset = dashoffset * 2.5;
-  // border[3].style.strokeDashoffset = dashoffset * 2.3;
-  // border[4].style.strokeDashoffset = dashoffset * 2.3;
-  // border[5].style.strokeDashoffset = dashoffset * 2.3;
-  // border[6].style.strokeDashoffset = dashoffset * 2.3;
-  // border[7].style.strokeDashoffset = dashoffset * 2.3;
-  // border[8].style.strokeDashoffset = dashoffset * 2.3;
-  // border[9].style.strokeDashoffset = dashoffset * 2.3;
-  // border[10].style.strokeDashoffset = dashoffset * 2.3;
-  // border[11].style.strokeDashoffset = dashoffset * 2.3;
-  // border[12].style.strokeDashoffset = dashoffset * 2.3;
-  // borderDesk[0].style.strokeDashoffset = dashoffset * 1.35;
-  // borderDesk[1].style.strokeDashoffset = dashoffset * 1.35;
-  // borderDesk[2].style.strokeDashoffset = dashoffset * 1.15;
-  // borderDesk[3].style.strokeDashoffset = dashoffset * 1.2;
-  // borderDesk[4].style.strokeDashoffset = dashoffset * 1.35;
+  border[0].style.strokeDashoffset = dashoffset * 2.3;
+  border[1].style.strokeDashoffset = dashoffset * 2.5;
+  border[2].style.strokeDashoffset = dashoffset * 2.5;
+  border[3].style.strokeDashoffset = dashoffset * 2.3;
+  border[4].style.strokeDashoffset = dashoffset * 2.3;
+  border[5].style.strokeDashoffset = dashoffset * 2.3;
+  border[6].style.strokeDashoffset = dashoffset * 2.3;
+  border[7].style.strokeDashoffset = dashoffset * 2.3;
+  border[8].style.strokeDashoffset = dashoffset * 2.3;
+  border[9].style.strokeDashoffset = dashoffset * 2.3;
+  borderDesk[0].style.strokeDashoffset = dashoffset * 1.35;
+  borderDesk[1].style.strokeDashoffset = dashoffset * 0.85;
+  borderDesk[2].style.strokeDashoffset = dashoffset * 1.15;
   if (window.innerWidth > 1024) {
     border[0].style.strokeDashoffset = dashoffset * 1.2;
-    // border[1].style.strokeDashoffset = dashoffset * 1.2;
-    // border[2].style.strokeDashoffset = dashoffset * 1.2;
-    // border[3].style.strokeDashoffset = dashoffset * 1.3;
-    // border[4].style.strokeDashoffset = dashoffset * 1.3;
-    // border[5].style.strokeDashoffset = dashoffset * 1.3;
-    // border[6].style.strokeDashoffset = dashoffset * 1.3;
-    // border[7].style.strokeDashoffset = dashoffset * 1.3;
-    // border[8].style.strokeDashoffset = dashoffset * 1.3;
-    // border[9].style.strokeDashoffset = dashoffset * 1.3;
-    // border[10].style.strokeDashoffset = dashoffset * 1.3;
-    // border[11].style.strokeDashoffset = dashoffset * 1.3;
-    // border[12].style.strokeDashoffset = dashoffset * 1.3;
+    border[1].style.strokeDashoffset = dashoffset * 1.2;
+    border[2].style.strokeDashoffset = dashoffset * 1.2;
+    border[3].style.strokeDashoffset = dashoffset * 1.3;
+    border[4].style.strokeDashoffset = dashoffset * 1.3;
+    border[5].style.strokeDashoffset = dashoffset * 1.3;
+    border[6].style.strokeDashoffset = dashoffset * 1.3;
+    border[7].style.strokeDashoffset = dashoffset * 1.3;
+    border[8].style.strokeDashoffset = dashoffset * 1.3;
   }
 }
 Animate();

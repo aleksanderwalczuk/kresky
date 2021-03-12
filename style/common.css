@@ -169,3 +169,27 @@
     stroke-dashoffset: 105%;
   }
   
+
+
+
+  /* Animations
+
+  @keyframes changedash {
+    from {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 100%;
+    }
+  
+    to {
+      stroke-dashoffset: 100%;
+      stroke-dasharray: 100%;
+    }
+  }
+
+  #border-desk,
+  #border {
+    animation-duration: 5s;
+    animation-name: changedash;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+  } */
