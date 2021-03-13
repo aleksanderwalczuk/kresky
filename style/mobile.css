@@ -10,7 +10,7 @@
     .bg-top {
         left: -20px;
         width: 85vw;
-        top: 14.5vw;
+        top: 13.25vw;
     }
 }
 
@@ -255,6 +255,9 @@
         text-align: center;
         align-items: center;
         margin-bottom: 6.25vh;
+        position: relative;
+        bottom: 9px;
+        bgleft: 5px;
     }
 
 

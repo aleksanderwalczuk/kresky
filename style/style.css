@@ -110,6 +110,71 @@ nav hr.blue {
   100% {width: 100%;}
 }
 
+.phone-screen {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: white;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-screen button {
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    width: 21px;
+    height: 21px;
+    transition: cubic-bezier(.33,.14,.35,.97) .2s;
+    transition-delay: 0s;
+    overflow: hidden;
+    display: block;
+}
+
+.phone-screen button:hover {
+  transform: rotate(90deg);
+}
+
+.phone-screen .close svg:first-child {
+  left: -29px;
+  top: 0;
+}
+
+.phone-screen .close svg:last-child {
+  left: 0px;
+  top: 0px;
+}
+
+.phone-screen .wrapper {
+  flex-direction: column;
+  width: 28%;
+  margin-bottom: 25vh;
+}
+
+.phone-screen .wrapper div {
+  display: flex;
+  margin-top: 5vh;
+  justify-content: space-between;
+}
+
+.phone-screen .wrapper div p:first-child {
+  width: 45%;
+}
+
+.phone-screen .wrapper div p:last-child {
+  font-family: 'Butler Bold';
+  font-size: 1.725vw;
+}
+
+.phone-screen svg {
+  position: absolute;
+  bottom: 0;
+  left: 25vw;
+}
+
 
 header {
     flex-direction: column;
