@@ -55,7 +55,61 @@ nav hr.blue {
     z-index: 1;
 }
 
-/* Navigation */
+/* Global */
+
+.global {
+  z-index: 6;
+}
+
+.loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  z-index: 15;
+  align-items: center;
+  animation: started .5s ease-in;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes started {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.loading img {
+  height: fit-content;
+  margin-bottom: 30px;
+}
+
+
+.loading span {
+  background-color: #f5f5f6;
+  display: block;
+  height: 6px;
+  width: 206px;
+}
+
+.loading span::after {
+  width: 0;
+  animation: load 2s;
+  animation-delay: .88s;
+  animation-fill-mode: forwards;
+  background-color: #00ffea;
+  z-index: 2;
+  content: '';
+  height: 6px;
+  display: block;
+}
+
+@keyframes load {
+  0% {width: 0%;}
+  100% {width: 100%;}
+}
+
 
 header {
     flex-direction: column;
@@ -80,7 +134,7 @@ header {
     width: 27px;
     height: 27px;
     text-decoration: none;
-    display: block;
+    display: flex;
     overflow: hidden;
     position: absolute;
     z-index: 4;
@@ -88,16 +142,14 @@ header {
 
 .runicBtn img {
     transition: transform .3s cubic-bezier(.33,.14,.35,.97);
-    position: relative;
+    position: absolute;
 }
 
 .runicBtn .down-arrowTwo {
-    position: absolute;
     top: 0;
 }
 
 .runicBtn .down-arrowLines {
-    top: -30px;
     opacity: 0;
 }
 
@@ -390,7 +442,7 @@ header {
 /* Contact */
 
 .contact {
-  padding-top: 15vh;
+  padding-top: 27vw;
 }
 
 .contact h2 {
@@ -457,12 +509,16 @@ footer {
   border-top: 1px solid #E7E9F0;
 }
 
-footer p {
-  font-size: .7275vw;
-}
 
 footer img {
   width: fit-content;
   height: fit-content;
 }
 
+
+
+/* Mozilla */
+
+
+@supports (-moz-appearance:none) {
+}

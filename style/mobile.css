@@ -2,7 +2,7 @@
     .bg-top {
         left: -10px;
         width: 85vw;
-        bottom: -6vw;
+        top: 20vw;
     }
 }
 
@@ -10,7 +10,7 @@
     .bg-top {
         left: -20px;
         width: 85vw;
-        bottom: -6vw;
+        top: 14.5vw;
     }
 }
 
@@ -18,7 +18,7 @@
     .bg-top {
         left: -10px;
         width: 85vw;
-        bottom: -6vw;
+        top: 0;
     }
 }
 
@@ -26,7 +26,7 @@
     .bg-top {
         left: -146px;
         width: 96vw;
-        bottom: -4vw;
+        top: 19vw;
     }
 }
 
@@ -34,7 +34,7 @@
     .bg-top {
         left: -108px;
         width: 95vw;
-        bottom: -12vw;
+        top: 10vw
     }
 }
 
@@ -42,7 +42,7 @@
     .bg-top {
         left: -22px;
         width: 85vw;
-        bottom: -20.5vw;
+        top: 0;
     }
 }
 
@@ -50,7 +50,7 @@
     .bg-top {
         left: -120px;
         width: 97vw;
-        bottom: -20vw;
+        top: 4vw;
     }
 }
 
@@ -58,7 +58,7 @@
     .bg-top {
         left: -10px;
         width: 85vw;
-        bottom: -6vw;
+        top: -14vw;
     }
 }
 
@@ -66,11 +66,25 @@
     .bg-top {
         left: -18px;
         width: 85vw;
-        bottom: -37.5vw;
+        top: -21vw;
     }
 }
 
 @media (min-width: 1024px) {
+
+    .loading img {
+        width: 18.78%;
+        height: fit-content;
+        margin-bottom: 30px;
+    }
+
+    .loading p {
+        margin: 350px 0 30px 0;
+    }
+
+    .loading span {
+        width: 360px;
+    }
 
     p {
         font-size: .875vw;
@@ -204,7 +218,7 @@
         stroke-width: 1px;
         fill-rule: evenodd;
         animation: drawtop 2s;
-        /* animation-delay: 3s; */
+        animation-delay: 3s;
         stroke-dasharray: 12357.5;
         stroke-dashoffset: 10794.5;
         opacity: 0;
@@ -365,9 +379,15 @@
     
     .bg-about,
     .angel {
-        width: 75vw;
+        width: 75%;
         transform: translate(-5.75vw, -10px);
         align-self: flex-start;
+    }
+
+    .bg-about {
+        position: relative;
+        left: 5.45vw;
+        bottom: 3.5vh;
     }
 
     .about .first,
@@ -392,7 +412,7 @@
     }
 
     .angel {
-        right: 12vw;
+        left: -3vw;
         top: -6.35vh;
     }
 
@@ -710,7 +730,22 @@
 /* MOBILE */
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
+
+    .loading img {
+        width: 57.225%;
+        height: fit-content;
+        margin-bottom: 30px;
+    }
+      
+      .loading p {
+        margin: 190px 0 30px 0;
+    }
+
+    .loading span {
+        width: 206px;
+    }
+
     /* Header */
 
     body {
@@ -725,18 +760,19 @@
 
     nav:after {
         transition: .36s ease-in-out;
+        transition-delay: .1s;
         left: 0;
         position: fixed;
         content: '';
         top: 0;
         bottom: 0;
         right: 0;
-        z-index: 3;
-        display: none;
+        z-index: -1;
     }
 
     .open nav::after {
         background-color: rgba(255, 255, 255, 0.87);
+        z-index: 3;
     }
 
     .open header,
@@ -807,7 +843,7 @@
     nav a {
         font-size: 13.05vw;
         line-height: 9.25vh;
-        height: 11.25vh;
+        height: 20vw;
         text-align: left;
         z-index: 6;
         text-shadow: 1.5px 1.5px #00ffea;
@@ -886,7 +922,7 @@
     .lineWrapper .bg-top {
         left: -82px;
         width: 137.25%;
-        top: 24.6vh;
+        top: 45vw;
     }
 
     .lineWrapper path {
@@ -898,8 +934,8 @@
 
     p {
        font-size: 4.45vw;
-       line-height: 4.15vh;
-       margin-top: 1.75vh;
+       line-height: 7.25vw;
+       margin-top: 3.25vw;
     }
 
     button {
@@ -911,11 +947,11 @@
     }
 
     h1, h2 {
-       line-height: 9.25vh;
+       line-height: 16.5vw;
     }
 
     h3 {
-       font-size: 8vw;
+       font-size: 7.75vw;
     }
     
     .desktop {
@@ -928,11 +964,11 @@
 
     header {
         place-items: center;
-        padding-bottom: 24.5vh;
+        padding-bottom: 40.5vw;
     }
 
     header .container {
-        margin-top: 11.75vh;
+        margin-top: 21vw;
         align-self: flex-start;
     }
 
@@ -941,18 +977,18 @@
     }
 
     header p {
-        margin: 9vh 0 0 1px;
+        margin: 16vw 0 0 1px;
     }
 
     header a {
-        bottom: 5vh;
+        bottom: 8vw;
     }
 
     /* Intro */
 
     .intro .heading-text {
-        margin-top: 10vh;
-        padding-bottom: 1vh;
+        margin-top: 22vw;
+        padding-bottom: 1.8vw;
     }
 
     .intro h2 {
@@ -961,25 +997,25 @@
 
     .intro .flexbox {
         flex-direction: column;
-        margin-top: 45vh;
+        margin-top: 80vw;
     }
 
     .intro .flexbox div:first-child {
-        margin-bottom: 45vh;
+        margin-bottom: 80vw;
     }
 
     .intro .flexbox div:nth-child(2) {
-        margin-bottom: 42.5vh;
+        margin-bottom: 75.75vw;
     }
 
     .intro a {
-        bottom: -19vh;
+        bottom: -34vw;
     }
 
     /* Showroom */
 
     .showroom {
-        padding-top: 17vh;
+        padding-top: 30.25vw;
         align-items: center;
     }
 
@@ -1006,7 +1042,7 @@
     /* About */
 
     .about {
-        padding-top: 17vh;
+        padding-top: 30.25vw;
         align-items: center;
     }
 
@@ -1021,15 +1057,15 @@
 
     .about .wrapper .content {
         flex-direction: column;
-        margin-top: 50vh;
+        margin-top: 89vw;
     }
 
     .about .wrapper .content div:first-child {
-        margin-bottom: 50vh;
+        margin-bottom: 89vw;
     }
 
     .about .wrapper .content div:nth-child(2) {
-        margin-bottom: 50vh;
+        margin-bottom: 89vw;
     }
 
     .about .bg-about {
@@ -1037,18 +1073,18 @@
     }
 
     .about .first {
-        top: -55vh;
+        top: -99vw;
         width: 100%;
         left: -50px;
     }
 
     .about .second {
-        top: 112vh;
+        top: 199vw;
         left: -85px
     }
 
     .about .third {
-        top: 170vh;
+        top: 302vw;
         left: -50px;
     }
 
@@ -1076,15 +1112,15 @@
     }
 
     .about .passion .author:first-child {
-        margin: 20vh 0 10vh;
+        margin: 35.5vw 0 18vw;
     }
 
     .customers {
-        margin-top: 20vh;
+        margin-top: 36vw;
     }
 
     .customers h2 {
-        margin-bottom: 20vh;
+        margin-bottom: 36vw;
     }
 
     .quotebox {
@@ -1115,23 +1151,23 @@
     }
 
     .about .first {
-        margin-bottom: 20vh;
+        margin-bottom: 14vw;
     }
 
     .about .first .quote:nth-child(1) .name {
         left: -11.5vw;
-        bottom: 28.5vh;
+        bottom: 50vw;
       }
       
       .about .first .quote:nth-child(2) .name {
         left: -14.5vw;
-        bottom: 14vh;
+        bottom: 25vw;
       }
       
       
       .about .first .quote:nth-child(3) .name {
         left: -27.5vw;
-        bottom: 15vh;
+        bottom: 27vw;
       }
       
       .about .quotebox button {
@@ -1143,7 +1179,6 @@
         font-family: 'Butler Bold';
         color: #0c3c3a;
         padding-bottom: 5px;
-        display: none;
       }
 
       .about .quotebox button span {
@@ -1163,22 +1198,32 @@
           content: '';
       }
 
-      .about .quotebox button:hover span:after {
+      .about .quotebox button.extend span:after {
           width: 100%;
       }
 
-      .about .second {
-          /* display: none; */
+      .about .quotebox .second {
+          overflow: hidden;
+          display: none;
+      }
+
+      .about .second.extend .quote {
+          transform: translateY(0);
+          transition: .34s ease;
       }
       
       .about .second .quote:nth-child(1) .name {
         left: -22vw;
-        bottom: 63vh;
+        bottom: 112vw;
       }
       
       .about .second .quote:nth-child(2) .name {
         left: -10vw;
-        bottom: 86vh;
+        bottom: 153vw;
+      }
+
+      .second .quote {
+          transform: translateY(-200%);
       }
 
       .about .charts {
@@ -1187,7 +1232,7 @@
       }
 
       .about .numbers h2 {
-          margin-bottom: 20vh;
+          margin-bottom: 36vw;
       }
 
       .about .charts div h3 {
@@ -1213,22 +1258,22 @@
       /* Offer */
 
       .offer {
-          padding-top: 4vh;
+          padding-top: 7vw;
           align-items: center;
       }
 
       .offer .heading-text  {
-          margin-bottom: 15vh;
+          margin-bottom: 26vw;
       }
 
       .offer h3 {
           font-size: 7.5vw;
-          line-height: 5.85vh;
-          margin-bottom: 1vh;
+          line-height: 10.5vw;
+          margin-bottom: 1.8vw;
       }
 
       .offerbox {
-          margin-bottom: 12.5vh;
+          margin-bottom: 22vw;
           justify-content: space-between;
       }
 
@@ -1259,34 +1304,140 @@
 
       .contact .boxes {
           flex-direction: column;
-          margin-top: 45vh;
+          margin-top: 80vw;
       }
 
       .contact .boxes div {
           width: auto;
-          margin-bottom: 10vh;
+          margin-bottom: 18vw;
       }
 
       .contact .boxes button {
-          font-size: 2.2vh;
+          font-size: 3.925vw;
       }
 
 
       /* Footer */
 
       footer {
-        height: 18.595vh;
+        height: 33.0556vw;
         display: flex;
         flex-direction: column;
         align-items: center;
       }
 
-      footer img {
+      footer .logo {
           width: 43.9%;
-          margin-top: 6vh;
+          margin: 7.75vw 0 4vw;
       }
 
-      footer p {
-          font-size: 2.25vh;
+      footer .icon-box-btn {
+          position: fixed;
+          right: 15px;
+          bottom: 4.25vw;
+          z-index: 3;
+          transform: translateX(130%);
+          transition: .25s ease;
+          overflow: hidden;
+      }
+
+      footer .icon-box-btn img {
+        transition: .2s ease;
+      }
+
+      footer .icon-box-btn.visible {
+          transform: translateX(0);
+      }
+
+      footer .icon-box-btn img:first-child {
+          position: absolute;
+      }
+
+      footer .icon-box-btn.open img:first-child {
+        transform: translateY(-30px);
+      }
+
+      footer .icon-box-btn.open img:last-child {
+        transform: rotate(90deg);
+      }
+
+      footer .icon-box {
+          width: 84vw;
+          display: flex;
+          padding: 4.25vw 0;
+          justify-content: space-between;
+          position: fixed;
+          background-color: white;
+          bottom: 0;
+          transform: translateY(100%);
+          transition: .34s ease;
+      }
+
+
+      .icon-box.open {
+          transform: translateY(0);
+      }
+
+      footer .icon-box span {
+          height: 27px;
+          width: 26px;
+          display: block;
+      }
+
+      footer .icon-box a:first-child span {
+          background-image: url('../assets/icons/messenger.svg');
+      }
+
+      footer .icon-box a:nth-child(2) span {
+        background-image: url('../assets/icons/mail.svg');
+    }
+
+      footer .icon-box a:nth-child(3) span {
+          background-image: url('../assets/icons/phone.svg');
+      }
+  
+      footer .icon-box a:nth-child(4) span {
+          background-image: url('../assets/icons/insta.svg');
+      }
+  
+      footer .icon-box a:last-child span {
+          background-image: url('../assets/icons/fb.svg');
+      }
+  
+      footer .icon-box a:last-child {
+          margin-right: 10.25vw;
+      }
+  
+      footer .icon-box a {
+          transform: translateY(160%);
+          transition: cubic-bezier(.33,.14,.35,.97) .2s;
+      }
+
+      footer .icon-box.open a {
+          transform: translateY(0);
+      }
+
+      footer .icon-box a:first-child {
+        transition-delay: .1s;
+      }
+
+      footer .icon-box a:nth-child(2) {
+        transition-delay: .2s;
+      }
+  
+      footer .icon-box a:nth-child(3) {
+        transition-delay: .3s;
+      }
+  
+      footer .icon-box a:nth-child(4) {
+        transition-delay: .4s;
+      }
+  
+      footer .icon-box a:last-child  {
+        transition-delay: .5s;
+      }
+  
+      footer .icon-box a:last-child {
+          margin-right: 10.25vw;
       }
 }

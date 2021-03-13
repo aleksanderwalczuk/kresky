@@ -1,3 +1,11 @@
+window.onload = () => {
+  const loader = document.querySelector('.loading')
+  setTimeout(() => {
+    loader.style.display = 'none'
+  }, 4000);
+}
+
+
 // Menu
 const body = document.querySelector('body');
 const menuBtn = document.querySelector('.menuBtn');
@@ -214,35 +222,40 @@ window.requestAnimationFrame(() => {
     svgTopMobile.style.strokeDashoffset = (lengthSvgTopMobile + 1000) - drawMobile;
   });
 
+
+
+
+
+
+
+
+
+
 const sygnet = document.querySelector('.logo_sygnet img');
 
-$(window).scroll(function(){
-    if ($(this).scrollTop() >= 5) {
-      if (window.innerWidth > 1024) {
-        console.log('dupa')
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() >= 5) {
+  sygnet.src ="assets/icons/sygnet-open.svg";
+  body.classList.add('after');
+  } else {
+    sygnet.src = 'assets/icons/sygnet_logo.svg'
+    body.classList.remove('after')
+  };
+  if (window.innerWidth < 1024) {
+    if ($(this).scrollTop() > $('.contact').offset().top) {
+      $('.icon-box-btn').addClass('visible');
+      } else {
+      $('.icon-box-btn').removeClass('open visible');
+      $('.icon-box').removeClass('open');
       }
-      sygnet.src ="assets/icons/sygnet-open.svg";
-      body.classList.add('after')
-    } else {
-    sygnet.src ="assets/icons/sygnet_logo.svg";
-    body.classList.remove('after');
-    };
+    }
  })
 
 
-$(window).scroll(function(){
-  if (window.innerWidth > 1024) {
-  if ($(this).scrollTop() >= 5)
-  {
-    $('body').addClass('after')
-    $('body').removeClass('start')
-    $('body').removeClass('rewind')
-  } else {
-    $('body').removeClass('after');
-    $('body').addClass('rewind');
-    // $('body').removeClass('start');
-  }}
-})
+
+
+
 
 // SVG Animation
 
@@ -315,3 +328,40 @@ function Animate() {
   }
 }
 Animate();
+
+
+// About Extend button //
+
+const extendBtn = document.querySelector('.quotebox button');
+
+const extend = () => {
+  const content = document.querySelector('.quotebox .second');
+  extendBtn.classList.add('extend')
+  setTimeout(() => {
+    extendBtn.style.display = 'none';
+    content.style.display = 'flex';
+  }, 900);
+  setTimeout(() => {
+    content.classList.add('extend');
+  }, 920);
+}
+
+extendBtn.addEventListener('click', extend)
+
+
+// Footer //
+
+const footerBtn = document.querySelector('.icon-box-btn');
+
+const bottomMenu = () => {
+  const bottomMenuBox = document.querySelector('.icon-box');
+  if (!footerBtn.classList.contains('open')) {
+    footerBtn.classList.add('open')
+    bottomMenuBox.classList.add('open')
+  } else {
+    footerBtn.classList.remove('open')
+    bottomMenuBox.classList.remove('open')
+  }
+}
+
+footerBtn.addEventListener('click', bottomMenu);
