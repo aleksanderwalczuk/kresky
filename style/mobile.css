@@ -111,6 +111,10 @@
     }
 
     /* HEADER */
+
+    nav a:hover {
+        text-shadow: -6px 0px #00ffea;
+    }
     
     nav hr {
         display: block;
@@ -123,13 +127,13 @@
     nav hr.black {
         width: 5px;
         right: -20px;
-        top: -30px;
+        top: -45px;
     }
     
     nav hr.blue {
         width: 5px;
         right: -20px;
-        top: -30px;
+        top: -45px;
         /* max-height: 0; */
     }
     
@@ -140,7 +144,7 @@
     
     nav a.int.active ~ hr.black,
     nav a.int:hover ~ hr.blue {
-      height: 40px;
+      height: 7vh;
     }
     
     nav a.sho.active ~ hr.black,
@@ -164,7 +168,7 @@
     }
     
     nav a.int.active ~ hr.black {
-      max-height: 40px;
+      max-height: 6vh;
     }
     
     nav a.sho.active ~ hr.black {

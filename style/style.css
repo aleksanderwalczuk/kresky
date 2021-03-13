@@ -18,12 +18,16 @@ nav .bars {
 
 nav:before {
     position: absolute;
-    content: '';
-    background: #0c3c3a;
+    content: "";
+    background: rgb(12, 60, 58);
     height: 100%;
-    transition: all 0.74s ease;
+    transition: all 0.74s ease 0s;
     opacity: 1;
     z-index: 3;
+    max-height: 4.4vh;
+    width: 5px;
+    right: -20px;
+    top: -30px;
 }
 
 nav hr {
@@ -40,6 +44,7 @@ nav hr.black {
     max-height: 0;
     height: 100%;
     transition: all 0.74s ease;
+    z-index: 2;
 }
 
 nav hr.blue {
@@ -47,6 +52,7 @@ nav hr.blue {
     background: #00ffea;
     height: 0px;
     transition: all 0.74s ease;
+    z-index: 1;
 }
 
 /* Navigation */

@@ -208,7 +208,7 @@ window.requestAnimationFrame(() => {
 
     const draw = lengthSvgTop * scrollpercent;
     if (window.innerWidth > 1300) {
-      svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * 6);
+      svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * 6.25);
     } else svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * 4.75);
     const drawMobile = lengthSvgTopMobile * scrollpercent * 7.25;
     svgTopMobile.style.strokeDashoffset = (lengthSvgTopMobile + 1000) - drawMobile;
@@ -277,6 +277,8 @@ border[8].style.strokeDashoffset = dashoffset;
 border[8].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3000}`;
 border[9].style.strokeDashoffset = dashoffset;
 border[9].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3000}`;
+border[10].style.strokeDashoffset = dashoffset;
+border[10].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3100}`;
 borderDesk[0].style.strokeDashoffset = dashoffset;
 borderDesk[0].style.strokeDasharray = `${strokeLengthBigger + 450},${pathLength - strokeLength - 4000}`;
 borderDesk[1].style.strokeDashoffset = dashoffset;
@@ -296,6 +298,7 @@ function Animate() {
   border[7].style.strokeDashoffset = dashoffset * 2.3;
   border[8].style.strokeDashoffset = dashoffset * 2.3;
   border[9].style.strokeDashoffset = dashoffset * 2.3;
+  border[10].style.strokeDashoffset = dashoffset * 1.25;
   borderDesk[0].style.strokeDashoffset = dashoffset * 1.35;
   borderDesk[1].style.strokeDashoffset = dashoffset * 0.85;
   borderDesk[2].style.strokeDashoffset = dashoffset * 1.15;
