@@ -11,6 +11,10 @@
     background: #00ffea;
   }
 
+  iframe {
+    display: none;
+  }
+
   .global {
     position: fixed;
     display: flex;
@@ -25,6 +29,13 @@
 
   .flexbox {
     display: flex;
+  }
+
+  a {
+    text-decoration: none;
+    border: none;
+    font-family: 'OpenSans Light';
+    color: #0c3c3a;
   }
 
   nav a {
@@ -193,3 +204,78 @@
     animation-iteration-count: infinite;
     animation-direction: normal;
   } */
+
+
+
+  /* Close button */
+
+
+  .close {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    transition: cubic-bezier(.33,.14,.35,.97) .2s;
+    transition-delay: 0s;
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+}
+
+.close svg {
+  position: absolute;
+  bottom: 0;
+  left: 27.5vw;
+}
+
+.close:hover {
+  transform: rotate(90deg);
+}
+
+.close svg {
+  transition: .2s ease-in;
+}
+
+.close svg:first-child {
+  left: -29px;
+  top: 0;
+}
+
+.close svg:last-child {
+  left: 0px;
+  top: 0px;
+}
+
+.close:hover svg:first-child {
+  transform: translate(25px, -25px);
+}
+
+.close:hover svg:last-child {
+  transform: translate(-25px, -25px);
+}
+
+
+.styledBtn {
+  font-family: 'Butler Bold';
+  position: relative;
+  box-sizing: content-box;
+  padding: 15.5px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #0c3c3a;
+}
+
+.styledBtn::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  transition: .74s ease;
+  display: block;
+  background-color: #00ffea;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+.styledBtn:hover::after {
+  width: 100%;
+}

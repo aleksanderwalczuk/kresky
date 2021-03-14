@@ -13,6 +13,50 @@
 <body>
 
   <div class="global">
+    <button class="close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51">
+        <defs>
+          <style>
+            .close-1, .close-2 {
+              fill: none;
+              stroke-width: 3px;
+              fill-rule: evenodd;
+            }
+      
+            .close-1 {
+              stroke: #0c3c3a;
+            }
+      
+            .close-2 {
+              stroke: #00ffea;
+            }
+          </style>
+        </defs>
+        <path id="icon_1-l" class="close-1" d="M49.044,1.952L26.952,24.043"/>
+        <path id="icon_2-l" class="close-2" d="M24.044,26.952L1.952,49.043"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51">
+    <defs>
+    <style>
+      .close-1, .close-2 {
+        fill: none;
+        stroke-width: 3px;
+        fill-rule: evenodd;
+      }
+    
+      .close-1 {
+        stroke: #0c3c3a;
+      }
+    
+      .close-2 {
+        stroke: #00ffea;
+      }
+    </style>
+    </defs>
+    <path id="icon_1-r" class="close-1" d="M1.956,1.952L24.048,24.043"/>
+    <path id="icon_2-r" class="close-2" d="M26.956,26.952L49.048,49.043"/>
+    </svg>
+    </button>
     <div class="loading">
       <p>Wczytuję dobre...</p>
       <img src="assets/icons/logo_kresky.svg" alt="logo icon">
@@ -20,50 +64,6 @@
         <span></span>
     </div>
     <div class="phone-screen">
-      <button class="close">
-        <svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51">
-          <defs>
-            <style>
-              .close-1, .close-2 {
-                fill: none;
-                stroke-width: 3px;
-                fill-rule: evenodd;
-              }
-        
-              .close-1 {
-                stroke: #0c3c3a;
-              }
-        
-              .close-2 {
-                stroke: #00ffea;
-              }
-            </style>
-          </defs>
-          <path id="icon_1-l" class="close-1" d="M49.044,1.952L26.952,24.043"></path>
-          <path id="icon_2-l" class="close-2" d="M24.044,26.952L1.952,49.043"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51">
-      <defs>
-      <style>
-        .close-1, .close-2 {
-          fill: none;
-          stroke-width: 3px;
-          fill-rule: evenodd;
-        }
-      
-        .close-1 {
-          stroke: #0c3c3a;
-        }
-      
-        .close-2 {
-          stroke: #00ffea;
-        }
-      </style>
-      </defs>
-      <path id="icon_1-r" class="close-1" d="M1.956,1.952L24.048,24.043"></path>
-      <path id="icon_2-r" class="close-2" d="M26.956,26.952L49.048,49.043"></path>
-      </svg>
-      </button>
       <div class="wrapper">
       <h2>Zadzwoń do nas</h2>
       <div>
@@ -87,15 +87,28 @@
       <path id="border" class="cls-1" d="M454.376,542.794s20.072-148.033-117.79-160.373S160.4,259.691,188.874,193.456c4.194-9.678-1.33-14.638-1.33-14.638s-50.751,37.2-105.144-7.377S3.56,75.386.981,45.61,27.616,0.442,30.588,1.2,76.653,38.376,75,53.012s-15,14.972-29.607,14.8c-6.281.757-2.047,22.374,22.205,44.411s44.215,47.355,51.813,22.206c4.405-11.106,15.679-7.732,17.781-6.891a16.729,16.729,0,0,1,4.424,2.733,203.084,203.084,0,0,1,40.419,33.017c7.6,14.635-10.374,12.2-29.608,0S130,140,130,140" style="stroke-dashoffset: -49119.2; stroke-dasharray: 1650, 186.987;"></path>
     </svg>
     </div>
+    <div class="mail-screen">
+      <form target="frame" action="scripts/contact.php" id="contactForm" method="POST"onsubmit="return !!(validateMyMail() & validateMyMessage());">
+        <h2>Skontaktuj się z nami</h2>
+        <p>Odpowiadamy na wiadomości<br class="mobile"> zazwyczaj w ciągu następnych 12h. </p>
+        <p class="inputParent" type="Email:"><input name="email" class="email input" placeholder="E-mail"><span>wpisz poprawny adres e-mail</span></input></p>
+        <p type="Numer telefonu:"><input class="input" name="number" placeholder="Numer telefonu"></input></p>
+        <p class="messageParent" type="Wiadomość:"><textarea class="msg input" name="message" placeholder="Treść wiadomości"></textarea><span>wiadomość jest pusta</span></p>
+        <button class="styledBtn" id="submit" type="submit" name="submit" value="Submit" value="send">Wyślij wiadomość</button>
+      </form>
+    </div>
+    <div class="finish-screen">
+      <svg xmlns="http://www.w3.org/2000/svg" width="227" height="143" viewBox="0 0 227 143">
+        <path id="border" data-name="mail ok kopia" d="M920,297l29,27s100.81-92.329,108-100c1.19,12.662,2.81,122,1,133-3.81,1-215.523,5-219,2s-1.857-131.662,1-132,211.81-3.662,210-2-96.19,77.672-101,77-95.523-60.662-97-61,2.143.338,0,1c-1.8.556,67,54,67,54l-83,70,226-2-85-65" transform="translate(-835.5 -223.5)" fill="none" stroke="#00ffea" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </svg>
+      <h2>Wiadomość wysłano</h2>
+      <p>Dziękujemy za skorzystanie z formularza kontaktowego</p>
+      <button class="styledBtn">Powrót do strony głównej</button>
+      </div>
+    </div>
     <div class="apla">
-      <button class="logo_sygnet" href="index.html" title="KRESKY">
-        <img src="assets/icons/sygnet logo.svg" alt="KRESKY">
-      </button>
       <p>Miło, że jesteś.</p>
       </div>
-    <button class="menuBtn mobile">
-      <span></span>
-    </button>
   </div>
 
   <nav>
@@ -110,6 +123,14 @@
       <hr class="blue-bottom" />
     </div>
   </nav>
+
+  <button class="logo_sygnet" href="index.html" title="KRESKY">
+    <img src="assets/icons/sygnet logo.svg" alt="KRESKY">
+  </button>
+
+  <button class="menuBtn mobile">
+    <span></span>
+  </button>
   
 <div class="lineWrapper">
 
@@ -996,7 +1017,9 @@
               </div>
             </div>
           </div>
-          <button class="mobile">Pokaż więcej<span></span></button>
+          <button class="mobile styledBtn">Pokaż więcej
+            <!-- <span></span> -->
+          </button>
             <div class="second">
           <div class="quote">
           <div class="name">
@@ -1267,14 +1290,15 @@
           <h3>Telefon</h3>
           <p>Skorzystaj z bezpośredniej formy kontaktu, aby sprawnie ustalić potrzeby i oczekiwania projektowe.<br>
             Dostępne w godzinach:<span> 10:00 - 17:00</span></p>
-          <button>
+            <a href="tel:+48516720692" class="phoneBtn">
             <img src="assets/icons/phone.svg" alt="">
-          </button>
+            <p>Wybierz numer telefonu</p>
+            </a>
         </div>
         <div>
           <h3>E-Mail</h3>
           <p>Napisz wiadomość o każdej porze dnia i nocy. Ustalimy obszar zapotrzebowania i wspólnie wyklarujemy korzystny kierunek realizacji.</p>
-          <button>
+          <button class="mailBtn">
             <img src="assets/icons/mail.svg" alt="">
           </button>
         </div>
@@ -1339,5 +1363,5 @@
     <script src="script/jquery.js"></script> 
     <script src="script/script.js"></script>
     <script src="script/contact.php"></script>
-    <!-- <iframe name="frame"></iframe> -->
+    <iframe name="frame"></iframe>
 </body>

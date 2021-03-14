@@ -1,15 +1,19 @@
+const globalBox = document.querySelector('.global');
+const body = document.querySelector('body');
+const menuBtn = document.querySelector('.menuBtn');
+const closeBtn = document.querySelector('.close');
+
+
 window.onload = () => {
   const loader = document.querySelector('.loading')
   setTimeout(() => {
-    loader.style.display = 'none'
-  }, 4000);
+    loader.style.display = 'none';
+    globalBox.style.zIndex = '-1';
+  }, 3400);
 }
 
 
 // Menu
-const body = document.querySelector('body');
-const menuBtn = document.querySelector('.menuBtn');
-// const nav = document.querySelector('nav');
 
 const open = () => {
   if (!body.classList.contains('open')) {
@@ -292,6 +296,8 @@ border[9].style.strokeDashoffset = dashoffset;
 border[9].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3000}`;
 border[10].style.strokeDashoffset = dashoffset;
 border[10].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3100}`;
+border[11].style.strokeDashoffset = dashoffset;
+border[11].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3100}`;
 borderDesk[0].style.strokeDashoffset = dashoffset;
 borderDesk[0].style.strokeDasharray = `${strokeLengthBigger + 450},${pathLength - strokeLength - 4000}`;
 borderDesk[1].style.strokeDashoffset = dashoffset;
@@ -312,6 +318,7 @@ function Animate() {
   border[8].style.strokeDashoffset = dashoffset * 2.3;
   border[9].style.strokeDashoffset = dashoffset * 2.3;
   border[10].style.strokeDashoffset = dashoffset * 1.25;
+  border[11].style.strokeDashoffset = dashoffset * 1.25;
   borderDesk[0].style.strokeDashoffset = dashoffset * 1.35;
   borderDesk[1].style.strokeDashoffset = dashoffset * 0.85;
   borderDesk[2].style.strokeDashoffset = dashoffset * 1.15;
@@ -365,3 +372,156 @@ const bottomMenu = () => {
 }
 
 footerBtn.addEventListener('click', bottomMenu);
+
+
+// Phone //
+
+const phoneScreen = document.querySelector('.phone-screen');
+const phoneBtn = document.querySelector('.phoneBtn');
+
+const phoneBox = (e) => {
+  if (window.innerWidth > 1024) {
+  closeBtn.style.zIndex = '13';
+  e.preventDefault();
+  globalBox.style.zIndex = '6';
+  phoneScreen.style.zIndex = '12';
+  setTimeout(() => {
+    phoneScreen.style.opacity = '1'
+    closeBtn.style.opacity = '1';
+  }, 200);
+}
+  if (window.innerWidth < 1024) {
+    const phoneNumber = document.querySelector('.phoneBtn p')
+    if (!phoneBtn.classList.contains('focus')) {
+      phoneBtn.classList.add('focus')
+      phoneNumber.textContent = '+48 516 720 692'
+    } else {
+      phoneBtn.classList.remove('focus');
+      phoneNumber.textContent = 'Wybierz numer telefonu'
+    }
+  };
+};
+
+
+phoneBtn.addEventListener('click', phoneBox);
+
+
+
+// Mail Form //
+
+const mailBtn = document.querySelector('.mailBtn');
+const mailScreen = document.querySelector('.mail-screen');
+
+const mailBox = () => {
+  closeBtn.style.zIndex = '13';
+  mailScreen.style.zIndex = '6';
+  globalBox.style.zIndex = '10';
+  setTimeout(() => {
+    mailScreen.style.opacity = '1'
+    closeBtn.style.opacity = '1'
+  }, 200);
+};
+
+mailBtn.addEventListener('click', mailBox);
+
+
+const mailInput = document.querySelector('.email');
+const msgInput = document.querySelector('form .msg');
+const inputParent = document.querySelector('.inputParent');
+const msgParent = document.querySelector('.messageParent');
+const sendBtn = document.querySelector('form button');
+const backBtn = document.querySelector('.finish-screen button');
+const finishScreen = document.querySelector('.finish-screen');
+let mailValue = mailInput.nodeValue;
+var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+
+mailInput.addEventListener('input', () => {
+  mailInput.setCustomValidity('');
+  mailInput.checkValidity();
+});
+
+function validateMyMail() {
+  if(!mailInput.value.match(mailformat)) {
+    inputParent.classList.add('invalid')
+    return false;
+  } else inputParent.classList.remove('invalid')
+  return true;
+}
+
+function validateMyMessage() {
+  if(msgInput.value === '') {
+    msgParent.classList.add('invalid')
+    return false;
+  } else msgParent.classList.remove('invalid')
+  return true;
+}
+
+inputParent.addEventListener('click', () => {
+  if (inputParent.classList.contains('invalid')) {
+    inputParent.classList.remove('invalid')
+  }
+});
+
+msgParent.addEventListener('click', () => {
+  if (msgParent.classList.contains('invalid')) {
+    msgParent.classList.remove('invalid')
+  }
+})
+
+sendBtn.addEventListener('click', () => {
+  if (msgInput.value === '' || !mailInput.value.match(mailformat)) {
+    return false;
+  } else {
+    sendBtn.classList.add('done');
+    setTimeout(function() {
+      finishScreen.style.opacity = '1'
+      }, 700);
+    setTimeout(function() {
+      mailScreen.style.opacity = '0'
+      }, 850);
+    setTimeout(function() {
+      mailScreen.style.zIndex = '-1'
+      finishScreen.style.zIndex = '6'
+      }, 1400);
+    setTimeout(function() {
+      sendBtn.classList.remove('done');
+    }, 2000);
+  }
+})
+
+backBtn.addEventListener('click', () => {
+  finishScreen.style.opacity = '0';
+  closeBtn.style.opacity = '0'
+  setTimeout(() => {
+    globalBox.style.zIndex = '-1'
+    finishScreen.style.zIndex = '-1'
+  }, 500);
+});
+
+
+
+
+
+// Close Button //
+
+const closeWindow = () => {
+  closeBtn.style.opacity = '0';
+  if (phoneScreen.style.opacity === '1') {
+    phoneScreen.style.opacity = '0'
+  }
+  if (finishScreen.style.opacity === '1') {
+    finishScreen.style.opacity = '0'
+  }
+  if (mailScreen.style.opacity === '1') {
+    mailScreen.style.opacity = '0'
+  }
+  setTimeout(() => {
+    globalBox.style.zIndex = '-1'
+    mailScreen.style.zIndex = '-1'
+    finishScreen.style.zIndex = '-1'
+    phoneScreen.style.zIndex = '-1'
+  }, 1000);
+}
+
+closeBtn.addEventListener('click', closeWindow);
