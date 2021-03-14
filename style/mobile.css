@@ -1569,4 +1569,24 @@
     form button {
         margin-top: 5vh;
     }
+
+    /* Finish Screen */
+
+    .finish-screen {
+        text-align: center;
+    }
+
+    .finish-screen svg {
+        margin-top: 15vh;
+    }
+
+    .finish-screen h2 {
+        font-size: 7.5vw;
+        margin: 5vh 0 0;
+    }
+
+    .finish-screen p {
+        width: 57%;
+        margin: 3vh 0 12vh;
+    }
 }
