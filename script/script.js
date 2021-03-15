@@ -298,6 +298,8 @@ border[10].style.strokeDashoffset = dashoffset;
 border[10].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3100}`;
 border[11].style.strokeDashoffset = dashoffset;
 border[11].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3100}`;
+border[12].style.strokeDashoffset = dashoffset;
+border[12].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3100}`;
 borderDesk[0].style.strokeDashoffset = dashoffset;
 borderDesk[0].style.strokeDasharray = `${strokeLengthBigger + 450},${pathLength - strokeLength - 4000}`;
 borderDesk[1].style.strokeDashoffset = dashoffset;
@@ -319,6 +321,7 @@ function Animate() {
   border[9].style.strokeDashoffset = dashoffset * 2.3;
   border[10].style.strokeDashoffset = dashoffset * 1.25;
   border[11].style.strokeDashoffset = dashoffset * 1.25;
+  border[12].style.strokeDashoffset = dashoffset * 1.25;
   borderDesk[0].style.strokeDashoffset = dashoffset * 1.35;
   borderDesk[1].style.strokeDashoffset = dashoffset * 0.85;
   borderDesk[2].style.strokeDashoffset = dashoffset * 1.15;
@@ -469,6 +472,9 @@ msgParent.addEventListener('click', () => {
   }
 })
 
+
+// Finish Screen //
+
 sendBtn.addEventListener('click', () => {
   if (msgInput.value === '' || !mailInput.value.match(mailformat)) {
     return false;
@@ -503,10 +509,211 @@ backBtn.addEventListener('click', () => {
 
 
 
+// Gallery //
+
+
+const projectHeader = document.querySelector('.projects .header ');
+const projectTitle = document.querySelector('.projects .title ');
+const projectDescription = document.querySelector('.projects .description ');
+const projectPhoto = document.querySelector('.projects .photo ');
+const projectClientTitle = document.querySelector('.projects .clientTitle');
+const projectClientFanPage = document.querySelector('.website');
+const projectClientFb = document.querySelector('.fanpage');
+const projectClientYt = document.querySelector('.youtube');
+const projectClientAddress = document.querySelector('.projects .address');
+const projectPhotograph = document.querySelector('.projects .photoBy');
+const projectQuote = document.querySelector('.projects .clientQuote');
+const projectQuoteAuthor = document.querySelector('.projects .author');
+const projectQuoteBox = document.querySelector('.projects .quote')
+const projectIcon = document.querySelector('.icon');
+const projectIconYt = document.querySelector('.youtube img');
+const projecttextYt = document.querySelector('.youtube p');
+const projectTestimonials = document.querySelector('.testimonial');
+const project = document.querySelector('.projects');
+
+const globalWrapper = document.querySelector('.global-wrapper')
+const galleryProjects = document.querySelectorAll('.hoverbox div');
+const backButton = document.querySelector('.back');
+const nextButton = document.querySelectorAll('.next');
+const prevButton = document.querySelectorAll('.prev');
+const projectBox = document.querySelector('.projects');
+var targetElm = document.querySelector('.projects .top');
+var root = document.querySelector('html');
+
+
+// Contents
+
+
+const galleryContents = {
+  headers: [" Okładka płyty CD (digipack)", 
+            " Logo + ilustracja", 
+            " Ilustracje (na ubrania)", 
+            " 4 Lubię Placki", 
+            " 5 Lubię Placki", 
+            " 6 Lubię Placki", 
+            " 7 Lubię Placki", 
+            " 8 Lubię Placki", 
+            " 9 Lubię Placki"],
+  
+  titles: ["Wiosna Ludów", 
+           "Damage Seed", 
+           "Kolekcja I-talia", 
+           "Święto Lasu", 
+           " 4 Lubię Placki", 
+           " 5 Lubię Placki", 
+           " 6 Lubię Placki", 
+           " 7 Lubię Placki", 
+           " 8 Lubię Placki"],
+   
+  
+  descriptionsDesk: ["Opracowanie graficzne dla digipack’a projektu muzycznego. Motywem przewodnim jest drzewo, którego korona przedstawia mapę europy. Jego pień skrywają ludzkie profile. Sylwetka umieszczona obok drzewa to postać wokalisty. Ramiona postaci tworzą kształt oka.",
+
+  "Założeniem projektu było stworzenie logo i ilustracji w nawiązaniu do motywu ziarna wyciąganego z oka. W logo opartym na złotej proporcji zawarty został kształt ziarna jako gałki ocznej. Ilustracja powstała na podstawie zdjęcia otrzymanego od klienta oraz sugestii na temat w/w motywu przewodniego. Całość oparta na technice wektorowej.", 
+  
+  "Ilustracje wektorowe dostosowane do haftu na ubraniach. Tematyka projektów nawiązuje w swobodny sposób do włoskiego klimatu. Dzięki zastosowaniu stylistyki linearnej, cała kolekcja osadzona jest w minimalistycznej formie.", 
+  
+  "Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4", " 4 Lubię Placki", " 4 Lubię Placki", " 4 Lubię Placki", " 4 Lubię Placki", " 4 Lubię Placki"],
+  
+  photos: ["assets/images/portfolio/1.jpg", 
+           "assets/images/portfolio/2.jpg", 
+           "assets/images/portfolio/3.jpg", 
+           "assets/images/portfolio/3.jpg", 
+           "assets/images/portfolio/5.jpg", 
+           "assets/images/portfolio/6.jpg", 
+           "assets/images/portfolio/7.jpg", 
+           "assets/images/portfolio/8.jpg", 
+           "assets/images/portfolio/9.jpg"],
+
+  photosMobile: ["assets/images/portfolio-mobile/1.jpg", 
+           "assets/images/portfolio-mobile/2.jpg", 
+           "assets/images/portfolio-mobile/3.jpg", 
+           "assets/images/portfolio-mobile/3.jpg", 
+           "assets/images/portfolio-mobile/5.jpg", 
+           "assets/images/portfolio-mobile/6.jpg", 
+           "assets/images/portfolio-mobile/7.jpg", 
+           "assets/images/portfolio-mobile/8.jpg", 
+           "assets/images/portfolio-mobile/9.jpg"],
+  
+  addresses : ["www.adres1.pl",
+               "", 
+               "I-TALIAWEAR.COM", 
+               "www.adres4.pl", 
+               "www.adres5.pl", 
+               "www.adres6.pl", 
+               "www.adres7.pl", 
+               "www.adres8.pl", 
+               "www.adres9.pl"],
+
+  websiteLinks : ["www.adres1.pl", "https://www.empty.com", "www.adres3.pl", "https://www.empty.com", "www.adres5.pl", "www.adres6.pl", "www.adres7.pl", "www.adres8.pl", "www.adres9.pl"], 
+
+  fbLinks : ["www.adres1.pl", "HTTPS://WWW.FACEBOOK.COM/DAMAGESEED", "www.adres3.pl", "https://www.empty.com", "www.adres5.pl", "www.adres6.pl", "www.adres7.pl", "www.adres8.pl", "www.adres9.pl", ],
+
+  ytLinks : ["www.adres1.pl", "HTTPS://WWW.YOUTUBE.COM/USER/DAMAGESEED", "www.adres3.pl", "www.adres4.pl", "www.adres5.pl", "www.adres6.pl", "www.adres7.pl", "www.adres8.pl", "www.adres9.pl", ],
+
+  photographers : ["Imie i nazwisko1", 
+                   "Imie i nazwisko2", 
+                   "Imie i nazwisko3",
+                   "Imie i nazwisko4",
+                   "Imie i nazwisko5",
+                   "Imie i nazwisko6",
+                   "Imie i nazwisko7",
+                   "Imie i nazwisko8",
+                   "Imie i nazwisko9"],
+
+   clientQuotes : ["Miałem bardzo wygórowane oczekiwania odnosnie szaty graficznej do mojego albumu. W sumie to mialem tylko zarys informacji, które chciałem, aby się tam pojawiły. Sama wspólpraca przebiegła na najwyższym poziomie! Pełne zrozumienie, choć nie musiałem robić/podpowiadać zbyt wiele, co jest mega ważne, bo nie każdy potrafi dokładnie przekazać to, czego oczekuje! (tak też było w moim przypadku). Oprócz samego wizualnego efektu w okładce została zawarta ukryta treść, dostepna tylko dla spostrzegawczego oka. WOW! Efekt końcowy przerósł wielokrotnie moje najsmielsze oczekiwania. Moje oczy zobaczyły to, co wcześniej widział tylko umysł. Rewelacja.",
+
+  "Jestem bardzo zadowolony z przebiegu i efektów naszej współpracy. Po przedstawieniu mojego pomysłu przeszliśmy z Łukaszem do omawiania szczegółów i konkretów, by wszystko było jasne i żebyśmy oboje wiedzieli na czym stoimy. W trakcie realizowania mojego zamówienia byłem informowany o postępach i mogłem na bieżąco śledzić etapy powstawania. Dzieło, które otrzymałem na końcu spełniło, a wręcz wykroczyło poza moje oczekiwania. Z czystym sumieniem mogę polecić Łukasza każdemu - osobie potrzebującej logotypu firmy, ilustracji, czy komuś, kto po prostu potrzebuje kreatywnego grafika, który pomoże, naprowadzi i rozwinie podany mu pomysł tak, by efekt był satysfakcjonujący dla obu stron.",
+
+  "Fachowy kontakt pozwolił na sprawne określenie potrzeb, a także specyfiki projektu. Świetna współpraca zaowocowała projektami dedykowanego logoi funkcjonalego sklepu internetowego; dostosowanymi do profilu moich klientów. Polecam.",
+  "",
+
+  "",
+
+  "Fachowy kontakt pozwolił na sprawne określenie potrzeb, a także specyfiki projektu. Świetna współpraca zaowocowała projektami dedykowanego logoi funkcjonalego sklepu internetowego; dostosowanymi do profilu moich klientów. Polecam.",
+  "Duże zaangażowanie podczas naszej współpracy to ogromna zaleta. Dzięki inwencji twórczej oraz sugestiom udało się wypracować atrakcyjny sposób prezentacji produktu mojej firmy.",
+
+  "Jestem bardzo zadowolony z przebiegu i efektów naszej współpracy. W trakcie realizowania projektu byłem informowany o postępach i mogłem na bieżąco śledzić etapy powstawania. Dzieło, które otrzymałem spełniło, a wręcz wykroczyło ponad moje oczekiwania.Z czystym sumieniem mogę polecić każdemu - osobie potrzebującej logo, ilustracji, czy komuś, kto po prostu potrzebuje kreatywnego grafika, który pomoże, naprowadzi i rozwinie podany mu pomysł tak, by efekt był satysfakcjonujący dla obu stron.",
+
+  "Planując wygląd swojego logo miałem w głowie tylko ogólny zarys jak ma ono wyglądać. Po tych cząstkowych informacjach powstało dla mnie dzieło sztuki które w pełni zobrazowało to na czym mi zależało. Pełen profesjonalizm i wyczucie. Dziękuję i polecam.",
+
+  "Miałem bardzo wygórowane oczekiwania odnosnie szaty graficznej do mojego albumu. W sumie to mialem tylko zarys informacji, które chciałem, aby się tam pojawiły. Sama wspólpraca przebiegła na najwyższym poziomie! Pełne zrozumienie, choć nie musiałem robić/podpowiadać zbyt wiele, co jest mega ważne, bo nie każdy potrafi dokładnie przekazać to, czego oczekuje! (tak też było w moim przypadku). Oprócz samego wizualnego efektu w okładce została zawarta ukryta treść, dostepna tylko dla spostrzegawczego oka. WOW! Efekt końcowy przerósł wielokrotnie moje najsmielsze oczekiwania. Moje oczy zobaczyły to, co wcześniej widział tylko umysł. Rewelacja.",
+
+  "Jestem bardzo zadowolony z przebiegu i efektów naszej współpracy. W trakcie realizowania projektu byłem informowany o postępach i mogłem na bieżąco śledzić etapy powstawania. Dzieło, które otrzymałem spełniło, a wręcz wykroczyło ponad moje oczekiwania.Z czystym sumieniem mogę polecić każdemu - osobie potrzebującej logo, ilustracji, czy komuś, kto po prostu potrzebuje kreatywnego grafika, który pomoże, naprowadzi i rozwinie podany mu pomysł tak, by efekt był satysfakcjonujący dla obu stron."],
+
+
+
+  quoteAuthors: ["Jan Robak, GMF LABEL","Karol Bieńkowski, Lider zespołu DAMAGE SEED", "Mikołaj Drożdżyński, BOOGIE WOODY", "Dawid Senko, REDTARGET.PL Sp. z o.o",
+                "Michał Miś, CEO kominki.eu","Jan Robak, GMF LABEL","Karol Bieńkowski, Lider zespołu DAMAGE SEED", "Mikołaj Drożdżyński, BOOGIE WOODY", "Jan Robak, GMF LABEL"]};
+
+
+
+// Events //
+
+
+galleryProjects.forEach(project => {    
+  project.addEventListener('click', () => {
+  body.classList.add('project');
+  globalBox.style.zIndex = '5';
+  root.style.scrollBehavior = 'unset'
+  project.classList.add('active');
+  setTimeout(() => {
+    body.style.overflow = 'hidden';
+    closeBtn.style.opacity = '1';
+  }, 800);
+
+
+  let activeContent = document.querySelector('.gallery .active');
+  let indexOfActiveContent = [...galleryProjects].indexOf(activeContent);
+
+  const changeContent = () => {
+    projectHeader.textContent = galleryContents.headers[indexOfActiveContent];
+    projectTitle.textContent = galleryContents.titles[indexOfActiveContent];
+    projectDescription.textContent = galleryContents.descriptionsDesk[indexOfActiveContent];
+    // projectClientTitle.textContent = galleryContents.websiteTitles[indexOfActiveContent];
+    projectClientAddress.textContent = galleryContents.addresses[indexOfActiveContent];
+    projectClientFanPage.setAttribute('href', galleryContents.websiteLinks[indexOfActiveContent]);
+    projectClientFb.setAttribute('href', galleryContents.fbLinks[indexOfActiveContent]);
+    projectClientYt.setAttribute('href', galleryContents.ytLinks[indexOfActiveContent]);
+    projectPhotograph.textContent = galleryContents.photographers[indexOfActiveContent];
+    projectQuote.textContent = galleryContents.clientQuotes[indexOfActiveContent];
+    projectQuoteAuthor.textContent = galleryContents.quoteAuthors[indexOfActiveContent];
+    if (window.innerWidth > 769) {
+      projectPhoto.src = galleryContents.photos[indexOfActiveContent];
+    } else projectPhoto.src = galleryContents.photosMobile[indexOfActiveContent];
+    if (projectClientFanPage.href !== "https://www.empty.com/") {
+      projectClientFanPage.style.display = 'flex';
+    } else projectClientFanPage.style.display ="none";
+    if (projectClientYt.href !== "https://www.empty.com/") {
+      projectClientYt.style.display = 'flex';
+    } else projectClientFanPage.style.display ="none";
+    if (projectClientFb.href !== "https://www.empty.com/") {
+      projectClientFb.style.display = 'flex';
+    } else projectClientFanPage.style.display ="none";
+    if (projectQuote.textContent !== "") {
+      projectQuoteBox.style.display = "block"
+    } else projectQuoteBox.style.display ="none";
+    if (projectClientFb.href !== "https://www.empty.com" && projectQuote.textContent !== "") {
+      projectTestimonials.style.display = 'flex'
+    } else projectTestimonials.style.display = 'none';
+  };
+
+
+   changeContent();
+
+  
+  setTimeout(function() {
+    globalWrapper.classList.add('off');
+  }, 500);
+
+ });
+});
+
+
+
+
 // Close Button //
 
 const closeWindow = () => {
-  closeBtn.style.opacity = '0';
   if (phoneScreen.style.opacity === '1') {
     phoneScreen.style.opacity = '0'
   }
@@ -516,12 +723,21 @@ const closeWindow = () => {
   if (mailScreen.style.opacity === '1') {
     mailScreen.style.opacity = '0'
   }
+  if (body.classList.contains('project')) {
+    body.classList.remove('project')
+    globalWrapper.classList.remove('off')
+    body.style.overflow = 'visible';
+    galleryProjects.forEach(project => {
+      project.classList.remove('active');
+    })
+  }
   setTimeout(() => {
     globalBox.style.zIndex = '-1'
     mailScreen.style.zIndex = '-1'
     finishScreen.style.zIndex = '-1'
     phoneScreen.style.zIndex = '-1'
-  }, 1000);
+  }, 800);
+  closeBtn.style.opacity = '0'
 }
 
 closeBtn.addEventListener('click', closeWindow);

@@ -262,6 +262,7 @@
   display: flex;
   flex-direction: column;
   border-bottom: 2px solid #0c3c3a;
+  cursor: pointer;
 }
 
 .styledBtn::after {
