@@ -122,8 +122,6 @@ nav hr.blue {
   height: 100vh;
   position: fixed;
   background-color: white;
-  opacity: 0;
-  z-index: -1;
   align-items: center;
   justify-content: center;
   transition: .34s ease-in;
@@ -167,8 +165,6 @@ nav hr.blue {
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: -1;
-  opacity: 0;
   transition: .34s ease;
 }
 
@@ -276,8 +272,6 @@ form button.done::before {
   width: 100vw;
   background-color: white;
   align-items: center;
-  opacity: 0;
-  z-index: -1;
   transition: .34s ease;
 }
 
@@ -402,8 +396,9 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 70;
+    z-index: 0;
     opacity: 0;
+    cursor: pointer;
   }
 
   .showroom .gallery .hoverbox:hover svg {
@@ -759,7 +754,6 @@ footer img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 85px;
 }
 
 .projects .photo {
@@ -774,9 +768,8 @@ footer img {
   justify-content: space-between;
 }
 
-.projects h1 {
+.projects h2 {
   text-align: center;
-  margin: 0 0 53px;
   text-align: center;
 }
 
@@ -802,8 +795,6 @@ footer img {
 
 .projects .quoteBox img {
   align-self: flex-start;
-  width: 6%;
-  margin-right: 15px;
 }
 
 .projects .ourbox div a {
@@ -817,8 +808,7 @@ footer img {
 .projects .quote div:last-child span {
   border-top: 1px solid #0C3C3A;
   display: block;
-  width: 56px;
-  margin: 25px 15px 0 0;
+  align-self: center;
 }
 
 .projects .quote div:last-child {
@@ -834,9 +824,6 @@ footer img {
   font-size: 4.25vw;
 }
 
-.projects .client p:first-child, .projects .ourbox p:first-child {
-  margin-bottom: 25px;
-}
 
 .projects .client a, .projects .ourbox a {
   margin-bottom: 15px;
@@ -844,16 +831,12 @@ footer img {
 
 .projects .client a p, .projects .ourbox a p {
   font-size: 4vw;
-  margin: 0 0 0 15px;
 }
 
 .projects .client div:last-child div {
   margin-top: 42px;
 }
 
-.projects .ourbox {
-  margin-top: 78px;
-}
 
 
 

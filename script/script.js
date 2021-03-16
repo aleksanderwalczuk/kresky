@@ -4,14 +4,6 @@ const menuBtn = document.querySelector('.menuBtn');
 const closeBtn = document.querySelector('.close');
 
 
-window.onload = () => {
-  const loader = document.querySelector('.loading')
-  setTimeout(() => {
-    loader.style.display = 'none';
-    globalBox.style.zIndex = '-1';
-  }, 3400);
-}
-
 
 // Menu
 
@@ -380,39 +372,49 @@ footerBtn.addEventListener('click', bottomMenu);
 // Phone //
 
 const phoneScreen = document.querySelector('.phone-screen');
-const phoneBtn = document.querySelector('.phoneBtn');
+const phoneBtn = document.querySelectorAll('.phoneBtn');
 
 const phoneBox = (e) => {
   if (window.innerWidth > 1024) {
-  closeBtn.style.zIndex = '13';
-  e.preventDefault();
-  globalBox.style.zIndex = '6';
-  phoneScreen.style.zIndex = '12';
-  setTimeout(() => {
-    phoneScreen.style.opacity = '1'
-    closeBtn.style.opacity = '1';
-  }, 200);
-}
-  if (window.innerWidth < 1024) {
-    const phoneNumber = document.querySelector('.phoneBtn p')
-    if (!phoneBtn.classList.contains('focus')) {
-      phoneBtn.classList.add('focus')
-      phoneNumber.textContent = '+48 516 720 692'
-    } else {
-      phoneBtn.classList.remove('focus');
-      phoneNumber.textContent = 'Wybierz numer telefonu'
+      e.preventDefault();
+      closeBtn.style.zIndex = '13';
+      globalBox.style.zIndex = '6';
+      phoneScreen.style.zIndex = '12';
+      setTimeout(() => {
+        phoneScreen.style.opacity = '1'
+        closeBtn.style.opacity = '1';
+      }, 200);
+ }
+ if (window.innerWidth < 1024) {
+  const phoneNumber = document.querySelectorAll('.phoneBtn p')
+   phoneBtn.forEach(button => {
+     if (!button.classList.contains('focus')) {
+      button.classList.add('focus');
+      phoneNumber.forEach(number => {
+        number.textContent = '+48 516 720 692'
+      })
+     } else {
+       e.preventDefault();
+       button.classList.remove('focus')
+       phoneNumber.forEach(number => {
+         number.textContent = 'WYŚWIETL NUMER TELEFONU'
+       })
+     }
     }
-  };
-};
+  )
+ }
+}
 
 
-phoneBtn.addEventListener('click', phoneBox);
+phoneBtn.forEach(button => {
+  button.addEventListener('click', phoneBox);
+});
 
 
 
 // Mail Form //
 
-const mailBtn = document.querySelector('.mailBtn');
+const mailBtn = document.querySelectorAll('.mailBtn');
 const mailScreen = document.querySelector('.mail-screen');
 
 const mailBox = () => {
@@ -425,7 +427,9 @@ const mailBox = () => {
   }, 200);
 };
 
-mailBtn.addEventListener('click', mailBox);
+mailBtn.forEach(button => {
+  button.addEventListener('click', mailBox);
+})
 
 
 const mailInput = document.querySelector('.email');
@@ -479,17 +483,16 @@ sendBtn.addEventListener('click', () => {
   if (msgInput.value === '' || !mailInput.value.match(mailformat)) {
     return false;
   } else {
+    finishScreen.style.opacity = '0'
     sendBtn.classList.add('done');
-    setTimeout(function() {
-      finishScreen.style.opacity = '1'
-      }, 700);
+    finishScreen.style.zIndex = '2'
+    finishScreen.style.opacity = '1'
     setTimeout(function() {
       mailScreen.style.opacity = '0'
-      }, 850);
+      }, 800);
     setTimeout(function() {
-      mailScreen.style.zIndex = '-1'
-      finishScreen.style.zIndex = '6'
-      }, 1400);
+      mailScreen.style.zIndex = '0'
+      }, 820);
     setTimeout(function() {
       sendBtn.classList.remove('done');
     }, 2000);
@@ -498,11 +501,17 @@ sendBtn.addEventListener('click', () => {
 
 backBtn.addEventListener('click', () => {
   finishScreen.style.opacity = '0';
+  if (!body.classList.contains('project')) {
   closeBtn.style.opacity = '0'
   setTimeout(() => {
     globalBox.style.zIndex = '-1'
     finishScreen.style.zIndex = '-1'
   }, 500);
+} else {
+  setTimeout(() => {
+    finishScreen.style.zIndex = '-1'
+  }, 500);
+}
 });
 
 
@@ -539,6 +548,9 @@ const prevButton = document.querySelectorAll('.prev');
 const projectBox = document.querySelector('.projects');
 var targetElm = document.querySelector('.projects .top');
 var root = document.querySelector('html');
+
+
+const showroomHref = document.querySelector('.sho');
 
 
 // Contents
@@ -650,6 +662,8 @@ const galleryContents = {
 // Events //
 
 
+// Open Gallery Event//
+
 galleryProjects.forEach(project => {    
   project.addEventListener('click', () => {
   body.classList.add('project');
@@ -710,34 +724,265 @@ galleryProjects.forEach(project => {
 
 
 
+// Close Gallery Event //
+
+
+const closeGalleryBtn = document.querySelector('.back');
+
+
+const closeGallery = () => {
+  closeBtn.style.opacity = '0';
+  setTimeout(() => {
+    body.classList.remove('project')
+    globalWrapper.classList.remove('off')
+    body.style.overflow = 'visible';
+  }, 300);
+  setTimeout(() => {
+    globalBox.style.zIndex = '-1'
+  }, 1100);
+  galleryProjects.forEach(project => {
+    project.classList.remove('active');
+  }
+ )
+ root.style.scrollBehavior = 'smooth'  
+}
+
+closeGalleryBtn.addEventListener('click', closeGallery);
+
+
+
+// Prev Project Event //
+
+
+
+const prevBtn = document.querySelectorAll('.prev')
+
+
+const prevProject = () => {
+  let activeContent = document.querySelector('.gallery .active');
+  let indexOfActiveContent = [...galleryProjects].indexOf(activeContent);
+  if (indexOfActiveContent < 1) {
+    indexOfActiveContent = galleryProjects.length;
+    galleryProjects[0].classList.remove('active');
+  }
+  indexOfActiveContent--;
+  body.classList.remove('project');
+  globalBox.classList.remove('Off');
+  window.location = showroomHref.href;
+  setTimeout(function() {
+    targetElm.scrollIntoView()
+    if (indexOfActiveContent !== 8) {
+      galleryProjects[indexOfActiveContent + 1].classList.remove('active');
+    } else galleryProjects[8].classList.remove('active')
+    root.style.scrollBehavior = 'smooth';
+  }, 1200);
+  setTimeout(function() {
+    body.classList.add('project');
+    root.style.scrollBehavior = 'unset'
+    galleryProjects[indexOfActiveContent].classList.add('active');
+  }, 1300);
+  setTimeout(function() {
+    globalBox.classList.add('Off');
+  }, 1800);    
+
+  const changeContent = () => {
+    projectHeader.textContent = galleryContents.headers[indexOfActiveContent];
+    projectTitle.textContent = galleryContents.titles[indexOfActiveContent];
+    projectDescription.textContent = galleryContents.descriptionsDesk[indexOfActiveContent];
+    // projectClientTitle.textContent = galleryContents.websiteTitles[indexOfActiveContent];
+    projectClientAddress.textContent = galleryContents.addresses[indexOfActiveContent];
+    projectClientFanPage.setAttribute('href', galleryContents.websiteLinks[indexOfActiveContent]);
+    projectClientFb.setAttribute('href', galleryContents.fbLinks[indexOfActiveContent]);
+    projectClientYt.setAttribute('href', galleryContents.ytLinks[indexOfActiveContent]);
+    projectPhotograph.textContent = galleryContents.photographers[indexOfActiveContent];
+    projectQuote.textContent = galleryContents.clientQuotes[indexOfActiveContent];
+    projectQuoteAuthor.textContent = galleryContents.quoteAuthors[indexOfActiveContent];
+    if (window.innerWidth > 769) {
+      projectPhoto.src = galleryContents.photos[indexOfActiveContent];
+    } else projectPhoto.src = galleryContents.photosMobile[indexOfActiveContent];
+    if (projectClientFanPage.href !== "https://www.empty.com/") {
+      projectClientFanPage.style.display = 'flex';
+    } else projectClientFanPage.style.display ="none";
+    if (projectClientYt.href !== "https://www.empty.com/") {
+      projectClientYt.style.display = 'flex';
+    } else projectClientFanPage.style.display ="none";
+    if (projectClientFb.href !== "https://www.empty.com/") {
+      projectClientFb.style.display = 'flex';
+    } else projectClientFanPage.style.display ="none";
+    if (projectQuote.textContent !== "") {
+      projectQuoteBox.style.display = "block"
+    } else projectQuoteBox.style.display ="none";
+    if (projectClientFb.href !== "https://www.empty.com" && projectQuote.textContent !== "") {
+      projectTestimonials.style.display = 'flex'
+    } else projectTestimonials.style.display = 'none';
+  };
+
+
+  setTimeout(function() {
+    changeContent();
+  }, 500)
+};
+
+prevBtn.forEach(button => {
+  button.addEventListener('click', prevProject)
+})
+
+
+
+
+// Next Project Event //
+
+
+
+const nextBtn = document.querySelectorAll('.next')
+
+
+const nextProject = () => {
+  let activeContent = document.querySelector('.gallery .active');
+  let indexOfActiveContent = [...galleryProjects].indexOf(activeContent);
+  if (indexOfActiveContent > 7) {
+    indexOfActiveContent = -1;
+    galleryProjects[8].classList.remove('active');
+  }
+  indexOfActiveContent++;
+  body.classList.remove('project');
+  globalBox.classList.remove('Off');
+  window.location = showroomHref.href;
+  setTimeout(function() {
+    targetElm.scrollIntoView()
+    if (indexOfActiveContent !== 0) {
+      galleryProjects[indexOfActiveContent - 1].classList.remove('active');
+    } else galleryProjects[8].classList.remove('active')
+    root.style.scrollBehavior = 'smooth';
+  }, 1200);
+  setTimeout(function() {
+    body.classList.add('project');
+    root.style.scrollBehavior = 'unset'
+    galleryProjects[indexOfActiveContent].classList.add('active');
+  }, 1300);
+  setTimeout(function() {
+    globalBox.classList.add('Off');
+  }, 1800);    
+
+  const changeContent = () => {
+    projectHeader.textContent = galleryContents.headers[indexOfActiveContent];
+    projectTitle.textContent = galleryContents.titles[indexOfActiveContent];
+    projectDescription.textContent = galleryContents.descriptionsDesk[indexOfActiveContent];
+    // projectClientTitle.textContent = galleryContents.websiteTitles[indexOfActiveContent];
+    projectClientAddress.textContent = galleryContents.addresses[indexOfActiveContent];
+    projectClientFanPage.setAttribute('href', galleryContents.websiteLinks[indexOfActiveContent]);
+    projectClientFb.setAttribute('href', galleryContents.fbLinks[indexOfActiveContent]);
+    projectClientYt.setAttribute('href', galleryContents.ytLinks[indexOfActiveContent]);
+    projectPhotograph.textContent = galleryContents.photographers[indexOfActiveContent];
+    projectQuote.textContent = galleryContents.clientQuotes[indexOfActiveContent];
+    projectQuoteAuthor.textContent = galleryContents.quoteAuthors[indexOfActiveContent];
+    if (window.innerWidth > 769) {
+      projectPhoto.src = galleryContents.photos[indexOfActiveContent];
+    } else projectPhoto.src = galleryContents.photosMobile[indexOfActiveContent];
+    if (projectClientFanPage.href !== "https://www.empty.com/") {
+      projectClientFanPage.style.display = 'flex';
+    } else projectClientFanPage.style.display ="none";
+    if (projectClientYt.href !== "https://www.empty.com/") {
+      projectClientYt.style.display = 'flex';
+    } else projectClientFanPage.style.display ="none";
+    if (projectClientFb.href !== "https://www.empty.com/") {
+      projectClientFb.style.display = 'flex';
+    } else projectClientFanPage.style.display ="none";
+    if (projectQuote.textContent !== "") {
+      projectQuoteBox.style.display = "block"
+    } else projectQuoteBox.style.display ="none";
+    if (projectClientFb.href !== "https://www.empty.com" && projectQuote.textContent !== "") {
+      projectTestimonials.style.display = 'flex'
+    } else projectTestimonials.style.display = 'none';
+  };
+
+
+  setTimeout(function() {
+    changeContent();
+  }, 500)
+};
+
+nextBtn.forEach(button => {
+  button.addEventListener('click', prevProject)
+})
+
+
+
+
 
 // Close Button //
 
 const closeWindow = () => {
-  if (phoneScreen.style.opacity === '1') {
-    phoneScreen.style.opacity = '0'
-  }
-  if (finishScreen.style.opacity === '1') {
-    finishScreen.style.opacity = '0'
-  }
-  if (mailScreen.style.opacity === '1') {
-    mailScreen.style.opacity = '0'
-  }
-  if (body.classList.contains('project')) {
-    body.classList.remove('project')
-    globalWrapper.classList.remove('off')
-    body.style.overflow = 'visible';
-    galleryProjects.forEach(project => {
-      project.classList.remove('active');
-    })
-  }
-  setTimeout(() => {
-    globalBox.style.zIndex = '-1'
-    mailScreen.style.zIndex = '-1'
-    finishScreen.style.zIndex = '-1'
-    phoneScreen.style.zIndex = '-1'
-  }, 800);
-  closeBtn.style.opacity = '0'
-}
+
+  // Gallery Close
+
+  if (!body.classList.contains('project')) {
+    if (phoneScreen.style.opacity === '1') {
+      phoneScreen.style.opacity = '0';
+      setTimeout(() => {
+        globalBox.style.zIndex = '-1'
+        phoneScreen.style.zIndex = '-1'
+      }, 800);
+      closeBtn.style.opacity = '0'
+    }
+    if (finishScreen.style.opacity === '1') {
+      finishScreen.style.opacity = '0';
+      setTimeout(() => {
+        globalBox.style.zIndex = '-1'
+        finishScreen.style.zIndex = '-1'
+      }, 800);
+      closeBtn.style.opacity = '0'
+    }
+    if (mailScreen.style.opacity === '1') {
+      mailScreen.style.opacity = '0';
+      setTimeout(() => {
+        globalBox.style.zIndex = '-1'
+        mailScreen.style.zIndex = '-1'
+      }, 800);
+      closeBtn.style.opacity = '0'
+    }
+    
+    // Gallery Open//
+
+  } else {
+    if (phoneScreen.style.opacity === '1' || mailScreen.style.opacity === '1' || finishScreen.style.opacity === '1') {
+      phoneScreen.style.opacity = '0';
+      mailScreen.style.opacity = '0';
+      finishScreen.style.opacity = '0';
+      setTimeout(() => {
+        phoneScreen.style.zIndex = '0';
+        mailScreen.style.zIndex = '0';
+        finishScreen.style.zIndex = '0';
+      }, 100);
+    } else if (phoneScreen.style.opacity === '0' || mailScreen.style.opacity === '0' || finishScreen.style.opacity === '0') {
+      closeBtn.style.opacity = '0';
+      setTimeout(() => {
+        body.classList.remove('project')
+        globalWrapper.classList.remove('off')
+        body.style.overflow = 'visible';
+      }, 300);
+      setTimeout(() => {
+        globalBox.style.zIndex = '-1'
+      }, 1100);
+      galleryProjects.forEach(project => {
+        project.classList.remove('active');
+      }
+     )
+     root.style.scrollBehavior = 'smooth'
+    }
+ }
+};
 
 closeBtn.addEventListener('click', closeWindow);
+
+
+window.onload = () => {
+  phoneScreen.style.opacity = '0';
+  mailScreen.style.opacity = '0';
+  finishScreen.style.opacity = '0';
+  const loader = document.querySelector('.loading')
+  setTimeout(() => {
+    loader.style.display = 'none';
+    globalBox.style.zIndex = '-1';
+  }, 3400);
+}

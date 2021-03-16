@@ -797,9 +797,27 @@
 
 
       .projects .testimonial {
-          margin-top: 10vh;
+        margin: 9vh 13vw 10vh 12.5vw;
+        justify-content: space-between;
+        width: 77%;
       }
 
+      .projects .heading-text {
+        margin-top: 8.75vh;
+        width: 100%;
+      }
+
+      .projects h2 {
+        margin: .8vh 0 6.35vh;
+      }
+
+      .projects .heading-text p:nth-child(3) {
+        width: 35%;
+      }
+
+      .projects .client p, .projects .ourbox p {
+        font-size: .8vw;
+    }
 
       .projects .photo {
           margin: 100px 0 0px;
@@ -819,7 +837,9 @@
       
       .projects .quote div:last-child {
           display: flex;
-          margin: 2vh 0 0 3.7vw;
+          margin: 2vh 0px 0px 1.25vw;
+          justify-content: space-between;
+          width: 64%;
       }
 
       .projects .author {
@@ -835,8 +855,17 @@
         font-size: .75vw;
       }
 
-      .projects .port-nav {
-        margin-top: 12vh;
+      .projects .testimonial a:hover p {
+        text-shadow: 6px 0px #00ffea;
+      }
+
+      .projects .quoteBox {
+          width: 95%;
+      }
+
+      .projects .quoteBox img {
+          width: 4%;
+          margin-right: 1.1vw;
       }
 
       .projects .port-nav a {
@@ -849,6 +878,14 @@
 
      .projects .testimonial a, .projects .ourbox div, .projects .client div:last-child {
         margin: 15px 0;
+    }
+
+    .projects .quote div:last-child span {
+        border-top: 1px solid #0C3C3A;
+        display: block;
+        align-self: center;
+        width: 15%;
+        margin-left: 1.1vw;
     }
 
     .projects .client div:last-child div {
@@ -1472,7 +1509,7 @@
           font-size: 3.925vw;
       }
 
-      .contact .boxes div:nth-child(2) a.focus p {
+      .phoneBtn.focus p {
         transform: translateX(10px);
       }
 
