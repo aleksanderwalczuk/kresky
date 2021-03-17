@@ -541,7 +541,7 @@ const projectTestimonials = document.querySelector('.testimonial');
 const project = document.querySelector('.projects');
 
 const globalWrapper = document.querySelector('.global-wrapper')
-const galleryProjects = document.querySelectorAll('.hoverbox div');
+const galleryProjects = document.querySelectorAll('.window');
 const backButton = document.querySelector('.back');
 const nextButton = document.querySelectorAll('.next');
 const prevButton = document.querySelectorAll('.prev');
@@ -565,7 +565,10 @@ const galleryContents = {
             " 6 Lubię Placki", 
             " 7 Lubię Placki", 
             " 8 Lubię Placki", 
-            " 9 Lubię Placki"],
+            " 9 Lubię Placki",
+            " 10 Lubię Placki",
+            " 11 Lubię Placki",
+            " 12 Lubię Placki"],
   
   titles: ["Wiosna Ludów", 
            "Damage Seed", 
@@ -575,7 +578,11 @@ const galleryContents = {
            " 5 Lubię Placki", 
            " 6 Lubię Placki", 
            " 7 Lubię Placki", 
-           " 8 Lubię Placki"],
+           " 8 Lubię Placki", 
+           " 9 Lubię Placki", 
+           " 10 Lubię Placki", 
+           " 11 Lubię Placki", 
+           " 12 Lubię Placki"],
    
   
   descriptionsDesk: ["Opracowanie graficzne dla digipack’a projektu muzycznego. Motywem przewodnim jest drzewo, którego korona przedstawia mapę europy. Jego pień skrywają ludzkie profile. Sylwetka umieszczona obok drzewa to postać wokalisty. Ramiona postaci tworzą kształt oka.",
@@ -589,22 +596,28 @@ const galleryContents = {
   photos: ["assets/images/portfolio/1.jpg", 
            "assets/images/portfolio/2.jpg", 
            "assets/images/portfolio/3.jpg", 
+           "assets/images/portfolio/1.jpg", 
+           "assets/images/portfolio/2.jpg", 
            "assets/images/portfolio/3.jpg", 
-           "assets/images/portfolio/5.jpg", 
-           "assets/images/portfolio/6.jpg", 
-           "assets/images/portfolio/7.jpg", 
-           "assets/images/portfolio/8.jpg", 
-           "assets/images/portfolio/9.jpg"],
+           "assets/images/portfolio/1.jpg", 
+           "assets/images/portfolio/2.jpg", 
+           "assets/images/portfolio/3.jpg",
+           "assets/images/portfolio/1.jpg", 
+           "assets/images/portfolio/2.jpg", 
+           "assets/images/portfolio/3.jpg"],
 
   photosMobile: ["assets/images/portfolio-mobile/1.jpg", 
            "assets/images/portfolio-mobile/2.jpg", 
            "assets/images/portfolio-mobile/3.jpg", 
+           "assets/images/portfolio-mobile/1.jpg", 
+           "assets/images/portfolio-mobile/2.jpg", 
            "assets/images/portfolio-mobile/3.jpg", 
-           "assets/images/portfolio-mobile/5.jpg", 
-           "assets/images/portfolio-mobile/6.jpg", 
-           "assets/images/portfolio-mobile/7.jpg", 
-           "assets/images/portfolio-mobile/8.jpg", 
-           "assets/images/portfolio-mobile/9.jpg"],
+           "assets/images/portfolio-mobile/1.jpg", 
+           "assets/images/portfolio-mobile/2.jpg", 
+           "assets/images/portfolio-mobile/3.jpg",
+           "assets/images/portfolio-mobile/1.jpg", 
+           "assets/images/portfolio-mobile/2.jpg", 
+           "assets/images/portfolio-mobile/3.jpg"],
   
   addresses : ["www.adres1.pl",
                "", 
@@ -614,13 +627,17 @@ const galleryContents = {
                "www.adres6.pl", 
                "www.adres7.pl", 
                "www.adres8.pl", 
-               "www.adres9.pl"],
+               "www.adres8.pl", 
+               "www.adres9.pl", 
+               "www.adres10.pl", 
+               "www.adres11.pl", 
+               "www.adres12.pl"],
 
-  websiteLinks : ["www.adres1.pl", "https://www.empty.com", "www.adres3.pl", "https://www.empty.com", "www.adres5.pl", "www.adres6.pl", "www.adres7.pl", "www.adres8.pl", "www.adres9.pl"], 
+  websiteLinks : ["www.adres1.pl", "https://www.empty.com", "www.adres3.pl", "https://www.empty.com", "www.adres5.pl", "www.adres6.pl", "www.adres7.pl", "www.adres8.pl", "www.adres9.pl", "www.adres10.pl", "www.adres11.pl", "www.adres12.pl"], 
 
-  fbLinks : ["www.adres1.pl", "HTTPS://WWW.FACEBOOK.COM/DAMAGESEED", "www.adres3.pl", "https://www.empty.com", "www.adres5.pl", "www.adres6.pl", "www.adres7.pl", "www.adres8.pl", "www.adres9.pl", ],
+  fbLinks : ["www.adres1.pl", "HTTPS://WWW.FACEBOOK.COM/DAMAGESEED", "www.adres3.pl", "https://www.empty.com", "www.adres5.pl", "www.adres6.pl", "www.adres7.pl", "www.adres8.pl", "www.adres9.pl", "www.adres10.pl", "www.adres11.pl", "www.adres12.pl" ],
 
-  ytLinks : ["www.adres1.pl", "HTTPS://WWW.YOUTUBE.COM/USER/DAMAGESEED", "www.adres3.pl", "www.adres4.pl", "www.adres5.pl", "www.adres6.pl", "www.adres7.pl", "www.adres8.pl", "www.adres9.pl", ],
+  ytLinks : ["www.adres1.pl", "HTTPS://WWW.YOUTUBE.COM/USER/DAMAGESEED", "www.adres3.pl", "www.adres4.pl", "www.adres5.pl", "www.adres6.pl", "www.adres7.pl", "www.adres8.pl", "www.adres9.pl", "www.adres10.pl", "www.adres11.pl", "www.adres12.pl" ],
 
   photographers : ["Imie i nazwisko1", 
                    "Imie i nazwisko2", 
@@ -630,7 +647,10 @@ const galleryContents = {
                    "Imie i nazwisko6",
                    "Imie i nazwisko7",
                    "Imie i nazwisko8",
-                   "Imie i nazwisko9"],
+                   "Imie i nazwisko9",
+                   "Imie i nazwisko10",
+                   "Imie i nazwisko11",
+                   "Imie i nazwisko12"],
 
    clientQuotes : ["Miałem bardzo wygórowane oczekiwania odnosnie szaty graficznej do mojego albumu. W sumie to mialem tylko zarys informacji, które chciałem, aby się tam pojawiły. Sama wspólpraca przebiegła na najwyższym poziomie! Pełne zrozumienie, choć nie musiałem robić/podpowiadać zbyt wiele, co jest mega ważne, bo nie każdy potrafi dokładnie przekazać to, czego oczekuje! (tak też było w moim przypadku). Oprócz samego wizualnego efektu w okładce została zawarta ukryta treść, dostepna tylko dla spostrzegawczego oka. WOW! Efekt końcowy przerósł wielokrotnie moje najsmielsze oczekiwania. Moje oczy zobaczyły to, co wcześniej widział tylko umysł. Rewelacja.",
 
@@ -650,12 +670,16 @@ const galleryContents = {
 
   "Miałem bardzo wygórowane oczekiwania odnosnie szaty graficznej do mojego albumu. W sumie to mialem tylko zarys informacji, które chciałem, aby się tam pojawiły. Sama wspólpraca przebiegła na najwyższym poziomie! Pełne zrozumienie, choć nie musiałem robić/podpowiadać zbyt wiele, co jest mega ważne, bo nie każdy potrafi dokładnie przekazać to, czego oczekuje! (tak też było w moim przypadku). Oprócz samego wizualnego efektu w okładce została zawarta ukryta treść, dostepna tylko dla spostrzegawczego oka. WOW! Efekt końcowy przerósł wielokrotnie moje najsmielsze oczekiwania. Moje oczy zobaczyły to, co wcześniej widział tylko umysł. Rewelacja.",
 
-  "Jestem bardzo zadowolony z przebiegu i efektów naszej współpracy. W trakcie realizowania projektu byłem informowany o postępach i mogłem na bieżąco śledzić etapy powstawania. Dzieło, które otrzymałem spełniło, a wręcz wykroczyło ponad moje oczekiwania.Z czystym sumieniem mogę polecić każdemu - osobie potrzebującej logo, ilustracji, czy komuś, kto po prostu potrzebuje kreatywnego grafika, który pomoże, naprowadzi i rozwinie podany mu pomysł tak, by efekt był satysfakcjonujący dla obu stron."],
+  "Jestem bardzo zadowolony z przebiegu i efektów naszej współpracy. W trakcie realizowania projektu byłem informowany o postępach i mogłem na bieżąco śledzić etapy powstawania. Dzieło, które otrzymałem spełniło, a wręcz wykroczyło ponad moje oczekiwania.Z czystym sumieniem mogę polecić każdemu - osobie potrzebującej logo, ilustracji, czy komuś, kto po prostu potrzebuje kreatywnego grafika, który pomoże, naprowadzi i rozwinie podany mu pomysł tak, by efekt był satysfakcjonujący dla obu stron.",
+  "Fachowy kontakt pozwolił na sprawne określenie potrzeb, a także specyfiki projektu. Świetna współpraca zaowocowała projektami dedykowanego logoi funkcjonalego sklepu internetowego; dostosowanymi do profilu moich klientów. Polecam.",
+  "Fachowy kontakt pozwolił na sprawne określenie potrzeb, a także specyfiki projektu. Świetna współpraca zaowocowała projektami dedykowanego logoi funkcjonalego sklepu internetowego; dostosowanymi do profilu moich klientów. Polecam.",
+  "Fachowy kontakt pozwolił na sprawne określenie potrzeb, a także specyfiki projektu. Świetna współpraca zaowocowała projektami dedykowanego logoi funkcjonalego sklepu internetowego; dostosowanymi do profilu moich klientów. Polecam."],
+  
 
 
 
   quoteAuthors: ["Jan Robak, GMF LABEL","Karol Bieńkowski, Lider zespołu DAMAGE SEED", "Mikołaj Drożdżyński, BOOGIE WOODY", "Dawid Senko, REDTARGET.PL Sp. z o.o",
-                "Michał Miś, CEO kominki.eu","Jan Robak, GMF LABEL","Karol Bieńkowski, Lider zespołu DAMAGE SEED", "Mikołaj Drożdżyński, BOOGIE WOODY", "Jan Robak, GMF LABEL"]};
+                "Michał Miś, CEO kominki.eu","Jan Robak, GMF LABEL","Karol Bieńkowski, Lider zespołu DAMAGE SEED", "Mikołaj Drożdżyński, BOOGIE WOODY", "Jan Robak, GMF LABEL","Jan Robak, GMF LABEL","Karol Bieńkowski, Lider zespołu DAMAGE SEED"]};
 
 
 
@@ -669,6 +693,7 @@ galleryProjects.forEach(project => {
   body.classList.add('project');
   globalBox.style.zIndex = '5';
   root.style.scrollBehavior = 'unset'
+  targetElm.scrollIntoView()
   project.classList.add('active');
   setTimeout(() => {
     body.style.overflow = 'hidden';
@@ -678,6 +703,7 @@ galleryProjects.forEach(project => {
 
   let activeContent = document.querySelector('.gallery .active');
   let indexOfActiveContent = [...galleryProjects].indexOf(activeContent);
+
 
   const changeContent = () => {
     projectHeader.textContent = galleryContents.headers[indexOfActiveContent];
@@ -761,7 +787,7 @@ const prevBtn = document.querySelectorAll('.prev')
 const prevProject = () => {
   let activeContent = document.querySelector('.gallery .active');
   let indexOfActiveContent = [...galleryProjects].indexOf(activeContent);
-  if (indexOfActiveContent < 1) {
+  if (indexOfActiveContent === 0) {
     indexOfActiveContent = galleryProjects.length;
     galleryProjects[0].classList.remove('active');
   }
@@ -771,9 +797,9 @@ const prevProject = () => {
   window.location = showroomHref.href;
   setTimeout(function() {
     targetElm.scrollIntoView()
-    if (indexOfActiveContent !== 8) {
+    if (indexOfActiveContent !== 11) {
       galleryProjects[indexOfActiveContent + 1].classList.remove('active');
-    } else galleryProjects[8].classList.remove('active')
+    } else galleryProjects[11].classList.remove('active')
     root.style.scrollBehavior = 'smooth';
   }, 1200);
   setTimeout(function() {
@@ -783,7 +809,9 @@ const prevProject = () => {
   }, 1300);
   setTimeout(function() {
     globalBox.classList.add('Off');
-  }, 1800);    
+  }, 1800);
+
+  console.log(indexOfActiveContent)
 
   const changeContent = () => {
     projectHeader.textContent = galleryContents.headers[indexOfActiveContent];
@@ -840,9 +868,10 @@ const nextBtn = document.querySelectorAll('.next')
 const nextProject = () => {
   let activeContent = document.querySelector('.gallery .active');
   let indexOfActiveContent = [...galleryProjects].indexOf(activeContent);
-  if (indexOfActiveContent > 7) {
+  console.log(indexOfActiveContent)
+  if (indexOfActiveContent === 11) {
     indexOfActiveContent = -1;
-    galleryProjects[8].classList.remove('active');
+    galleryProjects[11].classList.remove('active');
   }
   indexOfActiveContent++;
   body.classList.remove('project');
@@ -903,7 +932,7 @@ const nextProject = () => {
 };
 
 nextBtn.forEach(button => {
-  button.addEventListener('click', prevProject)
+  button.addEventListener('click', nextProject)
 })
 
 

@@ -8,9 +8,9 @@
 
 @media (max-width: 1920px) and (max-height: 1080px) {
     .bg-top {
-        left: -20px;
+        left: -18px;
         width: 85vw;
-        top: 13.25vw;
+        top: 11.35vw;
     }
 }
 
@@ -104,7 +104,7 @@
       }
     
       h1 {
-        line-height: 5.65vw
+        line-height: 5.6vw
       }
     
       h3 {
@@ -134,6 +134,11 @@
       }
 
     /* HEADER */
+
+    .logo_sygnet {
+        top: 29px;
+        left: 24px;
+    }
 
     nav a:hover {
         text-shadow: -6px 0px #00ffea;
@@ -233,7 +238,6 @@
         opacity: 0;
         transform: translate3d(0,0,0);
     }
-
     @keyframes drawtop {
         from {
           stroke-dasharray: 10000;
@@ -257,7 +261,7 @@
     header {
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: 96vh;
     }
 
     header .container {
@@ -265,8 +269,8 @@
         align-items: center;
         margin-bottom: 6.25vh;
         position: relative;
-        bottom: 9px;
-        bgleft: 5px;
+        bottom: 4.8vh;
+        left: 5px;
     }
 
 
@@ -275,17 +279,19 @@
     }
 
     header h1 img {
-        width: 18.25vw;
-        margin-left: 14px;
+        width: 18.15375vw;
+        margin-left: 15px;
     }
 
 
     header a {
-        bottom: 4.6vw;
+        bottom: 6.45vw;
     }
 
     h2 {
-        margin: 1.5vh 0;
+        margin: 1.6vh 0;
+        position: relative;
+        bottom: 4px;
     }
 
     header .container p {
@@ -305,6 +311,10 @@
 
     .intro .heading-text {
         margin-bottom: 11vh;
+    }
+
+    .intro .heading-text p {
+        margin-bottom: 17px;
     }
 
     .intro .flexbox {

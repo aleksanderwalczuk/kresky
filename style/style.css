@@ -303,7 +303,7 @@ header {
 
 
 .after .logo_sygnet {
-    transform: translate(-24px, -25px) scale(0.75);
+    transform: translate(-23px, -25px) scale(0.75);
     transition: cubic-bezier(.33,.14,.35,.97) .2s;
 }
 
