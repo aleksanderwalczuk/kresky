@@ -128,11 +128,6 @@ nav hr.blue {
 }
 
 
-.phone-screen .wrapper {
-  width: 28%;
-  margin-bottom: 27.5vh;
-}
-
 .phone-screen .wrapper div {
   display: flex;
   margin-top: 5vh;
@@ -150,7 +145,6 @@ nav hr.blue {
 
 .phone-screen svg {
   position: absolute;
-  left: 27.5vw;
   bottom: 0;
 }
 
@@ -276,11 +270,12 @@ form button.done::before {
 }
 
 .finish-screen svg {
-  margin-top: 24.85vh;
+  margin-top: 22.4vh;
+  margin-bottom: 2vh;
 }
 
 .finish-screen p {
-  margin: 3.75vh 0 20vh;
+  margin: 3.25vh 0 19vh;
 }
 
 
@@ -474,10 +469,6 @@ header {
   display: flex;
 }
 
-.about .wrapper .content {
-  justify-content: space-around;
-}
-
 .passion {
   position: relative;
 }
@@ -638,7 +629,6 @@ header {
 
 .contact .boxes div {
   flex-direction: column;
-  width: 28.5%;
 }
 
 .contact .boxes button {
@@ -648,15 +638,13 @@ header {
   padding: 0;
 }
 
-.contact .boxes button img {
-  margin-right: 1vw;
-}
-
+.contact .boxes div a::after,
 .contact .boxes div button::after {
   font-family: 'OpenSans Light';
   transition: .36s ease;
 }
 
+.contact .boxes div a:hover p,
 .contact .boxes div button:hover:after {
   text-shadow: #00ffea -3px 0px;
 }

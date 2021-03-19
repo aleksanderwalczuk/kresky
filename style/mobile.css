@@ -10,7 +10,7 @@
     .bg-top {
         left: -18px;
         width: 85vw;
-        top: 11.35vw;
+        top: 13.25vw;
     }
 }
 
@@ -91,7 +91,7 @@
     }
 
     p {
-        font-size: .875vw;
+        font-size: .885vw;
         line-height: 1.45vw;
       }
     
@@ -102,13 +102,18 @@
       h1, h2 {
         font-size: 3.85vw;
       }
+
+      h2 {
+          line-height: 5.6vw;
+      }
     
       h1 {
         line-height: 5.6vw
       }
+      
     
       h3 {
-        font-size: 1.75vw;
+        font-size: 1.77vw;
       }
 
 
@@ -124,12 +129,13 @@
         align-items: center;
     }
 
-    section:not(.showroom) {
+    section:not(.showroom):not(.about) {
         margin: 0 13vw;
     }
 
+
     .close {
-        right: 50px;
+        right: 30px;
         top: 30px;
       }
 
@@ -172,51 +178,48 @@
     
     nav a.int.active ~ hr.black,
     nav a.int:hover ~ hr.blue {
-      height: 7vh;
+      height: 60px;
     }
     
     nav a.sho.active ~ hr.black,
     nav a.sho:hover ~ hr.blue {
-      height: 60px;
+      height: 100px;
     }
     
     nav a.tea.active ~ hr.black,
     nav a.tea:hover ~ hr.blue {
-      height: 106px;
+      height: 146px;
     }
     
     nav a.off.active ~ hr.black,
     nav a.off:hover ~ hr.blue {
-      height: 145px;
+      height: 185px;
     }
-    
+
     nav a.con.active ~ hr.black,
     nav a.con:hover ~ hr.blue {
-      height: 190px;
+      height: 235px;
     }
     
     nav a.int.active ~ hr.black {
-      max-height: 6vh;
-    }
-    
-    nav a.sho.active ~ hr.black {
       max-height: 60px;
     }
     
+    nav a.sho.active ~ hr.black {
+      max-height: 100px;
+    }
+    
     nav a.tea.active ~ hr.black {
-      max-height: 106px;
+      max-height: 146px;
     }
     
     nav a.off.active ~ hr.black {
-      max-height: 145px;
+      max-height: 185px;
     }
-    
-    nav a.blo.active ~ hr.black {
-      max-height: 195px;
-    }
+
     
     nav a.con.active ~ hr.black {
-      max-height: 233px;
+      max-height: 235px;
     }
 
     .lineWrapper {
@@ -261,7 +264,7 @@
     header {
         justify-content: center;
         align-items: center;
-        height: 96vh;
+        height: 100vh;
     }
 
     header .container {
@@ -269,13 +272,13 @@
         align-items: center;
         margin-bottom: 6.25vh;
         position: relative;
-        bottom: 4.8vh;
+        bottom: 3vh;
         left: 5px;
     }
 
 
     h1 {
-        margin: 0 0 4vh;
+        margin: 0 0 0;
     }
 
     header h1 img {
@@ -284,15 +287,25 @@
     }
 
 
+    header .container p {
+        position: relative;
+        top: 2.05vw;
+    }
+
+
     header a {
-        bottom: 6.45vw;
+        bottom: 9vh;
     }
 
     h2 {
-        margin: 1.6vh 0;
         position: relative;
-        bottom: 4px;
+        margin: 0;
     }
+
+    p.desktop {
+        margin-bottom: .95vw;
+    }
+
 
     header .container p {
         font-size: 17px;
@@ -305,28 +318,34 @@
     /* INTRO */
 
     .intro {
-        height: 100vh;
+        height: 93.5vh;
         justify-content: space-around;
+        padding-top: 9px;
     }
+
+    .intro h2 {
+        margin:1.3375vh 0 1.6vh;
+    }
+
 
     .intro .heading-text {
         margin-bottom: 11vh;
     }
 
-    .intro .heading-text p {
-        margin-bottom: 17px;
-    }
 
     .intro .flexbox {
         align-self: center;
-        justify-content: center;
-        width: 80%;
+        justify-content: space-between;
+        width: 97.1%;
         margin:0 30vw 9vh 30vw;
-        transform: translate(0.25vh, .5vh);
+        position: relative;
+        top: 3.1vh;
+        right: 1vw;
     }
 
     .intro .flexbox div {
         width: 30%;
+        position: relative;
     }
 
     .intro .flexbox div:nth-child(1) {
@@ -335,6 +354,7 @@
 
     .intro .flexbox div:nth-child(3) {
         margin-left: 1.5vw;
+        left: 6px;
     }
 
     .intro h3 {
@@ -342,14 +362,14 @@
     }
 
     .intro a {
-        bottom: 6.2vw;
+        bottom: 3.55vw;
     }
 
     /* Gallery */
 
     .showroom {
         align-items: center;
-        padding-top: 4.75vw;
+        padding-top: 8.15vw;
     }
 
     .showroom .gallery {
@@ -357,7 +377,7 @@
         grid-auto-rows: 278px;
         grid-template-columns: repeat(auto-fit, minmax(444px, 0fr));
         width: 75%;
-        padding: 0 30px;
+        padding: 3.45vw 30px 0;
     }
 
     .showroom .gallery div {
@@ -369,47 +389,73 @@
     }
 
     .showroom .info {
-        margin-top: 1vh;
+        margin-top: 1.25vh;
+    }
+
+    .showroom .info h5 {
+        font-size: .885vw;
     }
 
     .showroom .info p {
-        margin:8px 0 0;
+        margin:3px 0 0;
+        font-size: .625vw;
     }
 
     .showroom a {
         position: relative;
-        margin-top: 8vh;
+        margin-top: 9vh;
     }
 
     /* About */
 
     .about {
-        padding: 20vh 0;
+        padding: 8.9vh 0 31vh;
     }
 
     .about .wrapper {
-        margin-left: 2.5vw;
+        width: 73.2%;
+    }
+
+    .about .content {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .about .content div:first-child {
+        margin-right: 1.3vw;
+    }
+
+    .about .content div:last-child {
+        position: relative;
+        right: 4px;
     }
 
     .about .flexbox {
-        align-items: flex-end;
-        width: 60.3vw;
+        align-items: baseline;
+        width: 60.9vw;
         justify-content: space-between;
         align-self: flex-start;
-        margin-top: 4vh;
+        margin-top: 5.5vh;
+    }
+
+    .about .flexbox h3 {
+        margin: 0;
+        position: relative;
+        top: 1px;
     }
     
     .bg-about,
     .angel {
-        width: 75%;
         transform: translate(-5.75vw, -10px);
         align-self: flex-start;
     }
 
     .bg-about {
         position: relative;
-        left: 5.45vw;
-        bottom: 3.5vh;
+        left: 5.4vw;
+        top: 2px;
+        width: 88.178%;
+        height: 25.182vh;
     }
 
     .about .first,
@@ -430,39 +476,44 @@
     }
 
     .about .author:first-of-type {
-        margin: 5vh 0 2vh;  
+        margin: 5vh 0 3.5vh;  
     }
 
     .angel {
-        left: -3vw;
-        top: -6.35vh;
+        left: 3.9vw;
+        bottom: 56.5%;
+        width: 57.093%
     }
 
     .passion {
-        margin-top: 40vh;
+        margin-top: 19.75vh;
         z-index: 3;
     }
 
     .passion .title {
         width: 16vw;
-        margin-right: 8vw;
+        margin-right: 6.9vw;
         z-index: 3;
+        position: relative;
+        right: 7px;
     }
 
     .passion .title h2 {
-        line-height: 10.75vh;
+        line-height: 11.1vh;
         text-align: left;
     }
 
     .passion .title p {
-        margin-top: 5vh;
+        margin-top: 5.1vh;
+        line-height: 1.4vw;
     }
 
     .about .container {
         display: flex;
         flex-direction: column;
-        margin-top: 15vh;
+        margin-top: 13.9vh;
         z-index: 2;
+        width: 65.75%;
     }
 
     .about .container div {
@@ -484,15 +535,23 @@
 
     .about .text {
         width: 24vw;
-        margin-top: 3vh;
+        margin-top: 2.6vh;
+    }
+
+    .about .text p:first-of-type {
+        font-size: .775vw;
+    }
+
+    .about .text h3 {
+        margin-bottom: 1.5vh;
     }
 
     .about .author:first-of-type .text {
-        margin-left: 3vw;
+        margin-left: 2.75vw;
     }
 
     .about .author:last-of-type .text {
-        margin-right: 3vw;
+        margin-left: 1.1vw;;
     }
 
     .about h3 {
@@ -500,7 +559,9 @@
     }
 
     .about .cursive {
-        margin-top: 4vh;
+        margin-top: 3.6vh;
+        width: 90%;
+        line-height: 1.4vw;
     }
 
     .about article {
@@ -508,90 +569,113 @@
     }
 
     .about article:first-of-type {
-        margin-top: 15vh;
-    }   
+        margin-top: 19vh;
+    }
+    
+    .about article .content {
+        justify-content: end;
+    }
 
     .about .quotebox {
         width: 65vw;
         justify-content: space-around;
-        margin-top: 5vh;
-      }
-      
-      .about .quotebox img {
-        width: 3.75%;
-        margin-right: 1vw;
-      }
-      
-      .about .first .quote .content p {
-        width: 54%;
-      }
-      
-      .about .quote {
-        width: 30vw;
-      }
-      
-      .about .first,
-      .about .second {
-        align-items: center;
-      }
-      .about .first .quote:nth-child(1) {
-        margin-bottom: 5vh;
-      }
-      
-      .about .first .quote:nth-child(2) {
-        margin-bottom: 15vh;
-      }
-      
-      .about .second .quote {
-        margin-bottom: 13vh;
-      }
-      
-      
-      
-      .about .quote .name {
-        flex-direction: column;
-      }
-      
-      .about .first .quote:nth-child(1) .name {
-        left: -7.5vw;
-        bottom: 5vh;
-      }
-      
-      .about .first .quote:nth-child(2) .name {
-        left: -8.5vw;
-        bottom: 1vh;
-      }
-      
-      
-      .about .first .quote:nth-child(3) .name {
-        left: -11.5vw;
-        bottom: -2.5vh;
-      }
+        margin: 7.4vh 0 0 1.6vw;
+    }
+
+    .about .quotebox h3 {
+        margin-bottom: .75vh;
+    }
+
+    .about .quotebox img {
+      width: 3.995%;
+      margin-right: 1.25vw;
+    }
+    
+    .about .first .quote .content p {
+      width: 52%;
+    }
+    
+    .about .quote {
+      width: 30vw;
+    }
+    
+    .about .first,
+    .about .second {
+      align-items: center;
+    }
+
+    .about .quotebox .first {
+        margin-right: 3.8vw;
+    }
+
+    .about .quotebox .content p {
+        line-height: 1.4vw;
+    }
+
+    .about .first .quote:nth-child(1) {
+      margin-bottom: 4.5vh;
+    }
+    
+    .about .first .quote:nth-child(2) {
+      margin-bottom: 9.2vh;
+    }
+    
+    .about .second .quote {
+      margin-bottom: 12vh;
+    }
+    
+    
+    
+    .about .quote .name {
+      flex-direction: column;
+    }
+    
+    .about .first .quote:nth-child(1) .name {
+      left: -7.5vw;
+      bottom: 5.75vh;
+    }
+    
+    .about .first .quote:nth-child(2) .name {
+      left: -8.3vw;
+      bottom: 1.75vh;
+    }
+    
+    
+    .about .first .quote:nth-child(3) .name {
+      left: -11.25vw;
+      bottom: -2vh;
+    }
       
       .about .second .quote:nth-child(1) .name {
         left: -10vw;
-        bottom: 3vh;
+        bottom: 3.25vh;
       }
       
       .about .second .quote:nth-child(2) .name {
-        left: -7vw;
-        bottom: 14.5vh;
+        left: -6.9vw;
+        bottom: 17.5vh;
       }
       
       .about .quote .name p {
         align-self: flex-end;
+        font-size: .78vw;
       }
 
       .about .numbers {
-        margin: 20vh 0 7.5vh;
+        margin: 15.75vh 0 7.5vh;
       }
 
       .about .numbers h2 {
         width: 75%;
+        line-height: 5.6vw;
+      }
+
+      .numbers p.desktop {
+          margin-bottom: .25vw;
       }
 
       .charts {
-        margin-top: 10vh;
+        margin-top: 13.6vh;
         width: 75vw;
         justify-content: space-around;
       }
@@ -604,16 +688,22 @@
       
       .charts div h3 {
         font-size: 3.85vw;
+        margin-bottom: .75vw;
+      }
+
+      .charts div h3 span:first-of-type {
+          position: relative;
+          left: 18px;
       }
       
       .charts svg {
-        bottom: -4vh;
+        bottom: -6vh;
         width: 20vw;
       }
       
       .charts div:first-child svg,
       .charts div:last-child svg {
-        left: 4vw;
+        left: 2.25vw;
       }
       
       .charts div:nth-child(2) svg {
@@ -621,13 +711,21 @@
       }
       
       .about .runicBtn {
-        bottom: 3vh;
+        bottom: 19.75vh;
       }
 
       /* Offer */
 
+      .offer {
+          padding: 3.5vh 0 0;
+      }
+
+      .offer p.desktop {
+          margin-bottom: .4vw;
+      }
+
       .offer .heading-text svg {
-        top: 28.25vh;
+        top: 30.85vh;
         left: 7.25vw;
       }
 
@@ -637,45 +735,93 @@
       
       
       .offer .heading-text p {
-        margin-top: 7vh;
+        margin-top: 7.85vh;
       }
       
       .offer .offers {
-        width: 78vw;
-        margin: 30vh 0 20vh;
+        width: 70vw;
+        margin: 31.5vh 0 27.5vh;
         row-gap: 12vh;
+        position: relative;
+        left: 5px;
       }
       
       .offerbox {
-        width: 26%;
-        justify-content: space-around;
+        width: 33%;
+        justify-content: space-between;
       }
       
       
       .offerbox p {
-        margin-top: 3.5vh;
+        margin-top: 2.4vh;
+        width: 84%;
+        line-height: 1.4vw;
       }
       
       .offerbox h3 {
-        width: 90%;
+        width: 63%;
+        line-height: 2.6vw;
       }
-      
+
+      .offerbox svg {
+          margin: 1vw 0 0 0;
+      }
+
       .offerbox div:last-child {
-        width: 51%;
+        width: 66%;
+        position: relative;
+        left: 10px;
+      }
+
+      .offerbox div {
+          height: fit-content;
+      }
+
+      .offer a {
+          bottom: 12vh;
       }
 
       /* Contact */
 
+      .contact {
+          padding-top: 5vh;
+      }
+
+      .contact p.desktop {
+          margin: 2vh 0 0 ;
+      }
+
+      .contact h2 {
+          margin: 0 0 6.5vh;
+          line-height: 4.85vw;
+      }
+
       .contact svg {
-        right: 0;
+        right: -6vw;
         bottom: 0;
         height: auto;
-        width: 10vw;
+        width: 8.03vw;
       }
 
       .contact .boxes {
-        margin: 15vh 0 35vh;
-        justify-content: space-between;
+        margin: 13vh 0 21vh;
+        width: 108%;
+        position: relative;
+        left: 25px;
+      }
+
+      .contact .boxes div {
+          margin-right: 2.9vw;
+          width: 28%;
+      }
+
+      .contact .boxes a img,
+      .contact .boxes button img {
+        margin-right: .75vw;
+      }
+
+      .contact .boxes div span {
+          font-weight: bolder;
       }
 
       /* Footer */
@@ -692,6 +838,7 @@
         margin: 2vh 2.5vw;
         display: flex;
         justify-content: space-between;
+        flex-direction: row;
       }
       
       footer .wrapper div {
@@ -706,16 +853,16 @@
       
       
       footer .wrapper div:nth-child(1) {
-        width: 20%;
+        width: 49%;
       }
       
       footer .wrapper div:nth-child(1) img {
-        margin-right: 2.75vw;
+        margin-right: 1.5vw;
       }
       
       footer .wrapper div:nth-child(2) {
         justify-content: space-around;
-        width: 25%;
+        width: 23.5%;
       }
       
       footer .wrapper .arrowUp {
@@ -726,6 +873,7 @@
         display: flex;
         place-items: flex-end;
         place-content: center;
+        bottom: 9px;
       }
       
       footer .wrapper .arrowUp img {
@@ -750,12 +898,12 @@
 
       
       .mail-screen form {
-        margin-top: 160px;
+        margin-top: 130px;
         width: 37.084%;
       }
       
       form p:first-of-type {
-        margin: 3vh 0;
+        margin: 3.25vh 0 4.75vh;
         align-self: center;
       }
       
@@ -766,7 +914,7 @@
         border-bottom: 1px solid #0c3c3a;
         height: 52px;
         font-size: 17px;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
       }
       
       form p span {
@@ -807,22 +955,22 @@
 
 
       .projects .testimonial {
-        margin: 9vh 13vw 10vh 12.5vw;
+        margin: 9vh 8vw 7.5vh 8vw;
         justify-content: space-between;
-        width: 77%;
+        width: 74%;
       }
 
       .projects .heading-text {
-        margin-top: 8.75vh;
+        margin-top: 8.7vh;
         width: 100%;
       }
 
       .projects h2 {
-        margin: .8vh 0 6.35vh;
+        margin: 0 0 5.25vh;
       }
 
       .projects .heading-text p:nth-child(3) {
-        width: 35%;
+        width: 38%;
       }
 
       .projects .client p, .projects .ourbox p {
@@ -840,20 +988,20 @@
       }
       
       .projects .quote {
-          width: 40%;
-          position: relative;
-          left: 39px;
+        width: 42.869%;
+        position: relative;
+        left: 39px;
       }
       
       .projects .quote div:last-child {
           display: flex;
           margin: 2vh 0px 0px 1.25vw;
-          justify-content: space-between;
-          width: 64%;
       }
 
+
       .projects .author {
-        top: 70%;
+        display: flex;
+        margin-left: 10px;
       }
 
       .projects .testimonial a img {
@@ -894,7 +1042,7 @@
         border-top: 1px solid #0C3C3A;
         display: block;
         align-self: center;
-        width: 15%;
+        width: 10%;
         margin-left: 1.1vw;
     }
 
@@ -905,6 +1053,95 @@
     .projects .client div:last-child p:first-child {
         margin-bottom: 1.75vh;
     }
+
+    /* Phone Screen */
+
+
+    .phone-screen .wrapper {
+        width: 28%;
+        margin-bottom: 22.5vh;
+    }
+
+    .phone-screen svg {
+        left: 27.25vw;
+    }
+
+
+    /* Transitions */
+
+
+a,p,h2,h3,div {
+    transition: .54s ease-in-out;
+  }
+  
+  h1, header p {
+    transition: 1s ease-in-out;
+  }
+  
+  p.desktop {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  
+  h2 {
+    transform: translateY(-24px);
+    opacity: 0;
+  }
+  
+  h1 {
+    transition-delay: .8s;
+  }
+  
+  .headerTransition {
+    line-height: 2vw;
+    opacity: 0;
+  }
+  
+  h1.disappear {
+    line-height: 2vw;
+    opacity: 0;
+  }
+  
+  .pTransition {
+    opacity: 0;
+    transition-delay: .5s;
+  }
+  
+  header p.disappear {
+    opacity: 0;
+    transition-delay: .5s;
+  }
+  
+  header p {
+    transition-delay: 1.74s;
+  }
+  
+  .visible h2,
+  .visible h3,
+  .visible p,
+  .visible div {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: .34s;
+  }
+  
+  .visibleNext h2,
+  .visibleNext h3,
+  .visibleNext p,
+  .visibleNext div {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: .34s;
+  }
+  
+  .visibleNextTwo h2,
+  .visibleNextTwo h3,
+  .visibleNextTwo p,
+  .visibleNextTwo div {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: .34s;
+  }
       
 }
 

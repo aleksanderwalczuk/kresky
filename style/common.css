@@ -143,7 +143,9 @@
   
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
+
 
   header, section {
       display: flex;
@@ -151,6 +153,7 @@
       flex-direction: column;
       /* z-index: 2; */
   }
+
 
   .runicBtn svg {
     position: absolute;
@@ -283,4 +286,11 @@
 
 .styledBtn:hover::after {
   width: 100%;
+}
+
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
