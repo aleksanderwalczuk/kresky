@@ -392,6 +392,10 @@ header {
     opacity: .18;
   }
 
+  .showroom .gallery img {
+    border: 1px solid #e7e9f0;
+  }
+
   .showroom .gallery div svg {
     position: absolute;
     top: 50%;
@@ -629,9 +633,9 @@ header {
   display: flex;
 }
 
-.contact .boxes p:not(a p) {
+/* .contact .boxes p:not(a p) {
   margin: 2.5vh 0;
-}
+} */
 
 .contact .boxes div {
   flex-direction: column;
@@ -664,6 +668,10 @@ header {
   }
 }
 
+.contact .boxes div button::after {
+  color: #0c3c3a;
+}
+
 .contact .boxes div button:hover:after {
   text-shadow: #00ffea -3px 0px;
 }
@@ -678,11 +686,6 @@ header {
 
 .contact .boxes div:nth-child(2) a p {
   transition: .34s ease-in;
-  margin-left: 5px;
-}
-
-.contact .boxes div:nth-child(3) button::after {
-  content: 'NAPISZ WIADOMOŚĆ E-MAIL';
 }
 
 .contact svg {
@@ -898,11 +901,3 @@ footer img {
   }
 
 
-
-
-
-/* Mozilla */
-
-
-@supports (-moz-appearance:none) {
-}

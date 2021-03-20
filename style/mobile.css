@@ -793,7 +793,7 @@
           padding-top: 5vh;
       }
 
-      .contact p.desktop {
+      .contact p.desktop:not(.boxes a p) {
           margin-top: 2vh ;
       }
 
@@ -803,7 +803,7 @@
       }
 
       .contact svg {
-        right: -6vw;
+        right: -5.25vw;
         bottom: 0;
         height: auto;
         width: 8.03vw;
@@ -817,17 +817,28 @@
       }
 
       .contact .boxes div {
-          margin-right: 2.9vw;
+          margin-right: 3.05vw;
           width: 28%;
       }
 
+      .contact .boxes div p:not(.boxes a p) {
+          margin: 2.5vh 0 1.35vh;      }
+
       .contact .boxes a img,
       .contact .boxes button img {
-        margin-right: .75vw;
+        margin-right: .65vw;
       }
 
       .contact .boxes div span {
           font-weight: bolder;
+      }
+
+      .contact .boxes div:nth-child(3) button::after {
+        content: 'NAPISZ WIADOMOŚĆ E-MAIL';
+      }
+
+      .contact .boxes div:nth-child(2) a p {
+        margin-left: 5px;
       }
 
 
@@ -842,7 +853,7 @@
       }
       
       footer .wrapper {
-        margin: 2vh 2.5vw;
+        margin: 2vh 1.75vw 2vh 2.25vw;
         display: flex;
         justify-content: space-between;
         flex-direction: row;
@@ -860,7 +871,7 @@
       
       
       footer .wrapper div:nth-child(1) {
-        width: 49%;
+        width: 48.5%;
       }
       
       footer .wrapper div:nth-child(1) img {
@@ -869,7 +880,11 @@
       
       footer .wrapper div:nth-child(2) {
         justify-content: space-around;
-        width: 23.5%;
+        width: 22.5%;
+      }
+
+      footer .wrapper div:nth-child(2) p {
+          margin-right: .15vw;
       }
       
       footer .wrapper .arrowUp {
@@ -880,7 +895,7 @@
         display: flex;
         place-items: flex-end;
         place-content: center;
-        bottom: 9px;
+        bottom: 11px;
       }
       
       footer .wrapper .arrowUp img {
@@ -1329,7 +1344,7 @@ h1, header p {
     .offer h2,
     .offer h3,
     .offer p,
-    .offer svg {
+    .offer svg:not(.UF) {
         transition: .74s ease;
         opacity: 0;
     }
@@ -1476,9 +1491,230 @@ h1, header p {
      transition-delay: 1.84s;
     }
 
+    .mozilla {
+        display: none;
+    }
+
+
+    /* Mozilla */
+
+
+    @supports (-moz-appearance:none) {
+
+        .mozilla {
+            display: block;
+        }
+
+        .chrome {
+            display: none;
+        }
+
+        header {
+            height: 100.6vh;
+            /* padding-top: 1.4vh; */
+        }
+
+        .logo_sygnet {
+            left: 22px;
+        }
+
+        .apla {
+            margin: 15px 65px;
+        }
+
+        nav {
+            margin: 28px 41px;
+        }
+
+        nav::before {
+            top: -29px;
+        }
+
+        header .container {
+            bottom: 1.7vh;
+        }
+
+        header .container p {
+            top: 2vw;
+        }
+
+        header .container img {
+            position: relative;
+            bottom: 1px;
+            /* right: 1px; */
+        }
+
+        header a {
+            bottom: 6.6vh;
+        }
+
+        .intro .flexbox {
+            top: 7.7vh;
+        }
+
+        .intro .flexbox p {
+            line-height: 1.4vw;
+        }
+
+        .intro {
+            padding-bottom: 7vh;
+            height: 87.8vh;
+            padding-top: 28px;
+        }
+
+        .intro h3 {
+            margin: 0 0 2.3vh;
+        }
+
+        .intro a {
+            bottom: 1.5vw;
+        }
+
+        .showroom {
+            padding-top: 18.15vh;
+        }
+
+        .showroom .gallery {
+            padding: 3.325vw 30px 0;
+        }
+
+        .about {
+            padding: 7.4vh 0 31vh;
+        }
+
+        .about .flexbox {
+            margin-top: 4.75vh;
+        }
+
+        .bg-about {
+            left: 1vw;
+            width: 100%;
+            height: 26vh;
+        }
+
+        .about .content {
+            margin-top: 3.1vh;
+        }
+
+        .passion .title h2 {
+            line-height: 11.4vh;
+        }
+
+        .passion {
+            margin-top: 20.4vh;
+        }
+
+        .passion .title p {
+            margin-top: 5.5vh;
+            line-height: 1.35vw;
+        }
+
+        .about .text h3 {
+            margin-bottom: 1.25vh;
+        }
+
+        .about .author:first-of-type {
+            margin: 5.2vh 0 3.4vh;
+        }
+
+        .about .text {
+            width: 24vw;
+            margin-top: 2.7vh;
+        }
+
+        .about .quotebox {
+            width: 65vw;
+            justify-content: space-around;
+            margin: 7.4vh 0 0 2vw;
+        }
+
+        .about article:first-of-type {
+            margin-top: 21.05vh;
+        }
+
+        .about .first .quote .content p {
+            width: auto;
+        }
+
+        .about .content {
+            display: flex;
+        }
+
+        .about .first .content {
+            width: 17.7vw;
+            align-self: flex-start;
+            margin-top: 3.1vh;
+        }
+
+        .about .quotebox h3 {
+            margin-bottom: 0.25vw;
+        }
+
+        .about .quotebox .first {
+            margin-right: 4.05vw;
+        }
+
+        .about .quotebox img {
+            width: 1.2vw;
+            margin-right: .9vw;
+            align-self: flex-start;
+            position: relative;
+            bottom: 1px;
+            right: 2px;
+        }
+
+        .about .quotebox .content p {
+            line-height: 1.35vw;
+        } 
+        
+        .about .first .quote:nth-child(1) .name {
+            left: -7.65vw;
+            bottom: 6.15vh;
+        }
+
+        .about .first .quote:nth-child(2) .name {
+            left: -8.5vw;
+            bottom: -1vh;
+        }
+
+        .about .first .quote:nth-child(3) .name {
+            left: -11.5vw;
+            bottom: -1.9vh;
+        }
+        
+        .about .first .quote:nth-child(2) {
+            margin-bottom: 9.75vh;
+        }
+
+        .about .second .quote:nth-child(1) .name {
+            left: -10.25vw;
+            bottom: 3.8vh;
+        }
+
+        .about .second .quote:nth-child(2) .name {
+            left: -7.15vw;
+            bottom: 15vh;
+        }
+
+        .offer p {
+            line-height: 1.35vw;
+        }
+
+        .offer .offers {
+            margin: 32.75vh 0 27.5vh;
+        }
+
+        .offer .heading-text p {
+            margin-top: 8vh;
+        }
+
+        .offer .heading-text svg {
+            top: 31.25vh;
+        }
+        
 
 }
-
+}
 
 
 
@@ -1685,7 +1921,7 @@ h1, header p {
     }
 
     .lineWrapper .bg-top {
-        left: -112px;
+        left: -83px;
         width: 138%;
         top: 43.5vw;
     }
@@ -1723,8 +1959,8 @@ h1, header p {
         display: none;
     }
 
-    .global-wrapper {
-        margin: 0 29px 0 29px;
+    header, section {
+        margin: 0 29px 0 30px;
     }
 
     header {
@@ -1735,6 +1971,8 @@ h1, header p {
     header .container {
         margin-top: 21vw;
         align-self: flex-start;
+        position: relative;
+        right: 1px;
     }
 
     header .container img {
@@ -2232,7 +2470,7 @@ h1, header p {
 
       .contact h2 {
           width: 101%;
-          margin-bottom: 5.25vw;
+          margin-bottom: 5.5vw;
       }
 
       .contact p {
@@ -2240,24 +2478,32 @@ h1, header p {
       }
 
       .contact svg {
-        top: 41vh;
+        top: 41.5vh;
         width: 43.21%;
         transform: scaleX(-1);
         right: 32%;
     }
 
+    .contact svg path {
+        stroke-width: 2px;
+    }
+
       .contact .boxes {
           flex-direction: column;
-          margin-top: 72vw;
+          margin-top: 71.85vw;
+      }
+
+      .contact .boxes h3 {
+          margin-bottom: 5.25vw;
       }
 
       .contact .boxes div {
           width: auto;
-          margin-bottom: 18vw;
+          margin-bottom: 24.75vw;
       }
 
-      .contact .boxes p {
-          margin-bottom: 5vw;
+      .contact .boxes p:not(.hours) {
+          margin-bottom: 6.75vw;
       }
 
       .contact .boxes button,
@@ -2268,6 +2514,53 @@ h1, header p {
       .phoneBtn.focus p {
         transform: translateX(10px);
       }
+
+      .contact .boxes div:nth-child(1) img {
+        height: 7.35vw;
+    }
+
+      .mailBtn img {
+        height: 7.15vw;
+    }
+
+    .phoneBtn img {
+        width: 7vw;
+    }
+
+      .contact .boxes div:nth-child(2) {
+          order: 1;
+      }
+
+      .contact .boxes div button::after {
+        margin-left: 3.75vw;
+    }
+
+    .contact .boxes div:nth-child(3) button::after {
+        content: 'WIADOMOŚĆ E-MAIL';
+    }
+
+    .contact .hours {
+        margin: 0 0 6vw;
+        position: relative;
+        bottom: 4px;
+    }
+
+    .contact .hours span {
+        margin-left: 9vw;
+        font-family: 'Open Sans Bold';
+        font-weight: bolder;
+        color: #167172;
+        font-size: 4.75vw;
+        position: relative;
+        left: 2px;
+    }
+
+    .phoneBtn p {
+        font-size: 3.85vw;
+        position: relative;
+        top: 6px;
+        margin-left: 4vw;
+    }
 
 
       /* Footer */
@@ -2280,7 +2573,7 @@ h1, header p {
       }
 
       footer .logo {
-          width: 43.9%;
+          width: 43.89%;
           margin: 7.75vw 0 4vw;
       }
 
@@ -2392,6 +2685,11 @@ h1, header p {
   
       footer .icon-box a:last-child {
           margin-right: 10.25vw;
+      }
+
+      footer p {
+          margin-top: 1vw;
+          font-size: 3.85vw;
       }
 
       /* Mail Screen */
@@ -2517,4 +2815,114 @@ h1, header p {
     .projects .ourbox {
         margin-bottom: 90px;
     }
+
+
+    /* Transitions */
+
+
+    #bgTopMobile {
+        animation: drawtop 2s;
+        animation-delay: 3s;
+        stroke-dasharray:14784.5;
+        stroke-dashoffset: 13194.5;
+    }
+
+    header img.start {
+        transform: translateX(-16px);
+        opacity: 0;
+    }
+
+    header img {
+        transition: .74s ease-in;
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .after header h1,
+    .after header p,
+    .after header h1 img {
+        opacity: 0;
+        transition-delay: 0;
+    }
+
+    header h1,
+    header p,
+    header h1 img {
+        transition: cubic-bezier(.33,.14,.35,.97) .87s;
+    }
+
+    .rewind h1 {
+        transition-delay: 1s;
+    }
+
+    .rewind h1 img {
+        transition-delay: 1.7s;
+    }
+
+    .rewind header p {
+        transition-delay: 2.3s;
+    }
+
+    .intro h2,
+    .intro p,
+    .intro h3 {
+        transition: cubic-bezier(.33,.14,.35,.97) .87s;
+    }
+
+    .intro h2 {
+        transform: translateY(-29px);
+    }
+
+    .intro p, .intro h3, .intro h2 {
+        opacity: 0;
+    }
+
+    .intro.visible h2 {
+        transform: translateY(0);
+    }
+
+    .intro.visible p,
+    .intro.visible h3,
+    .intro.visible h2 {
+        opacity: 1;
+    }
+
+    .intro.visible h3,
+    .intro.visible p {
+        transition-delay: .54s;
+    }
+
+    .showroom h2,
+    .about h2,
+    .customers h2,
+    .numbers h2,
+    .offer h2,
+    .contact h2 {
+        opacity: 0;
+        transform: translateY(-29px);
+        transition: cubic-bezier(.33,.14,.35,.97) .87s;
+    }
+
+    .showroom.visible h2,
+    .about.visible h2:not(.customers h2, .numbers h2),
+    .customers.visible h2,
+    .numbers.visible h2,
+    .offer.visible h2,
+    .contact.visible h2 {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .offer p,
+    .contact p {
+        opacity: 0;
+        transform: translateY(29px);
+    }
+
+    .offer.visible p,
+    .contact.visible p {
+        opacity: 1;
+        transform: translateY(0);
+    } 
+
 }

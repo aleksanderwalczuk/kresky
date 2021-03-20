@@ -239,11 +239,15 @@ $(window).scroll(function() {
   body.classList.add('after');
   mainHeader.classList.add('disappear');
   pHeader.classList.add('disappear');
+  if (body.classList.contains('rewind')) {
+    body.classList.remove('rewind');
+  }
   } else {
     sygnet.src = 'assets/icons/sygnet_logo.svg'
     body.classList.remove('after')
     mainHeader.classList.remove('disappear');
     pHeader.classList.remove('disappear');
+    body.classList.add('rewind');
   };
   if ($(this).scrollTop() > $('.intro').offset().top * 0.9) {
     $('.intro').addClass('visible');
@@ -256,7 +260,7 @@ $(window).scroll(function() {
     if ($(this).scrollTop() > $('.showroom').offset().top * 0.8) {
       $('.showroom').addClass('visible');
     }
-    if ($(this).scrollTop() > $('.about').offset().top * 0.8) {
+    if ($(this).scrollTop() > $('.about').offset().top) {
       $('.about').addClass('visible');
     }
     if ($(this).scrollTop() > $('.about').offset().top * 1.08) {
@@ -359,6 +363,112 @@ $(window).scroll(function() {
       } else {
       $('.icon-box-btn').removeClass('open visible');
       $('.icon-box').removeClass('open');
+      }
+      if ($(this).scrollTop() > $('.intro').offset().top * 0.8) {
+        $('.intro').addClass('visible');
+      }
+      if ($(this).scrollTop() > $('header').innerHeight() * 0.9 && $(this).scrollTop() < $('header').innerHeight()) {
+        $('.apla').addClass('transparent');
+      } else {
+         $('.apla').removeClass('transparent');
+      }
+      if ($(this).scrollTop() > $('.showroom').offset().top * 0.9) {
+        $('.showroom').addClass('visible');
+      }
+      if ($(this).scrollTop() > $('.about').offset().top * 0.95) {
+        $('.about').addClass('visible');
+      }
+      if ($(this).scrollTop() > $('.about').offset().top * 1.45) {
+        $('.customers').addClass('visible');
+      }
+      if ($(this).scrollTop() > $('.numbers').offset().top) {
+        $('.numbers').addClass('visible');
+        $('.counter').each(function() {
+          var $this = $(this),
+              countTo = $this.attr('data-count');
+          
+          $({ countNum: $this.text()}).animate({
+            countNum: countTo
+          },
+        
+          {
+        
+            duration: 3000,
+            easing:'linear',
+            step: function() {
+              $this.text(Math.floor(this.countNum));
+            },
+            complete: function() {
+              $this.text(this.countNum);
+              //alert('finished');
+            }
+        
+          });
+        });
+        setTimeout(function() {
+          $('.counterTwo').each(function() {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+            
+            $({ countNum: $this.text()}).animate({
+              countNum: countTo
+            },
+          
+            {
+          
+              duration: 3000,
+              easing:'linear',
+              step: function() {
+                $this.text(Math.floor(this.countNum));
+              },
+              complete: function() {
+                $this.text(this.countNum);
+                //alert('finished');
+              }
+          
+            });
+          });
+        }, 3500);
+        setTimeout(function() {
+          $('.counterThree').each(function() {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+            
+            $({ countNum: $this.text()}).animate({
+              countNum: countTo
+            },
+          
+            {
+          
+              duration: 3000,
+              easing:'linear',
+              step: function() {
+                $this.text(Math.floor(this.countNum));
+              },
+              complete: function() {
+                $this.text(this.countNum);
+                //alert('finished');
+              }
+          
+            });
+          });
+        }, 7000);
+      };
+      if ($(this).scrollTop() > $('.offer').offset().top * 0.95) {
+        $('.offer').addClass('visible');
+      }
+      if ($(this).scrollTop() > $('.contact').offset().top * 0.99) {
+        $('.contact').addClass('visible');
+      }
+      if ($(this).scrollTop() > $('.contact').offset().top * 1.02) {
+        $('.contact').addClass('visibleNext');
+      }
+      if ($(this).scrollTop() > $('.contact').offset().top) {
+      $('.mannaz').addClass('visible');
+      } else {
+      $('.mannaz').removeClass('visible');
+      $('.mannaz').removeClass('active');
+      $('.icon-box').removeClass('visible');
       }
     }
  })
@@ -672,32 +782,32 @@ const showroomHref = document.querySelector('.sho');
 
 
 const galleryContents = {
-  headers: [" Okładka płyty CD (digipack)", 
-            " Logo + ilustracja", 
-            " Ilustracje (na ubrania)", 
-            " 4 Lubię Placki", 
-            " 5 Lubię Placki", 
-            " 6 Lubię Placki", 
-            " 7 Lubię Placki", 
-            " 8 Lubię Placki", 
-            " 9 Lubię Placki",
-            " 10 Lubię Placki",
-            " 11 Lubię Placki",
-            " 12 Lubię Placki"],
   
   titles: ["Wiosna Ludów", 
            "Damage Seed", 
            "Kolekcja I-talia", 
-           "Święto Lasu", 
-           " 4 Lubię Placki", 
-           " 5 Lubię Placki", 
-           " 6 Lubię Placki", 
-           " 7 Lubię Placki", 
-           " 8 Lubię Placki", 
-           " 9 Lubię Placki", 
-           " 10 Lubię Placki", 
-           " 11 Lubię Placki", 
-           " 12 Lubię Placki"],
+           "Boogy Woody", 
+           "Carter Polska", 
+           "Junior Jobs Only", 
+           "Kominki.eu", 
+           "Atlanca", 
+           "Instrukcja RedTarget.pl", 
+           "RocaMar Cruise", 
+           "Holistic Studio",  
+           "Jest Słodko"],
+
+  headers: ["Ilustracje, CD Cover", 
+  "Logo, Ilustracje", 
+  "Ilustracje", 
+  "Logo / identyfikacja wizualna", 
+  "Logo / identyfikacja wizualna", 
+  "Logo / Identyfikacja wizualna / Header WWW", 
+  "Logo, WWW", 
+  "Logo, WWW", 
+  "Ilustracje",
+  "Reklama",
+  "Logo / Identyfikacja wizualna, WWW",
+  "Logo / Identyfikacja wizualna, WWW"],
    
   
   descriptionsDesk: ["Opracowanie graficzne dla digipack’a projektu muzycznego. Motywem przewodnim jest drzewo, którego korona przedstawia mapę europy. Jego pień skrywają ludzkie profile. Sylwetka umieszczona obok drzewa to postać wokalisty. Ramiona postaci tworzą kształt oka.",
@@ -706,99 +816,220 @@ const galleryContents = {
   
   "Ilustracje wektorowe dostosowane do haftu na ubraniach. Tematyka projektów nawiązuje w swobodny sposób do włoskiego klimatu. Dzięki zastosowaniu stylistyki linearnej, cała kolekcja osadzona jest w minimalistycznej formie.", 
   
-  "Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4Opis 4", " 4 Lubię Placki", " 4 Lubię Placki", " 4 Lubię Placki", " 4 Lubię Placki", " 4 Lubię Placki"],
+  "Logo w bezpośrednim nawiązaniu do nazwy działalności inspirowanej tańcem „boogie woogie”. Kształt stworzony w oparciu o złotą proporcję. Dynamiczna forma. Element swobody. Zgodnie ze specyfikacją i oczekiwaniami klienta - przedstawia tańczące drzewa. Analiza uproszczonych sylwetek w tańcu pozwoliła wyklarować najbardziej czytelną figurę.",
   
-  photos: ["assets/images/portfolio/1.jpg", 
-           "assets/images/portfolio/2.jpg", 
-           "assets/images/portfolio/3.jpg", 
-           "assets/images/portfolio/1.jpg", 
-           "assets/images/portfolio/2.jpg", 
-           "assets/images/portfolio/3.jpg", 
-           "assets/images/portfolio/1.jpg", 
-           "assets/images/portfolio/2.jpg", 
-           "assets/images/portfolio/3.jpg",
-           "assets/images/portfolio/1.jpg", 
-           "assets/images/portfolio/2.jpg", 
-           "assets/images/portfolio/3.jpg"],
+  "Projekt logo dla oficjalnego polskiego dystrybutora koparek CARTER. Koncept oparty jest o stylizację litery A na kształt ramienia koparki.", 
+  
+  "Logo i nagłówek strony internetowej skierowanej do osób szukających swojej pierwszej pracy w branży IT. Ze względu na młodą grupę odbiorczą, logo tworzy połączenie kształtu emotikony z aktówką. Swobodny charakter pozwala na zminimalizowanie stresu związanego z poszukiwaniem nowej pracy, natomiast mocna forma daje wyraz solidnego podejścia do selekcji ogłoszeń. racy.",
+  
+  "Fachowy kontakt pozwolił na sprawne określenie potrzeb, a także specyfiki projektu. Świetna współpraca zaowocowała realizacją dedykowanego logo i funkcjonalego sklepu internetowego. W trakcie realizacji projekt ewoluował. Dzięki umiejętności uważnego słuchania oraz dostosowania widoków strony internetowej do pojawiających się sugestii i nowych wytycznych, finalnie udało się uzyskać efekt, którego oczekiwałem. Polecam.", 
+  
+  "Projekt logo i strony internetowej dla firmy zajmującej się wynajmem łodzi motorowych na Teneryfie. Sygnet logo tworzy zestawienie fal, litery A oraz kształtu łodzi dostępnych we flocie Atlanca. Kolorystyka w bezpośredni sposób nawiązuje do gorącego klimatu hiszpańskiej wyspy i aktywnej formy wypoczynku. Mocny czerwony kolor aktywizuje do działania.",
 
-  photosMobile: ["assets/images/portfolio-mobile/1.jpg", 
-           "assets/images/portfolio-mobile/2.jpg", 
-           "assets/images/portfolio-mobile/3.jpg", 
-           "assets/images/portfolio-mobile/1.jpg", 
-           "assets/images/portfolio-mobile/2.jpg", 
-           "assets/images/portfolio-mobile/3.jpg", 
-           "assets/images/portfolio-mobile/1.jpg", 
-           "assets/images/portfolio-mobile/2.jpg", 
-           "assets/images/portfolio-mobile/3.jpg",
-           "assets/images/portfolio-mobile/1.jpg", 
-           "assets/images/portfolio-mobile/2.jpg", 
-           "assets/images/portfolio-mobile/3.jpg"],
+  "Instrukcja obrazkowa przedstawiająca zasadę działania produktu RedTarget. Stylistyka dostosowana do wyglądu strony klienta z zastosowaniem podstawowego koloru identyfikacji wizualnej.",
+
+  "Ulotka w formacie 3DL dla firmy organizującej rejsy na Teneryfie. Zewnętrzna strona zrealizowana w formie wizerunkowej, a zawartość ulotki pełni rolę sprzedażową.",
+
+  "Miejsce, które opisać można w trzech słowach - dotyk, piękno, harmonia. Projekt logo Holistic Studio łączy w sobie te trzy aspekty. Stworzony z połączenia personalizowanego symbolu harmonii, formy “koru” i sylwetki osoby realizującej masaż (widzianej od góry).", 
   
-  addresses : ["www.adres1.pl",
+  "Projekt logo i strony internetowej dla firmy zajmującej się wynajmem łodzi motorowych na Teneryfie. Sygnet logo tworzy zestawienie fal, litery A oraz kształtu łodzi dostępnych we flocie Atlanca. Kolorystyka w bezpośredni sposób nawiązuje do gorącego klimatu hiszpańskiej wyspy i aktywnej formy wypoczynku. Mocny czerwony kolor aktywizuje do działania."],
+  
+  photos: ["assets/images/portfolio/1.jpg",
+           "assets/images/portfolio/2.jpg", 
+           "assets/images/portfolio/3.jpg", 
+           "assets/images/portfolio/4.jpg", 
+           "assets/images/portfolio/5.jpg", 
+           "assets/images/portfolio/6.jpg", 
+           "assets/images/portfolio/7.jpg", 
+           "assets/images/portfolio/8.jpg", 
+           "assets/images/portfolio/9.jpg",
+           "assets/images/portfolio/10.jpg", 
+           "assets/images/portfolio/11.jpg", 
+           "assets/images/portfolio/12.jpg"],
+  
+  addresses : ["",
+
                "", 
+
                "I-TALIAWEAR.COM", 
-               "www.adres4.pl", 
-               "www.adres5.pl", 
-               "www.adres6.pl", 
-               "www.adres7.pl", 
-               "www.adres8.pl", 
-               "www.adres8.pl", 
-               "www.adres9.pl", 
-               "www.adres10.pl", 
-               "www.adres11.pl", 
-               "www.adres12.pl"],
 
-  websiteLinks : ["www.adres1.pl", "https://www.empty.com", "www.adres3.pl", "https://www.empty.com", "www.adres5.pl", "www.adres6.pl", "www.adres7.pl", "www.adres8.pl", "www.adres9.pl", "www.adres10.pl", "www.adres11.pl", "www.adres12.pl"], 
+               "", 
 
-  fbLinks : ["www.adres1.pl", "HTTPS://WWW.FACEBOOK.COM/DAMAGESEED", "www.adres3.pl", "https://www.empty.com", "www.adres5.pl", "www.adres6.pl", "www.adres7.pl", "www.adres8.pl", "www.adres9.pl", "www.adres10.pl", "www.adres11.pl", "www.adres12.pl" ],
+               "", 
 
-  ytLinks : ["www.adres1.pl", "HTTPS://WWW.YOUTUBE.COM/USER/DAMAGESEED", "www.adres3.pl", "www.adres4.pl", "www.adres5.pl", "www.adres6.pl", "www.adres7.pl", "www.adres8.pl", "www.adres9.pl", "www.adres10.pl", "www.adres11.pl", "www.adres12.pl" ],
+               "juniorjobsonly.com", 
 
-  photographers : ["Imie i nazwisko1", 
-                   "Imie i nazwisko2", 
-                   "Imie i nazwisko3",
-                   "Imie i nazwisko4",
-                   "Imie i nazwisko5",
-                   "Imie i nazwisko6",
-                   "Imie i nazwisko7",
-                   "Imie i nazwisko8",
-                   "Imie i nazwisko9",
-                   "Imie i nazwisko10",
-                   "Imie i nazwisko11",
-                   "Imie i nazwisko12"],
+               "kominki.eu", 
+
+               "", 
+
+               "RedTarget.pl", 
+
+               "", 
+
+               "", 
+               
+               ""],
+
+  websiteLinks : [
+  "",
+
+   "",
+
+    "https://i-taliawear.com/", 
+
+    "", 
+
+    "",
+
+    "juniorjobsonly.com", 
+
+     "kominki.eu", 
+
+     "", 
+
+     "redtarget.pl", 
+
+     "",
+
+     "",
+
+     ""], 
+
+  fbLinks : ["https://www.facebook.com/janrobakGMF",
+
+   "HTTPS://WWW.FACEBOOK.COM/DAMAGESEED",
+
+    "https://www.facebook.com/I-taliawear-108265350698176",
+
+     "https://www.facebook.com/Boogie-Woody-112971413508798",
+
+      "",
+
+       "",
+
+       "", 
+
+       "https://www.facebook.com/atlanca.boat",
+
+        "",
+
+         "",
+
+         "",
+
+          "https://www.facebook.com/jestslodko" ],
+
+  ytLinks : [
+    "https://www.youtube.com/watch?v=15UxnqtNyf8&list=PLde9Fg2kiWvOK8aND20bi6EpNhj9BW7L7",
+
+     "HTTPS://WWW.YOUTUBE.COM/USER/DAMAGESEED",
+
+      "", 
+
+      "", 
+
+      "", 
+
+      "",
+
+       "",
+
+        "",
+
+         "", 
+
+         "", 
+
+         "",
+
+          "" ],
+
+  photographers : ["", 
+
+                   "", 
+
+                   "Anna Sincini [http://www.annasincini.pl]",
+
+                   "",
+
+                   "",
+
+                   "",
+
+                   "",
+
+                   "",
+
+                   "",
+
+                   "",
+
+                   "",
+
+                   ""],
 
    clientQuotes : ["Miałem bardzo wygórowane oczekiwania odnosnie szaty graficznej do mojego albumu. W sumie to mialem tylko zarys informacji, które chciałem, aby się tam pojawiły. Sama wspólpraca przebiegła na najwyższym poziomie! Pełne zrozumienie, choć nie musiałem robić/podpowiadać zbyt wiele, co jest mega ważne, bo nie każdy potrafi dokładnie przekazać to, czego oczekuje! (tak też było w moim przypadku). Oprócz samego wizualnego efektu w okładce została zawarta ukryta treść, dostepna tylko dla spostrzegawczego oka. WOW! Efekt końcowy przerósł wielokrotnie moje najsmielsze oczekiwania. Moje oczy zobaczyły to, co wcześniej widział tylko umysł. Rewelacja.",
 
   "Jestem bardzo zadowolony z przebiegu i efektów naszej współpracy. Po przedstawieniu mojego pomysłu przeszliśmy z Łukaszem do omawiania szczegółów i konkretów, by wszystko było jasne i żebyśmy oboje wiedzieli na czym stoimy. W trakcie realizowania mojego zamówienia byłem informowany o postępach i mogłem na bieżąco śledzić etapy powstawania. Dzieło, które otrzymałem na końcu spełniło, a wręcz wykroczyło poza moje oczekiwania. Z czystym sumieniem mogę polecić Łukasza każdemu - osobie potrzebującej logotypu firmy, ilustracji, czy komuś, kto po prostu potrzebuje kreatywnego grafika, który pomoże, naprowadzi i rozwinie podany mu pomysł tak, by efekt był satysfakcjonujący dla obu stron.",
 
-  "Fachowy kontakt pozwolił na sprawne określenie potrzeb, a także specyfiki projektu. Świetna współpraca zaowocowała projektami dedykowanego logoi funkcjonalego sklepu internetowego; dostosowanymi do profilu moich klientów. Polecam.",
+  "Pan Łukasz fachowo wykonał powierzone mu zlecenie. Podobała mi się jakość wykonania grafik oraz obsługa na wysokim poziomie. Ma głowę pełną pomysłów za co serdecznie dziękuję i jak najbardziej POLECAM.",
+
+
+  "Planując wygląd swojego logo miałem w głowie tylko ogólny zarys jak ma ono wyglądać. Po tych cząstkowych informacjach powstało dla mnie dzieło sztuki które w pełni zobrazowało to na czym mi zależało. Pełen profesjonalizm i wyczucie.",
+
+  "",
+
+  "Pan Łukasz zrobił kawał świetnej roboty dla Junior Jobs Only. Przy projekcie wykazał się wielką kreatywnością, wysoką starannością i szybkim czasem realizacji. Zawsze chętnie doradzał. Świetny kontakt. Polecam.",
+
+
+  "Fachowy kontakt pozwolił na sprawne określenie potrzeb, a także specyfiki projektu. Świetna współpraca zaowocowała realizacją dedykowanego logo i funkcjonalego sklepu internetowego. W trakcie realizacji projekt ewoluował. Dzięki umiejętności uważnego słuchania oraz dostosowania widoków strony internetowej do pojawiających się sugestii i nowych wytycznych, finalnie udało się uzyskać efekt, którego oczekiwałem. Polecam.",
+
+  "",
+
+  "Duże zaangażowanie podczas współpracy to ogromna zaleta Pana Łukasza. Dzięki jego inwencji oraz sugestiom udało się wypracować kompromisowy sposób prezentacji produktu mojej firmy.",
+
   "",
 
   "",
 
-  "Fachowy kontakt pozwolił na sprawne określenie potrzeb, a także specyfiki projektu. Świetna współpraca zaowocowała projektami dedykowanego logoi funkcjonalego sklepu internetowego; dostosowanymi do profilu moich klientów. Polecam.",
-  "Duże zaangażowanie podczas naszej współpracy to ogromna zaleta. Dzięki inwencji twórczej oraz sugestiom udało się wypracować atrakcyjny sposób prezentacji produktu mojej firmy.",
-
-  "Jestem bardzo zadowolony z przebiegu i efektów naszej współpracy. W trakcie realizowania projektu byłem informowany o postępach i mogłem na bieżąco śledzić etapy powstawania. Dzieło, które otrzymałem spełniło, a wręcz wykroczyło ponad moje oczekiwania.Z czystym sumieniem mogę polecić każdemu - osobie potrzebującej logo, ilustracji, czy komuś, kto po prostu potrzebuje kreatywnego grafika, który pomoże, naprowadzi i rozwinie podany mu pomysł tak, by efekt był satysfakcjonujący dla obu stron.",
-
-  "Planując wygląd swojego logo miałem w głowie tylko ogólny zarys jak ma ono wyglądać. Po tych cząstkowych informacjach powstało dla mnie dzieło sztuki które w pełni zobrazowało to na czym mi zależało. Pełen profesjonalizm i wyczucie. Dziękuję i polecam.",
-
-  "Miałem bardzo wygórowane oczekiwania odnosnie szaty graficznej do mojego albumu. W sumie to mialem tylko zarys informacji, które chciałem, aby się tam pojawiły. Sama wspólpraca przebiegła na najwyższym poziomie! Pełne zrozumienie, choć nie musiałem robić/podpowiadać zbyt wiele, co jest mega ważne, bo nie każdy potrafi dokładnie przekazać to, czego oczekuje! (tak też było w moim przypadku). Oprócz samego wizualnego efektu w okładce została zawarta ukryta treść, dostepna tylko dla spostrzegawczego oka. WOW! Efekt końcowy przerósł wielokrotnie moje najsmielsze oczekiwania. Moje oczy zobaczyły to, co wcześniej widział tylko umysł. Rewelacja.",
-
-  "Jestem bardzo zadowolony z przebiegu i efektów naszej współpracy. W trakcie realizowania projektu byłem informowany o postępach i mogłem na bieżąco śledzić etapy powstawania. Dzieło, które otrzymałem spełniło, a wręcz wykroczyło ponad moje oczekiwania.Z czystym sumieniem mogę polecić każdemu - osobie potrzebującej logo, ilustracji, czy komuś, kto po prostu potrzebuje kreatywnego grafika, który pomoże, naprowadzi i rozwinie podany mu pomysł tak, by efekt był satysfakcjonujący dla obu stron.",
-  "Fachowy kontakt pozwolił na sprawne określenie potrzeb, a także specyfiki projektu. Świetna współpraca zaowocowała projektami dedykowanego logoi funkcjonalego sklepu internetowego; dostosowanymi do profilu moich klientów. Polecam.",
-  "Fachowy kontakt pozwolił na sprawne określenie potrzeb, a także specyfiki projektu. Świetna współpraca zaowocowała projektami dedykowanego logoi funkcjonalego sklepu internetowego; dostosowanymi do profilu moich klientów. Polecam.",
-  "Fachowy kontakt pozwolił na sprawne określenie potrzeb, a także specyfiki projektu. Świetna współpraca zaowocowała projektami dedykowanego logoi funkcjonalego sklepu internetowego; dostosowanymi do profilu moich klientów. Polecam."],
+  "Długo zastanawialiśmy się jak najlepiej opisać współpracę z Kresky. Doszliśmy jednak do wniosku ,że właściwym opisem będzie jedno słowo: Profesjonalizm. Dziękujemy za stały kontakt na każdym etapie realizacji naszego logo i za głebokie zrozumienie potrzeb oraz oczekiwań jakie z nim wiązaliśmy. Całym sercem polecamy."],
   
 
 
 
-  quoteAuthors: ["Jan Robak, GMF LABEL","Karol Bieńkowski, Lider zespołu DAMAGE SEED", "Mikołaj Drożdżyński, BOOGIE WOODY", "Dawid Senko, REDTARGET.PL Sp. z o.o",
-                "Michał Miś, CEO kominki.eu","Jan Robak, GMF LABEL","Karol Bieńkowski, Lider zespołu DAMAGE SEED", "Mikołaj Drożdżyński, BOOGIE WOODY", "Jan Robak, GMF LABEL","Jan Robak, GMF LABEL","Karol Bieńkowski, Lider zespołu DAMAGE SEED"]};
+  quoteAuthors: [
+    "Jan Robak, GMF LABEL",
+
+    "Karol Bieńkowski, Lider zespołu DAMAGE SEED",
+
+     "Izabela Dudek, właścicielka marki i-taliawear",
+
+      "Mikołaj Drożdżyński, Boogie Woody",
+
+      "Michał Miś, CEO kominki.eu",
+
+      "",
+
+      "",
+
+       "",
+
+        "Dawid Senko, RedTarget.pl sp. z o. o.",
+
+        "",
+
+        "",
+
+        "Zespół JestSłodko"
+  
+]};
 
 
 
 // Events //
+
+const portNav = document.querySelector('.port-nav');
 
 
 // Open Gallery Event//
@@ -808,6 +1039,7 @@ galleryProjects.forEach(project => {
   body.classList.add('project');
   globalBox.style.zIndex = '5';
   root.style.scrollBehavior = 'unset'
+  portNav.style.opacity = '1';
   targetElm.scrollIntoView()
   project.classList.add('active');
   setTimeout(() => {
@@ -832,9 +1064,7 @@ galleryProjects.forEach(project => {
     projectPhotograph.textContent = galleryContents.photographers[indexOfActiveContent];
     projectQuote.textContent = galleryContents.clientQuotes[indexOfActiveContent];
     projectQuoteAuthor.textContent = galleryContents.quoteAuthors[indexOfActiveContent];
-    if (window.innerWidth > 769) {
-      projectPhoto.src = galleryContents.photos[indexOfActiveContent];
-    } else projectPhoto.src = galleryContents.photosMobile[indexOfActiveContent];
+    projectPhoto.src = galleryContents.photos[indexOfActiveContent];
     if (projectClientFanPage.href !== "https://www.empty.com/") {
       projectClientFanPage.style.display = 'flex';
     } else projectClientFanPage.style.display ="none";
@@ -940,9 +1170,7 @@ const prevProject = () => {
     projectPhotograph.textContent = galleryContents.photographers[indexOfActiveContent];
     projectQuote.textContent = galleryContents.clientQuotes[indexOfActiveContent];
     projectQuoteAuthor.textContent = galleryContents.quoteAuthors[indexOfActiveContent];
-    if (window.innerWidth > 769) {
-      projectPhoto.src = galleryContents.photos[indexOfActiveContent];
-    } else projectPhoto.src = galleryContents.photosMobile[indexOfActiveContent];
+    projectPhoto.src = galleryContents.photos[indexOfActiveContent];
     if (projectClientFanPage.href !== "https://www.empty.com/") {
       projectClientFanPage.style.display = 'flex';
     } else projectClientFanPage.style.display ="none";
@@ -1020,9 +1248,7 @@ const nextProject = () => {
     projectPhotograph.textContent = galleryContents.photographers[indexOfActiveContent];
     projectQuote.textContent = galleryContents.clientQuotes[indexOfActiveContent];
     projectQuoteAuthor.textContent = galleryContents.quoteAuthors[indexOfActiveContent];
-    if (window.innerWidth > 769) {
-      projectPhoto.src = galleryContents.photos[indexOfActiveContent];
-    } else projectPhoto.src = galleryContents.photosMobile[indexOfActiveContent];
+    projectPhoto.src = galleryContents.photos[indexOfActiveContent];
     if (projectClientFanPage.href !== "https://www.empty.com/") {
       projectClientFanPage.style.display = 'flex';
     } else projectClientFanPage.style.display ="none";
@@ -1125,15 +1351,20 @@ window.onload = () => {
   phoneScreen.style.opacity = '0';
   mailScreen.style.opacity = '0';
   finishScreen.style.opacity = '0';
+  portNav.style.opacity = '0';
+  const headerImg = document.querySelector('h1 img')
   const loader = document.querySelector('.loading')
   setTimeout(() => {
     mainHeader.classList.remove('headerTransition');
   }, 3000);
+  setTimeout(() => {
+    headerImg.classList.remove('start');
+  }, 3200);
   setTimeout(() => {
     loader.style.display = 'none';
     globalBox.style.zIndex = '-1';
   }, 3400);
   setTimeout(() => {
     pHeader.classList.remove('pTransition');
-  }, 4500);
+  }, 6000);
 }
