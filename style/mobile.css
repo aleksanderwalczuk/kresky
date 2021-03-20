@@ -253,7 +253,7 @@
       }
 
     .apla {
-        margin: 29px 24px;
+        margin: 14px 65px;
     }
 
     nav {
@@ -302,10 +302,6 @@
         margin: 0;
     }
 
-    p.desktop {
-        margin-bottom: .95vw;
-    }
-
 
     header .container p {
         font-size: 17px;
@@ -318,13 +314,9 @@
     /* INTRO */
 
     .intro {
-        height: 93.5vh;
+        height: 93.05vh;
         justify-content: space-around;
-        padding-top: 9px;
-    }
-
-    .intro h2 {
-        margin:1.3375vh 0 1.6vh;
+        padding-top: 12px;
     }
 
 
@@ -339,7 +331,7 @@
         width: 97.1%;
         margin:0 30vw 9vh 30vw;
         position: relative;
-        top: 3.1vh;
+        top: 3.35vh;
         right: 1vw;
     }
 
@@ -358,11 +350,11 @@
     }
 
     .intro h3 {
-        margin: 0 0 2.25vh;
+        margin: 0 0 2.3vh;
     }
 
     .intro a {
-        bottom: 3.55vw;
+        bottom: 3.25vw;
     }
 
     /* Gallery */
@@ -370,6 +362,7 @@
     .showroom {
         align-items: center;
         padding-top: 8.15vw;
+        padding-bottom: 10.1vh;
     }
 
     .showroom .gallery {
@@ -403,13 +396,13 @@
 
     .showroom a {
         position: relative;
-        margin-top: 9vh;
+        margin-top: 10vh;
     }
 
     /* About */
 
     .about {
-        padding: 8.9vh 0 31vh;
+        padding: 10vh 0 31vh;
     }
 
     .about .wrapper {
@@ -432,16 +425,24 @@
 
     .about .flexbox {
         align-items: baseline;
-        width: 60.9vw;
-        justify-content: space-between;
         align-self: flex-start;
-        margin-top: 5.5vh;
+        margin-top: 4.5vh;
+        width: 100%;
     }
 
     .about .flexbox h3 {
         margin: 0;
         position: relative;
         top: 1px;
+    }
+
+    .about .flexbox p {
+        width: 50%;
+        white-space: nowrap;
+        overflow: hidden;
+        opacity: 0;
+        border-right: 2px solid rgba(0,0,0,.75);
+        margin-left: 160px;
     }
     
     .bg-about,
@@ -569,8 +570,9 @@
     }
 
     .about article:first-of-type {
-        margin-top: 19vh;
+        margin-top: 19.05vh;
     }
+
     
     .about article .content {
         justify-content: end;
@@ -670,9 +672,6 @@
         line-height: 5.6vw;
       }
 
-      .numbers p.desktop {
-          margin-bottom: .25vw;
-      }
 
       .charts {
         margin-top: 13.6vh;
@@ -720,9 +719,6 @@
           padding: 3.5vh 0 0;
       }
 
-      .offer p.desktop {
-          margin-bottom: .4vw;
-      }
 
       .offer .heading-text svg {
         top: 30.85vh;
@@ -741,10 +737,20 @@
       .offer .offers {
         width: 70vw;
         margin: 31.5vh 0 27.5vh;
-        row-gap: 12vh;
+        row-gap: 12.3vh;
         position: relative;
-        left: 5px;
+        left: 6px;
       }
+
+      .offers div:nth-child(4) svg {
+          position: relative;
+          right: 25px;
+      }
+
+      .offers div:nth-child(6) svg {
+        position: relative;
+        right: 15px;
+    }
       
       .offerbox {
         width: 33%;
@@ -788,12 +794,12 @@
       }
 
       .contact p.desktop {
-          margin: 2vh 0 0 ;
+          margin-top: 2vh ;
       }
 
       .contact h2 {
           margin: 0 0 6.5vh;
-          line-height: 4.85vw;
+          /* line-height: 4.85vw; */
       }
 
       .contact svg {
@@ -823,6 +829,7 @@
       .contact .boxes div span {
           font-weight: bolder;
       }
+
 
       /* Footer */
 
@@ -1067,30 +1074,14 @@
     }
 
 
-    /* Transitions */
+/* Transitions */
 
+/* Header */
 
-a,p,h2,h3,div {
-    transition: .54s ease-in-out;
-  }
-  
-  h1, header p {
-    transition: 1s ease-in-out;
-  }
-  
-  p.desktop {
-    transform: translateY(24px);
-    opacity: 0;
-  }
-  
-  h2 {
-    transform: translateY(-24px);
-    opacity: 0;
-  }
-  
-  h1 {
+h1, header p {
+    transition: 1.04s ease;
     transition-delay: .8s;
-  }
+}
   
   .headerTransition {
     line-height: 2vw;
@@ -1109,40 +1100,383 @@ a,p,h2,h3,div {
   
   header p.disappear {
     opacity: 0;
-    transition-delay: .5s;
+  }
+
+  /* Intro */
+
+  .intro h3,
+  .intro h2 {
+      transform: translateY(-29px);
+  }
+
+  .intro p {
+      transform: translateY(29px);
+  }
+
+  .intro p,
+  .intro h3,
+  .intro h2 {
+      transition: .74s ease;
+      opacity: 0;
+  }
+
+  .intro.visible p,
+  .intro.visible h3,
+  .intro.visible h2 {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+  .intro.visible .flexbox div:nth-child(1) h3,
+  .intro.visible .flexbox div:nth-child(1) p {
+    transition-delay: .6s;
   }
   
-  header p {
-    transition-delay: 1.74s;
+  .intro.visible .flexbox div:nth-child(2) h3,
+  .intro.visible .flexbox div:nth-child(2) p {
+    transition-delay: .8s;
   }
   
-  .visible h2,
-  .visible h3,
-  .visible p,
-  .visible div {
-    transform: translateY(0);
+  .intro.visible .flexbox div:nth-child(3) h3,
+  .intro.visible .flexbox div:nth-child(3) p {
+    transition-delay: 1s;
+  }
+
+  /* Showroom */
+
+  .showroom h2 {
+      transform: translateY(-29px);
+  }
+
+  .showroom h2,
+  .showroom .gallery {
+      opacity: 0;
+  }
+
+  .showroom.visible h2 {
+      transform: translateY(0);
+  }
+
+  .showroom.visible h2,
+  .showroom.visible .gallery {
+    transition: .74s ease;
     opacity: 1;
-    transition-delay: .34s;
   }
-  
-  .visibleNext h2,
-  .visibleNext h3,
-  .visibleNext p,
-  .visibleNext div {
-    transform: translateY(0);
+
+  .showroom.visible .gallery {
+      transition-delay: .34s;
+  }
+
+  /* About */
+
+.about h2,
+.about .content h3 {
+    transform: translateY(-29px);
+}
+
+.about h2,
+.about .content p,
+.about p.desktop,
+.about .content h3 {
+    opacity: 0;
+}
+
+.about .content p,
+.about p.desktop {
+    transform: translateY(29px);
+}
+
+.about.visible p.desktop:not(.customers p.desktop, .numbers p.desktop),
+.about.visible .wrapper .content p,
+.about.visible h2:nth-child(2):not(.customers h2, .numbers h2),
+.about.visible .wrapper .content h3 {
     opacity: 1;
-    transition-delay: .34s;
-  }
-  
-  .visibleNextTwo h2,
-  .visibleNextTwo h3,
-  .visibleNextTwo p,
-  .visibleNextTwo div {
     transform: translateY(0);
+    transition: .74s ease;
+}
+
+
+.about.visible .flexbox p {
+    animation: typewriter 4s steps(36) 1s 1 normal both, blinkTextCursor 500ms steps(36) normal both 14;
     opacity: 1;
-    transition-delay: .34s;
-  }
-      
+}
+
+@keyframes typewriter{
+    from {
+      width: 0;
+    }
+    to {
+      width: 51%;
+       }
+    }
+    
+    @keyframes blinkTextCursor{
+    from {
+      border-right-color: rgba(0,0,0,.75);
+    }
+    to {
+      border-right-color: transparent;
+       }
+    }
+
+
+    .about.visible .wrapper .content div:nth-of-type(1) h3,
+    .about.visible .wrapper .content div:nth-of-type(1) p {
+      transition-delay: 1s;
+    }
+    
+    .about.visible .wrapper .content div:nth-of-type(2) h3,
+    .about.visible .wrapper .content div:nth-of-type(2) p {
+      transition-delay: 1.2s;
+    }
+    
+    .about.visible .wrapper .content div:nth-of-type(3) h3,
+    .about.visible .wrapper .content div:nth-of-type(3) p {
+      transition-delay: 1.4s;
+    }
+
+
+    /* Visible Next */
+
+    .passion h2,
+    .passion h3,
+    .passion p,
+    .passion img {
+        opacity: 0;
+        transition: .74s ease;
+    }
+
+    .passion h2,
+    .passion h3 {
+        transform: translateY(29px);
+    }
+
+    .passion p {
+        transform: translateY(-29px);
+    }
+
+
+    .about.visibleNext .passion h2 {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .about.visibleNext .container .author img {
+        opacity: 1;
+    }
+    
+    
+    .about.visibleNext .container .author:last-child img {
+        transition-delay: .74s;
+    }
+
+    .about.visibleNext .author:first-child .text h3,
+    .about.visibleNext .author:first-child .text p {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: .56s;
+    }
+
+    .about.visibleNext .author:last-child .text h3,
+    .about.visibleNext .author:last-child .text p {
+        transition-delay: 1.04s;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .about.visibleNext .passion .title p {
+        transition-delay: 1.74s;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Visible NextTwo */
+
+    .about .customers h2,
+    .about .customers h3,
+    .about .customers p {
+        transition: .74s ease;
+        opacity: 0;
+    }
+
+    .about .customers h2 {
+        transform: translateY(29px);
+    }
+
+    .about .customers p,
+    .about .customers .quote h3 {
+        transform: translateY(-29px);
+    }
+
+    .about.visibleNextTwo .customers h2,
+    .about.visibleNextTwo .customers h3,
+    .about.visibleNextTwo .customers p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .numbers.visible p.desktop,
+    .numbers.visible h2 {
+        transform: translateY(0);
+        opacity: 1;
+        transition: .74s ease;
+    }
+
+
+    /* Offer */
+
+
+    .offer h2,
+    .offer h3,
+    .offer p,
+    .offer svg {
+        transition: .74s ease;
+        opacity: 0;
+    }
+
+    .offer .offerbox p,
+    .offer .heading-text p:last-child {
+        transform: translateY(29px);
+    }
+
+    .offer p.desktop,
+    .offer .offerbox h3,
+    .offer h2 {
+        transform: translateY(-29px);
+    }
+
+    .offer.visible h2,
+    .offer.visible .heading-text p {
+        transform: translateY(0);
+        opacity: 1;
+    } 
+
+    /* Visible next */
+
+    .offer.visibleNext .offerbox:nth-child(1) div h3,
+    .offer.visibleNext .offerbox:nth-child(1) div svg,
+    .offer.visibleNext .offerbox:nth-child(1) div p,
+    .offer.visibleNext .offerbox:nth-child(2) div h3,
+    .offer.visibleNext .offerbox:nth-child(2) div svg,
+    .offer.visibleNext .offerbox:nth-child(2) div p,
+    .offer.visibleNext .offerbox:nth-child(3) div h3,
+    .offer.visibleNext .offerbox:nth-child(3) div svg,
+    .offer.visibleNext .offerbox:nth-child(3) div p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .offer.visibleNext .offerbox:nth-child(2) div h3,
+    .offer.visibleNext .offerbox:nth-child(2) div svg {
+      transition-delay: .3s;
+    }    
+
+    .offer.visibleNext .offerbox:nth-child(3) div h3,
+    .offer.visibleNext .offerbox:nth-child(3) div svg  {
+      transition-delay: .6s;
+    }
+
+    .offer.visibleNext .offerbox:nth-child(2) div:last-child p {
+        transition-delay: .74s;
+    }    
+  
+      .offer.visibleNext .offerbox:nth-child(3) div:last-child p {
+        transition-delay: 1.04s;
+    }    
+
+    .offer.visibleNextTwo .offerbox:nth-child(4) div h3,
+    .offer.visibleNextTwo .offerbox:nth-child(4) div svg,
+    .offer.visibleNextTwo .offerbox:nth-child(4) div p,
+    .offer.visibleNextTwo .offerbox:nth-child(5) div h3,
+    .offer.visibleNextTwo .offerbox:nth-child(5) div svg,
+    .offer.visibleNextTwo .offerbox:nth-child(5) div p,
+    .offer.visibleNextTwo .offerbox:nth-child(6) div h3,
+    .offer.visibleNextTwo .offerbox:nth-child(6) div svg,
+    .offer.visibleNextTwo .offerbox:nth-child(6) div p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    .offer.visibleNextTwo .offerbox:nth-child(5) div h3,
+    .offer.visibleNextTwo .offerbox:nth-child(5) div svg {
+      transition-delay: .3s;
+    }    
+
+    .offer.visibleNextTwo .offerbox:nth-child(6) div h3,
+    .offer.visibleNextTwo .offerbox:nth-child(6) div svg  {
+      transition-delay: .6s;
+    }    
+
+    .offer.visibleNextTwo .offerbox:nth-child(5) div:last-child p{
+      transition-delay: .74s;
+    }    
+
+    .offer.visibleNextTwo .offerbox:nth-child(6) div:last-child p{
+      transition-delay: 1.04s;
+    }
+
+
+    /* Contact */
+
+
+    .contact h2,
+    .contact p,
+    .contact h3,
+    .contact button,
+    .contact a,
+    .contact svg {
+        opacity: 0;
+        transition: .74s ease;
+    }
+
+    .contact h2,
+    .contact .boxes h3,
+    .contact .boxes p {
+        transform: translateY(29px);
+    }
+
+    .contact p.desktop,
+    .contact button,
+    .contact a {
+        transform: translateY(-29px);
+    }
+
+    .contact.visible h2,
+    .contact.visible h3,
+    .contact.visible p,
+    .contact.visible button,
+    .contact.visible a,
+    .contact.visible svg {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    .contact.visible svg {
+        transition-delay: 3.2s;
+    }
+
+
+    .contact.visible .boxes div:nth-child(1) h3,
+    .contact.visible .boxes div:nth-child(1) p,
+    .contact.visible .boxes div:nth-child(1) button {
+      transition-delay: .84s;
+    }
+    
+    .contact.visible .boxes div:nth-child(2) h3,
+    .contact.visible .boxes div:nth-child(2) p,
+    .contact.visible .boxes div:nth-child(2) a {
+      transition-delay: 1.34s;
+    }
+    
+    .contact.visible .boxes div:nth-child(3) h3,
+    .contact.visible .boxes div:nth-child(3) p,
+    .contact.visible .boxes div:nth-child(3) button {
+     transition-delay: 1.84s;
+    }
+
+
 }
 
 
@@ -1157,6 +1491,11 @@ a,p,h2,h3,div {
         right: 23px;
         top: 30px;
       }
+
+    .logo_sygnet {
+        top: 29px;
+        left: 24px;
+    }
 
     .loading img {
         width: 57.225%;
@@ -1200,7 +1539,7 @@ a,p,h2,h3,div {
     }
 
     .open nav::after {
-        background-color: rgba(255, 255, 255, 0.87);
+        background-color: rgba(255, 255, 255, 0.92);
         z-index: 2;
     }
 
@@ -1220,7 +1559,6 @@ a,p,h2,h3,div {
 
     .svgbox {
         position: absolute;
-        overflow: hidden;
         height: 375vh;
         width: 100vw;
     }
@@ -1245,6 +1583,7 @@ a,p,h2,h3,div {
 
     .apla {
         z-index: 7;
+        margin: 3px 0 0 59px;
     }
 
 
@@ -1267,7 +1606,7 @@ a,p,h2,h3,div {
     }
 
     nav a {
-        font-size: 13.05vw;
+        font-size: 12.75vw;
         line-height: 9.25vh;
         height: 20vw;
         text-align: left;
@@ -1283,7 +1622,7 @@ a,p,h2,h3,div {
         box-sizing: border-box;
         padding: 0 0 5vh 6vw;
         position: fixed;
-        left: 100vw;
+        left: 102.25vw;
         z-index: 6;
     }
 
@@ -1346,9 +1685,9 @@ a,p,h2,h3,div {
     }
 
     .lineWrapper .bg-top {
-        left: -82px;
-        width: 137.25%;
-        top: 45vw;
+        left: -112px;
+        width: 138%;
+        top: 43.5vw;
     }
 
     .lineWrapper path {
@@ -1360,7 +1699,7 @@ a,p,h2,h3,div {
 
     p {
        font-size: 4.45vw;
-       line-height: 7.25vw;
+       line-height: 7.5vw;
        margin-top: 3.25vw;
     }
 
@@ -1377,7 +1716,7 @@ a,p,h2,h3,div {
     }
 
     h3 {
-       font-size: 7.75vw;
+       font-size: 7.5vw;
     }
     
     .desktop {
@@ -1390,7 +1729,7 @@ a,p,h2,h3,div {
 
     header {
         place-items: center;
-        padding-bottom: 40.5vw;
+        padding-bottom: 44vw;
     }
 
     header .container {
@@ -1403,39 +1742,48 @@ a,p,h2,h3,div {
     }
 
     header p {
-        margin: 16vw 0 0 1px;
+        margin: 15.25vw 0 0 1px;
     }
 
     header a {
-        bottom: 8vw;
+        bottom: 7.5vw;
     }
 
     /* Intro */
 
+    .intro {
+        padding-bottom: 44.75vw;
+    }
+
     .intro .heading-text {
-        margin-top: 22vw;
+        margin-top: 19.25vw;
         padding-bottom: 1.8vw;
     }
+
 
     .intro h2 {
         margin: 0;
     }
 
+    .intro h3 {
+        margin-bottom: 4.75vw;
+    }
+
     .intro .flexbox {
         flex-direction: column;
-        margin-top: 80vw;
+        margin-top: 77.25vw;
     }
 
     .intro .flexbox div:first-child {
-        margin-bottom: 80vw;
+        margin-bottom: 76.5vw;
     }
 
     .intro .flexbox div:nth-child(2) {
-        margin-bottom: 75.75vw;
+        margin-bottom: 77vw;
     }
 
     .intro a {
-        bottom: -34vw;
+        bottom: 11vw;
     }
 
     /* Showroom */
@@ -1443,6 +1791,7 @@ a,p,h2,h3,div {
     .showroom {
         padding-top: 30.25vw;
         align-items: center;
+        padding-bottom: 11vw;
     }
 
     .showroom h1 {
@@ -1461,14 +1810,23 @@ a,p,h2,h3,div {
         margin: 5vh 0;
     }
 
+    .showroom .info p {
+        margin-top: 1.25vw;
+        font-size: 3.35vw;
+    }
+
+    .showroom .info h5 {
+        font-size: 4.425vw;
+    }
+
     .showroom a {
-        bottom: -5vh;
+        bottom: 5vh;
     }
 
     /* About */
 
     .about {
-        padding-top: 30.25vw;
+        padding-top: 8.5vw;
         align-items: center;
     }
 
@@ -1483,54 +1841,78 @@ a,p,h2,h3,div {
 
     .about .wrapper .content {
         flex-direction: column;
-        margin-top: 89vw;
+        margin-top: 90.5vw;
     }
 
     .about .wrapper .content div:first-child {
-        margin-bottom: 89vw;
+        margin-bottom: 80.75vw;
     }
 
     .about .wrapper .content div:nth-child(2) {
-        margin-bottom: 89vw;
+        margin-bottom: 87.25vw;
     }
 
     .about .bg-about {
         position: absolute;
     }
 
+    .about .content div p {
+        width: 94%;
+        margin-top: 4.5vw;
+        line-height: 7.25vw;
+    }
+
     .about .first {
-        top: -99vw;
+        top: -95vw;
         width: 100%;
         left: -50px;
     }
 
     .about .second {
-        top: 199vw;
-        left: -85px
+        top: 191vw;
+        left: -94px;
     }
 
     .about .third {
-        top: 302vw;
-        left: -50px;
+        top: 296vw;
+        left: -32px;
     }
 
     .about .flexbox {
         align-items: flex-start;
     }
 
+    .about h2 {
+        margin-bottom: 9vw;
+    }
+
+    .about .flexbox h3 {
+        line-height: 7.75vw;
+    }
+
     .about .flexbox p {
-        width: 100%;
         margin: 0;
+        width: 87%;
+        line-height: 7.25vw;
     }
 
     .passion {
         flex-direction: column;
-        margin-top: 100vw;
+        margin-top: 75.5vw;
+    }
+
+    .passion .title {
+        z-index: 1;
+    }
+
+    .passion .title p {
+        line-height: 7.25vw;
     }
 
     .angel {
-        top: -80vw;
-        left: -20vw;
+        top: -64vw;
+        left: -10vw;
+        width: 107.285%;
     }
 
     .about .passion img {
@@ -1538,16 +1920,26 @@ a,p,h2,h3,div {
     }
 
     .about .passion .author:first-child {
-        margin: 35.5vw 0 18vw;
+        margin: 8.5vw 0 9vw;
+    }
+
+    .about .passion .text {
+        margin-top: 5.25vw;
+    }
+
+    .about .cursive {
+        line-height: 7.4vw;
+        margin-top: 3.5vw;
     }
 
     .customers {
-        margin-top: 36vw;
+        margin-top: 27vw;
     }
 
     .customers h2 {
-        margin-bottom: 36vw;
+        margin-bottom: 12vw;
     }
+
 
     .quotebox {
         flex-direction: column;
@@ -1559,7 +1951,18 @@ a,p,h2,h3,div {
     }
 
     .quote .content img {
-        width: 8%;
+        top: 1px;
+        left: 2px;
+        width: 7.45%;
+        position: relative;
+    }
+
+    .about .first .quote:nth-child(1) {
+        margin-bottom: 6vh;
+    }
+
+    .about .first .quote:nth-child(2) {
+        margin-bottom: 6vh;
     }
 
     .quote {
@@ -1573,20 +1976,24 @@ a,p,h2,h3,div {
 
     .quote .name h3 {
         font-size: 7.5vw;
-        margin-bottom: 1vw;
+        margin-bottom: .5vw;
     }
 
     .about .first {
         margin-bottom: 14vw;
     }
 
+    .about .quotebox p {
+        line-height: 7.4vw;
+    }
+
     .about .first .quote:nth-child(1) .name {
-        left: -11.5vw;
-        bottom: 50vw;
+        left: -13vw;
+        bottom: 50.25vw;
       }
       
       .about .first .quote:nth-child(2) .name {
-        left: -14.5vw;
+        left: -15.5vw;
         bottom: 25vw;
       }
       
@@ -1600,8 +2007,11 @@ a,p,h2,h3,div {
         font-size: 19px;
         width: 140px;
         align-self: center;
-        padding-bottom: 5px;
+        padding-bottom: 10px;
         border: none;
+        position: relative;
+        left: 14px;
+        bottom: 6px;
       }
 
       .about .quotebox button span {
@@ -1650,6 +2060,11 @@ a,p,h2,h3,div {
           transform: translateY(0);
           transition: .34s ease;
       }
+
+      .about .second.extend div:nth-child(1) {
+        margin-top: 29vw;
+        margin-bottom: 10.75vw;
+      }
       
       .about .second .quote:nth-child(1) .name {
         left: -22vw;
@@ -1657,8 +2072,12 @@ a,p,h2,h3,div {
       }
       
       .about .second .quote:nth-child(2) .name {
-        left: -10vw;
-        bottom: 153vw;
+        left: -9.25vw;
+        bottom: 141.5vw;
+    }
+
+      .about .numbers {
+          margin-top: 3.5vw;
       }
 
       .second .quote {
@@ -1679,18 +2098,33 @@ a,p,h2,h3,div {
       }
 
       .charts div svg {
-          top: -8vh;
+          top: -11vh;
       }
 
       .charts div {
-          margin-bottom: 30vh;
           display: flex;
           flex-direction: column;
           align-items: center;
       }
 
+      .charts div:first-child {
+        margin-bottom: 31.5vh;
+      }
+
+      .charts div:nth-child(2) {
+        margin-bottom: 29.25vh;
+      }
+
+      .charts div:last-child {
+        margin-bottom: 33.4vh;
+      }
+
+      .charts div p {
+          margin-top: 2.5vw;
+      }
+
       .about a {
-        bottom: 0;
+        bottom: 6vh;
       }
 
 
@@ -1699,10 +2133,38 @@ a,p,h2,h3,div {
       .offer {
           padding-top: 7vw;
           align-items: center;
+          padding-bottom: 28vw;
+      }
+
+      .offer h2 {
+          margin-bottom: 9.5vw;
       }
 
       .offer .heading-text  {
           margin-bottom: 26vw;
+      }
+
+      .offer .heading-text p {
+          width: 96%;
+          line-height: 7.25vw;
+      }
+
+      .offer .offerbox div:last-child {
+          position: relative;
+          width: 50%;
+      }
+
+      .offer .offerbox h3 {
+          margin-bottom: 2vw;
+      }
+
+      .offer .offerbox p {
+          line-height: 7.25vw;
+      }
+
+      .offer .offerbox div:last-child:not(.reverse div) {
+          right: 10px;
+          bottom: 15px;
       }
 
       .offer h3 {
@@ -1711,13 +2173,49 @@ a,p,h2,h3,div {
           margin-bottom: 1.8vw;
       }
 
-      .offerbox {
-          margin-bottom: 22vw;
+      .offer .offerbox {
           justify-content: space-between;
       }
 
-      .offerbox div:last-child {
-          width: 50%;
+      .offers .offerbox:first-child {
+        margin-bottom: 18vw;
+      }
+
+      .offers .offerbox:nth-child(2) {
+        margin-bottom: 26.75vw;
+      }
+
+      .offers .offerbox:nth-child(3) {
+        margin-bottom: 18vw;
+      }
+
+      .offers .offerbox:nth-child(4) {
+        margin-bottom: 26.75vw;
+      }
+
+      .offers .offerbox:nth-child(4) p {
+        width: 105%;
+      }
+
+      .offers .offerbox:nth-child(5) div:last-child {
+        width: 49%;
+      }
+
+      .offers .offerbox:nth-child(5) {
+        margin-bottom: 18vw;
+      }
+
+      .offers .offerbox:nth-child(6) div:last-child {
+        width: 53%;
+      }
+
+      .offers .offerbox:nth-child(6) {
+        margin-bottom: 5vw;
+      }
+
+      .offers .offerbox:nth-child(6) svg {
+          position: relative;
+          top: 10px;
       }
 
       .reverse {
@@ -1729,26 +2227,37 @@ a,p,h2,h3,div {
 
       .contact {
           align-items: center;
+          padding-top: 16.9vw;
       }
 
       .contact h2 {
           width: 101%;
+          margin-bottom: 5.25vw;
+      }
+
+      .contact p {
+          line-height: 7.25vw;
       }
 
       .contact svg {
-          top: 53vh;
-          width: 43.21%;
-          transform: scaleX(-1);
-      }
+        top: 41vh;
+        width: 43.21%;
+        transform: scaleX(-1);
+        right: 32%;
+    }
 
       .contact .boxes {
           flex-direction: column;
-          margin-top: 80vw;
+          margin-top: 72vw;
       }
 
       .contact .boxes div {
           width: auto;
           margin-bottom: 18vw;
+      }
+
+      .contact .boxes p {
+          margin-bottom: 5vw;
       }
 
       .contact .boxes button,

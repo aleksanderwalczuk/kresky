@@ -245,7 +245,7 @@ $(window).scroll(function() {
     mainHeader.classList.remove('disappear');
     pHeader.classList.remove('disappear');
   };
-  if ($(this).scrollTop() > $('.intro').offset().top / 4) {
+  if ($(this).scrollTop() > $('.intro').offset().top * 0.9) {
     $('.intro').addClass('visible');
     }
     if ($(this).scrollTop() > $('header').innerHeight() * 0.8 && $(this).scrollTop() < $('header').innerHeight() * 1.2) {
@@ -262,13 +262,13 @@ $(window).scroll(function() {
     if ($(this).scrollTop() > $('.about').offset().top * 1.08) {
       $('.about').addClass('visibleNext');
     }
-    if ($(this).scrollTop() > $('.about').offset().top * 1.1) {
+    if ($(this).scrollTop() > $('.about').offset().top * 1.4) {
       $('.about').addClass('visibleNextTwo');
     }
-    if ($(this).scrollTop() > $('.about').offset().top * 1.5) {
-      $('.testimonials').addClass('visible');
+    if ($(this).scrollTop() > $('.about').offset().top * 1.6) {
+      $('.numbers').addClass('visible');
     }
-    if ($(this).scrollTop() > $('.numbers').offset().top) {
+    if ($(this).scrollTop() > $('.numbers').offset().top * 0.95) {
       $('.numbers').addClass('visible');
       $('.counter').each(function() {
         var $this = $(this),
@@ -344,10 +344,10 @@ $(window).scroll(function() {
     if ($(this).scrollTop() > $('.offer').offset().top * 0.95) {
       $('.offer').addClass('visible');
     }
-    if ($(this).scrollTop() > $('.offer').offset().top * 0.975) {
+    if ($(this).scrollTop() > $('.offer').offset().top * 1.025) {
       $('.offer').addClass('visibleNext');
     }
-    if ($(this).scrollTop() > $('.offer').offset().top * 1.025) {
+    if ($(this).scrollTop() > $('.offer').offset().top * 1.05) {
       $('.offer').addClass('visibleNextTwo');
     }
     if ($(this).scrollTop() > $('.contact').offset().top * 0.95) {

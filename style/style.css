@@ -6,6 +6,14 @@ nav, .apla {
   z-index: 4;
 }
 
+.apla p {
+  transition: .34s ease;
+}
+
+.apla.transparent p {
+  opacity: 1;;
+}
+
 nav {
   right: 0;
 }
@@ -286,8 +294,6 @@ header {
 .logo_sygnet {
     transition: .36s ease;
     position: fixed;
-    top: 30px;
-    left: 30px;
     z-index: 2;
 }
 
@@ -383,7 +389,7 @@ header {
   }
 
   .showroom .gallery .hoverbox:hover div:first-child img {
-    opacity: .5;
+    opacity: .18;
   }
 
   .showroom .gallery div svg {
@@ -644,7 +650,20 @@ header {
   transition: .36s ease;
 }
 
-.contact .boxes div a:hover p,
+.contact .boxes div a:hover p {
+  animation: hover .36s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hover {
+  from {
+    text-shadow: none;
+  }
+  to {
+    text-shadow: #00ffea -3px 0px;
+  }
+}
+
 .contact .boxes div button:hover:after {
   text-shadow: #00ffea -3px 0px;
 }
@@ -825,6 +844,58 @@ footer img {
   margin-top: 42px;
 }
 
+
+
+
+/* Charts */
+
+
+.numbers.visible .charts svg {
+  opacity: 1;
+  transition: .36s ease;
+  transition-delay: .5s;
+}
+
+.numbers.visible .charts div:nth-child(1) svg path,
+.numbers.visible .charts div:nth-child(3) svg path {
+  animation: circles 1s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1s; 
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.numbers.visible .charts div:nth-child(2) svg path {
+  animation: circlesBig 1s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 4.2s; 
+  stroke-dasharray: 1100;
+  stroke-dashoffset: 1100;
+}
+
+
+.numbers.visible .charts div:nth-child(3) svg path {
+  animation-delay: 6.3s;
+}
+
+
+@keyframes circles {
+  from {
+    stroke-dashoffset: 960;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+@keyframes circlesBig {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 
 
 
