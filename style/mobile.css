@@ -821,8 +821,26 @@
           width: 28%;
       }
 
-      .contact .boxes div p:not(.boxes a p) {
-          margin: 2.5vh 0 1.35vh;      }
+      .contact .boxes div p:not(.boxes a p, .hours, .boxes div:nth-child(2) p) {
+          margin: 2.5vh 0 1.35vh;
+      }
+
+      .contact .boxes div:nth-child(2) p:not(.hours, .contact .desktop) {
+          margin: 2.5vh 0 0;
+      }
+
+      .contact p.desktop {
+          margin: 0;
+      }
+
+      .contact .hours {
+          margin:0 0 1.35vh;
+      }
+
+      .contact .msgBtn::after {
+        /* margin-left: 1vw; */
+        font-size: .75vw;
+      }
 
       .contact .boxes a img,
       .contact .boxes button img {
@@ -960,6 +978,13 @@
         width: 221px;
       }
       
+
+
+      
+      form button:hover::after {
+        width: 100%;
+      }
+      
       form button:last-child, .sent-message div button {
         font-size: 22px;
       }
@@ -970,6 +995,7 @@
       
       form button::before {
         bottom: -2px;
+        background-color: #0c3c3a;
       }
 
 
@@ -981,6 +1007,7 @@
         justify-content: space-between;
         width: 74%;
       }
+
 
       .projects .heading-text {
         margin-top: 8.7vh;
@@ -1723,6 +1750,69 @@ h1, header p {
 
 @media (max-width: 1023px) {
 
+
+    hr {
+        width: 5px;
+    }
+
+    hr.black {
+        top: 22px;
+        transform: translateX(-15.5vw);
+        opacity: 0;
+        transition: all 0.74s ease;
+    }
+
+    .open hr.black {
+        opacity: 1;
+    }
+
+    nav a.int.active ~ hr.black,
+    nav a.int:hover ~ hr.blue {
+      height: 120px;
+    }
+    
+    nav a.int.active ~ hr.black {
+      max-height: 135px;
+    }
+    
+    nav a.sho.active ~ hr.black {
+      max-height: 183px;
+    }
+    
+    nav a.tea.active ~ hr.black {
+      max-height: 270px;
+    }
+    
+    nav a.off.active ~ hr.black {
+      max-height: 340px;
+    }
+    
+    nav a.con.active ~ hr.black {
+      max-height: 400px;
+    }
+    
+      header nav.open hr.black {
+        /* max-height: 190px; */
+      }
+    
+      nav a.sho:hover ~ hr.blue {
+        max-height: 252px !important;
+      }
+    
+      nav a.tea:hover ~ hr.blue {
+        max-height: 250px !important;
+      }
+    
+      nav a.off:hover ~ hr.blue {
+        max-height: 415px !important;
+      }
+    
+      nav a.con:hover ~ hr.blue {
+        max-height: 575px !important;
+      }
+    
+
+
     .close {
         right: 23px;
         top: 30px;
@@ -1820,6 +1910,11 @@ h1, header p {
     .apla {
         z-index: 7;
         margin: 3px 0 0 59px;
+        transition: .84s ease;
+    }
+
+    .open .apla {
+        opacity: .2;
     }
 
 
@@ -1848,7 +1943,7 @@ h1, header p {
         text-align: left;
         z-index: 6;
         text-shadow: 1.5px 1.5px #00ffea;
-        transition: .34s ease-in-out;
+        transition: .3s ease;
     }
 
     .links {
@@ -1960,7 +2055,8 @@ h1, header p {
     }
 
     header, section {
-        margin: 0 29px 0 30px;
+        /* margin: 0 29px 0 30px; */
+        margin: 0 25px 0 30px;
     }
 
     header {
@@ -2478,7 +2574,7 @@ h1, header p {
       }
 
       .contact svg {
-        top: 41.5vh;
+        top: 73.75vw;
         width: 43.21%;
         transform: scaleX(-1);
         right: 32%;
@@ -2546,16 +2642,14 @@ h1, header p {
     }
 
     .contact .hours span {
-        margin-left: 9vw;
+        margin-left: 8vw;
         font-family: 'Open Sans Bold';
         font-weight: bolder;
         color: #167172;
         font-size: 4.75vw;
-        position: relative;
-        left: 2px;
     }
 
-    .phoneBtn p {
+    .phoneBtn p:not(.projects .phoneBtn p) {
         font-size: 3.85vw;
         position: relative;
         top: 6px;
@@ -2656,7 +2750,7 @@ h1, header p {
   
       footer .icon-box a {
           transform: translateY(160%);
-          transition: cubic-bezier(.33,.14,.35,.97) .2s;
+          transition: cubic-bezier(.33,.14,.35,.97) .4s;
       }
 
       footer .icon-box.open a {
@@ -2730,6 +2824,10 @@ h1, header p {
         margin-top: 5vh;
     }
 
+    form button::before {
+        background-color:#00ffea;
+    }
+
     /* Finish Screen */
 
     .finish-screen {
@@ -2753,14 +2851,26 @@ h1, header p {
 
     /* PROJECTS */
 
+    .project .projects {
+        height: 86.5vh;
+    }
+
+    /* .projects .quote div:last-child span {
+        transform: translateY(25%);
+      } */
+
     .projects .heading-text {
         place-items: flex-start;
-        margin: 78px 30px 0;
+        margin: 65px 30px 0;
     }
 
     .projects h2 {
         text-align: left;
-        margin: 0;
+        margin: 0 0 9.75vw;
+    }
+
+    .projects .heading-text p {
+        line-height: 7.25vw;
     }
 
     .projects .header {
@@ -2768,13 +2878,43 @@ h1, header p {
         margin-bottom: 10px;
     }
 
+    .projects .photo {
+        margin-bottom: 15vh;
+        width: 91.5%;
+    }
+
+    .projects .quoteBox img {
+        width: 5.8%;
+    }
+
+    .projects div span {
+        width: 19.181%;
+    }
+
+    .projects .client p:first-child, .projects .ourbox p:first-child {
+        margin-bottom: 25px;
+    }
+
+    .projects .author {
+        margin-top: 0;
+        margin-left: 4vw;
+    }
+
     .projects .testimonial {
         flex-direction: column;
+        margin-bottom: 18vw;
+        align-self: flex-start;
+        /* margin-left: 6.75vw; */
     }
+
+    .projects .testimonial a p {
+        margin: 0 0 0 4vw;
+    }
+
 
     .projects .quote {
         order: -1;
-        margin-bottom: 78px;
+        margin-bottom: 19vw;
         width: 84%;
         align-self: center;
     }
@@ -2794,7 +2934,7 @@ h1, header p {
     .projects .port-nav {
         position: fixed;
         bottom: 0;
-        opacity: 1;
+        opacity: 0;
         transition: .36s ease;
         transition-delay: .74s;
         z-index: 3;
@@ -2806,14 +2946,20 @@ h1, header p {
 
     .projects .port-nav .styledBtn {
         border-bottom: none;
+        font-size: 4vw;
+    }
+
+    .projects .port-nav .styledBtn::after {
+        display: none;
     }
 
     .projects .port-nav a {
         font-family: 'OpenSans Light';
+        text-transform: capitalize;
     }
 
     .projects .ourbox {
-        margin-bottom: 90px;
+        margin-top: 19vw;
     }
 
 

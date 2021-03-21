@@ -133,6 +133,7 @@ nav hr.blue {
   align-items: center;
   justify-content: center;
   transition: .34s ease-in;
+  opacity: 0;
 }
 
 
@@ -168,6 +169,7 @@ nav hr.blue {
   flex-direction: column;
   align-items: center;
   transition: .34s ease;
+  opacity: 0;
 }
 
 .mail-screen form {
@@ -242,7 +244,6 @@ form button {
 }
 
 form button::before {
-  background-color: #0c3c3a;
   content: '';
   width: 0;
   height: 2px;
@@ -251,10 +252,6 @@ form button::before {
   position: absolute;
   bottom: -2px;
   left: 0;
-}
-
-form button:hover::after {
-  width: 100%;
 }
 
 form button.done::before {
@@ -275,6 +272,7 @@ form button.done::before {
   background-color: white;
   align-items: center;
   transition: .34s ease;
+  opacity: 0;
 }
 
 .finish-screen svg {
@@ -382,6 +380,53 @@ header {
     align-content: flex-start;
     align-items: stretch;
     place-content: center;
+  }
+
+  .showroom .gallery .hoverbox:nth-child(1) {
+    order: 12;
+  }
+
+  .showroom .gallery .hoverbox:nth-child(2) {
+    order: 11;
+  }
+
+  .showroom .gallery .hoverbox:nth-child(3) {
+    order: 10;
+  }
+
+  .showroom .gallery .hoverbox:nth-child(4) {
+    order: 9;
+  }
+
+  .showroom .gallery .hoverbox:nth-child(5) {
+    order: 8;
+  }
+
+  .showroom .gallery .hoverbox:nth-child(6) {
+    order: 7;
+  }
+
+  .showroom .gallery .hoverbox:nth-child(7) {
+    order: 6;
+  }
+
+  .showroom .gallery .hoverbox:nth-child(8) {
+    order: 5;
+  }
+
+  .showroom .gallery .hoverbox:nth-child(9) {
+    order: 4;  }
+
+  .showroom .gallery .hoverbox:nth-child(10) {
+    order: 3;
+  }
+
+  .showroom .gallery .hoverbox:nth-child(11) {
+    order: 2;
+  }
+
+  .showroom .gallery .hoverbox:nth-child(12) {
+    order: 1;
   }
 
    .showroom .gallery .hoverbox:hover div:first-child {
@@ -672,16 +717,26 @@ header {
   color: #0c3c3a;
 }
 
-.contact .boxes div button:hover:after {
+.contact .boxes div button:hover:after,
+.contact .boxes div a:hover:after {
   text-shadow: #00ffea -3px 0px;
 }
 
-.contact .boxes div:nth-child(1) button::after {
+.contact .boxes div:nth-child(1) button::after,
+.contact .msgBtn::after {
   content: 'NAPISZ NA MESSENGER';
 }
 
 .contact .boxes div:nth-child(2) a  {
   display: flex;
+}
+
+.contact .msgBtn {
+  display: flex;
+}
+
+.contact .msgBtn p {
+  margin: 0;
 }
 
 .contact .boxes div:nth-child(2) a p {
@@ -809,6 +864,7 @@ footer img {
 
 .projects .ourbox div a {
   display: flex;
+  align-items: center;
 }
 
 .project .port-nav p {
@@ -818,7 +874,6 @@ footer img {
 .projects .quote div:last-child span {
   border-top: 1px solid #0C3C3A;
   display: block;
-  align-self: center;
 }
 
 .projects .quote div:last-child {
@@ -845,6 +900,10 @@ footer img {
 
 .projects .client div:last-child div {
   margin-top: 42px;
+}
+
+.projects .quote div:last-child span {
+  align-self: center;
 }
 
 

@@ -217,7 +217,7 @@ window.requestAnimationFrame(() => {
     if (window.innerWidth > 1300) {
       svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * 6.25);
     } else svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * 4.75);
-    const drawMobile = lengthSvgTopMobile * scrollpercent * 7.25;
+    const drawMobile = lengthSvgTopMobile * scrollpercent * 6.25;
     svgTopMobile.style.strokeDashoffset = (lengthSvgTopMobile + 1000) - drawMobile;
   });
 
@@ -708,7 +708,6 @@ sendBtn.addEventListener('click', () => {
   if (msgInput.value === '' || !mailInput.value.match(mailformat)) {
     return false;
   } else {
-    finishScreen.style.opacity = '0'
     sendBtn.classList.add('done');
     finishScreen.style.zIndex = '2'
     finishScreen.style.opacity = '1'
@@ -725,17 +724,19 @@ sendBtn.addEventListener('click', () => {
 })
 
 backBtn.addEventListener('click', () => {
-  finishScreen.style.opacity = '0';
   if (!body.classList.contains('project')) {
   closeBtn.style.opacity = '0'
   setTimeout(() => {
-    globalBox.style.zIndex = '-1'
+    finishScreen.style.opacity = '0'
+  }, 700);
+  setTimeout(() => {
     finishScreen.style.zIndex = '-1'
-  }, 500);
+    globalBox.style.zIndex = '-1'
+  }, 900);
 } else {
   setTimeout(() => {
     finishScreen.style.zIndex = '-1'
-  }, 500);
+  }, 800);
 }
 });
 
@@ -750,11 +751,14 @@ const projectHeader = document.querySelector('.projects .header ');
 const projectTitle = document.querySelector('.projects .title ');
 const projectDescription = document.querySelector('.projects .description ');
 const projectPhoto = document.querySelector('.projects .photo ');
+const projectClient = document.querySelector('.projects .client ');
 const projectClientTitle = document.querySelector('.projects .clientTitle');
 const projectClientFanPage = document.querySelector('.website');
 const projectClientFb = document.querySelector('.fanpage');
 const projectClientYt = document.querySelector('.youtube');
+const projectClientInsta = document.querySelector('.instagram');
 const projectClientAddress = document.querySelector('.projects .address');
+const projectPhotographBox = document.querySelector('.projects .photoAuthor');
 const projectPhotograph = document.querySelector('.projects .photoBy');
 const projectQuote = document.querySelector('.projects .clientQuote');
 const projectQuoteAuthor = document.querySelector('.projects .author');
@@ -764,6 +768,8 @@ const projectIconYt = document.querySelector('.youtube img');
 const projecttextYt = document.querySelector('.youtube p');
 const projectTestimonials = document.querySelector('.testimonial');
 const project = document.querySelector('.projects');
+const projectMedia = document.querySelectorAll('.projects .media');
+const projectOurBox = document.querySelector('.projects .ourbox');
 
 const globalWrapper = document.querySelector('.global-wrapper')
 const galleryProjects = document.querySelectorAll('.window');
@@ -771,8 +777,8 @@ const backButton = document.querySelector('.back');
 const nextButton = document.querySelectorAll('.next');
 const prevButton = document.querySelectorAll('.prev');
 const projectBox = document.querySelector('.projects');
-var targetElm = document.querySelector('.projects .top');
-var root = document.querySelector('html');
+const targetElm = document.querySelector('.projects .top');
+const root = document.querySelector('html');
 
 
 const showroomHref = document.querySelector('.sho');
@@ -872,29 +878,29 @@ const galleryContents = {
                ""],
 
   websiteLinks : [
-  "",
+  "empty",
 
-   "",
+   "empty",
 
     "https://i-taliawear.com/", 
 
-    "", 
+    "empty", 
 
-    "",
+    "empty",
 
     "juniorjobsonly.com", 
 
      "kominki.eu", 
 
-     "", 
+     "empty", 
 
      "redtarget.pl", 
 
-     "",
+     "empty",
 
-     "",
+     "empty",
 
-     ""], 
+     "empty"], 
 
   fbLinks : ["https://www.facebook.com/janrobakGMF",
 
@@ -904,19 +910,19 @@ const galleryContents = {
 
      "https://www.facebook.com/Boogie-Woody-112971413508798",
 
-      "",
+      "empty",
 
-       "",
+       "empty",
 
-       "", 
+       "empty", 
 
        "https://www.facebook.com/atlanca.boat",
 
-        "",
+        "empty",
 
-         "",
+         "empty",
 
-         "",
+         "empty",
 
           "https://www.facebook.com/jestslodko" ],
 
@@ -925,25 +931,51 @@ const galleryContents = {
 
      "HTTPS://WWW.YOUTUBE.COM/USER/DAMAGESEED",
 
-      "", 
+      "empty", 
 
-      "", 
+      "empty", 
 
-      "", 
+      "empty", 
 
-      "",
+      "empty",
 
-       "",
+       "empty",
 
-        "",
+        "empty",
 
-         "", 
+         "empty", 
 
-         "", 
+         "empty", 
 
-         "",
+         "empty",
 
-          "" ],
+          "empty" ],
+  
+  instaLinks: [
+    "empty",
+    
+    "empty",
+    
+    "https://www.instagram.com/italiawear/",
+    
+    "empty",
+    
+    "empty",
+    
+    "empty",
+    
+    "empty",
+    
+    "https://www.instagram.com/atlanca_boatrental/",
+    
+    "empty",
+    
+    "https://www.instagram.com/rocamar_cruise/",
+    
+    "empty",
+    
+    "https://www.instagram.com/jest.slodko",
+  ],
 
   photographers : ["", 
 
@@ -1007,11 +1039,11 @@ const galleryContents = {
 
       "Mikołaj Drożdżyński, Boogie Woody",
 
+      "",
+
+      "Dawid Zamkowski, Founder & CEO: Junior Jobs Only",
+
       "Michał Miś, CEO kominki.eu",
-
-      "",
-
-      "",
 
        "",
 
@@ -1038,12 +1070,13 @@ galleryProjects.forEach(project => {
   project.addEventListener('click', () => {
   body.classList.add('project');
   globalBox.style.zIndex = '5';
-  root.style.scrollBehavior = 'unset'
+  root.style.scrollBehavior = 'unset';
   portNav.style.opacity = '1';
   targetElm.scrollIntoView()
   project.classList.add('active');
   setTimeout(() => {
     body.style.overflow = 'hidden';
+    root.style.overflow = 'hidden';
     closeBtn.style.opacity = '1';
   }, 800);
 
@@ -1061,25 +1094,53 @@ galleryProjects.forEach(project => {
     projectClientFanPage.setAttribute('href', galleryContents.websiteLinks[indexOfActiveContent]);
     projectClientFb.setAttribute('href', galleryContents.fbLinks[indexOfActiveContent]);
     projectClientYt.setAttribute('href', galleryContents.ytLinks[indexOfActiveContent]);
+    projectClientInsta.setAttribute('href', galleryContents.instaLinks[indexOfActiveContent]);
     projectPhotograph.textContent = galleryContents.photographers[indexOfActiveContent];
     projectQuote.textContent = galleryContents.clientQuotes[indexOfActiveContent];
     projectQuoteAuthor.textContent = galleryContents.quoteAuthors[indexOfActiveContent];
     projectPhoto.src = galleryContents.photos[indexOfActiveContent];
-    if (projectClientFanPage.href !== "https://www.empty.com/") {
+    if (projectClientFanPage.href !== "") {
       projectClientFanPage.style.display = 'flex';
     } else projectClientFanPage.style.display ="none";
-    if (projectClientYt.href !== "https://www.empty.com/") {
+    if (projectClientYt.href !== "") {
       projectClientYt.style.display = 'flex';
     } else projectClientFanPage.style.display ="none";
-    if (projectClientFb.href !== "https://www.empty.com/") {
+    if (projectClientFb.href !== "") {
       projectClientFb.style.display = 'flex';
     } else projectClientFanPage.style.display ="none";
     if (projectQuote.textContent !== "") {
       projectQuoteBox.style.display = "block"
     } else projectQuoteBox.style.display ="none";
-    if (projectClientFb.href !== "https://www.empty.com" && projectQuote.textContent !== "") {
-      projectTestimonials.style.display = 'flex'
-    } else projectTestimonials.style.display = 'none';
+    // if (projectClientFb.href !== "" && projectQuote.textContent !== "") {
+    //   projectTestimonials.style.display = 'flex'
+    // } else projectTestimonials.style.display = 'none';
+    if (projectPhotograph.textContent !== "") {
+      projectPhotographBox.style.display = 'block'
+    } else projectPhotographBox.style.display = 'none';
+    if (projectMedia[0].children[1].textContent !== "") {
+      projectMedia[0].style.display = 'flex';
+    } else projectMedia[0].style.display = 'none'
+    if (projectMedia[1].href.indexOf("empty") > -1) {
+      projectMedia[1].style.display = 'none';
+    } else projectMedia[1].style.display = 'flex'
+    if (projectMedia[2].href.indexOf("empty") > -1) {
+      projectMedia[2].style.display = 'none';
+    } else projectMedia[2].style.display = 'flex'
+    if (projectMedia[3].href.indexOf("empty") > -1) {
+      projectMedia[3].style.display = 'none';
+    } else projectMedia[3].style.display = 'flex'
+    if (projectMedia[0].children[1].textContent === "" && projectMedia[1].href.indexOf("empty") > -1 && projectMedia[2].href.indexOf("empty") > -1 && projectMedia[3].href.indexOf("empty") > -1) {
+      projectClient.style.display = 'none'
+      if (window.innerWidth > 1023) {
+        projectOurBox.style.alignItems = 'center'
+      }
+      if (window.innerWidth < 1024) {
+        projectTestimonials.style.alignSelf = 'flex-start';
+      }
+    } else  {
+      projectClient.style.display = 'block';
+      projectTestimonials.style.display = 'flex';
+    }
   };
 
 
@@ -1103,10 +1164,12 @@ const closeGalleryBtn = document.querySelector('.back');
 
 const closeGallery = () => {
   closeBtn.style.opacity = '0';
+  portNav.style.opacity = '0';
   setTimeout(() => {
     body.classList.remove('project')
     globalWrapper.classList.remove('off')
     body.style.overflow = 'visible';
+    root.style.overflow ='visible';
   }, 300);
   setTimeout(() => {
     globalBox.style.zIndex = '-1'
@@ -1140,6 +1203,7 @@ const prevProject = () => {
   body.classList.remove('project');
   globalBox.classList.remove('Off');
   window.location = showroomHref.href;
+  closeBtn.style.opacity = '0';
   setTimeout(function() {
     targetElm.scrollIntoView()
     if (indexOfActiveContent !== 11) {
@@ -1154,6 +1218,7 @@ const prevProject = () => {
   }, 1300);
   setTimeout(function() {
     globalBox.classList.add('Off');
+    closeBtn.style.opacity = '1';
   }, 1800);
 
   console.log(indexOfActiveContent)
@@ -1167,31 +1232,59 @@ const prevProject = () => {
     projectClientFanPage.setAttribute('href', galleryContents.websiteLinks[indexOfActiveContent]);
     projectClientFb.setAttribute('href', galleryContents.fbLinks[indexOfActiveContent]);
     projectClientYt.setAttribute('href', galleryContents.ytLinks[indexOfActiveContent]);
+    projectClientInsta.setAttribute('href', galleryContents.instaLinks[indexOfActiveContent]);
     projectPhotograph.textContent = galleryContents.photographers[indexOfActiveContent];
     projectQuote.textContent = galleryContents.clientQuotes[indexOfActiveContent];
     projectQuoteAuthor.textContent = galleryContents.quoteAuthors[indexOfActiveContent];
     projectPhoto.src = galleryContents.photos[indexOfActiveContent];
-    if (projectClientFanPage.href !== "https://www.empty.com/") {
+    if (projectClientFanPage.href !== "") {
       projectClientFanPage.style.display = 'flex';
     } else projectClientFanPage.style.display ="none";
-    if (projectClientYt.href !== "https://www.empty.com/") {
+    if (projectClientYt.href !== "") {
       projectClientYt.style.display = 'flex';
     } else projectClientFanPage.style.display ="none";
-    if (projectClientFb.href !== "https://www.empty.com/") {
+    if (projectClientFb.href !== "") {
       projectClientFb.style.display = 'flex';
     } else projectClientFanPage.style.display ="none";
     if (projectQuote.textContent !== "") {
       projectQuoteBox.style.display = "block"
     } else projectQuoteBox.style.display ="none";
-    if (projectClientFb.href !== "https://www.empty.com" && projectQuote.textContent !== "") {
-      projectTestimonials.style.display = 'flex'
-    } else projectTestimonials.style.display = 'none';
+    // if (projectClientFb.href !== "" && projectQuote.textContent !== "") {
+    //   projectTestimonials.style.display = 'flex'
+    // } else projectTestimonials.style.display = 'none';
+    if (projectPhotograph.textContent !== "") {
+      projectPhotographBox.style.display = 'block'
+    } else projectPhotographBox.style.display = 'none';
+    if (projectMedia[0].children[1].textContent !== "") {
+      projectMedia[0].style.display = 'flex';
+    } else projectMedia[0].style.display = 'none'
+    if (projectMedia[1].href.indexOf("empty") > -1) {
+      projectMedia[1].style.display = 'none';
+    } else projectMedia[1].style.display = 'flex'
+    if (projectMedia[2].href.indexOf("empty") > -1) {
+      projectMedia[2].style.display = 'none';
+    } else projectMedia[2].style.display = 'flex'
+    if (projectMedia[3].href.indexOf("empty") > -1) {
+      projectMedia[3].style.display = 'none';
+    } else projectMedia[3].style.display = 'flex'
+    if (projectMedia[0].children[1].textContent === "" && projectMedia[1].href.indexOf("empty") > -1 && projectMedia[2].href.indexOf("empty") > -1 && projectMedia[3].href.indexOf("empty") > -1) {
+      projectClient.style.display = 'none'
+      if (window.innerWidth > 1023) {
+        projectOurBox.style.alignItems = 'center'
+      }
+      if (window.innerWidth < 1024) {
+        projectTestimonials.style.alignSelf = 'flex-start';
+      }
+    } else  {
+      projectClient.style.display = 'block';
+      projectTestimonials.style.display = 'flex';
+    }
   };
 
 
   setTimeout(function() {
     changeContent();
-  }, 500)
+  }, 1000)
 };
 
 prevBtn.forEach(button => {
@@ -1220,6 +1313,7 @@ const nextProject = () => {
   body.classList.remove('project');
   globalBox.classList.remove('Off');
   window.location = showroomHref.href;
+  closeBtn.style.opacity = '0'
   setTimeout(function() {
     targetElm.scrollIntoView()
     if (indexOfActiveContent !== 0) {
@@ -1234,6 +1328,7 @@ const nextProject = () => {
   }, 1300);
   setTimeout(function() {
     globalBox.classList.add('Off');
+    closeBtn.style.opacity = '1'
   }, 1800);    
 
   const changeContent = () => {
@@ -1245,31 +1340,59 @@ const nextProject = () => {
     projectClientFanPage.setAttribute('href', galleryContents.websiteLinks[indexOfActiveContent]);
     projectClientFb.setAttribute('href', galleryContents.fbLinks[indexOfActiveContent]);
     projectClientYt.setAttribute('href', galleryContents.ytLinks[indexOfActiveContent]);
+    projectClientInsta.setAttribute('href', galleryContents.instaLinks[indexOfActiveContent]);
     projectPhotograph.textContent = galleryContents.photographers[indexOfActiveContent];
     projectQuote.textContent = galleryContents.clientQuotes[indexOfActiveContent];
     projectQuoteAuthor.textContent = galleryContents.quoteAuthors[indexOfActiveContent];
     projectPhoto.src = galleryContents.photos[indexOfActiveContent];
-    if (projectClientFanPage.href !== "https://www.empty.com/") {
+    if (projectClientFanPage.href !== "") {
       projectClientFanPage.style.display = 'flex';
     } else projectClientFanPage.style.display ="none";
-    if (projectClientYt.href !== "https://www.empty.com/") {
+    if (projectClientYt.href !== "") {
       projectClientYt.style.display = 'flex';
     } else projectClientFanPage.style.display ="none";
-    if (projectClientFb.href !== "https://www.empty.com/") {
+    if (projectClientFb.href !== "") {
       projectClientFb.style.display = 'flex';
     } else projectClientFanPage.style.display ="none";
     if (projectQuote.textContent !== "") {
       projectQuoteBox.style.display = "block"
     } else projectQuoteBox.style.display ="none";
-    if (projectClientFb.href !== "https://www.empty.com" && projectQuote.textContent !== "") {
-      projectTestimonials.style.display = 'flex'
-    } else projectTestimonials.style.display = 'none';
+    // if (projectClientFb.href !== "" && projectQuote.textContent !== "") {
+    //   projectTestimonials.style.display = 'flex'
+    // } else projectTestimonials.style.display = 'none';
+    if (projectPhotograph.textContent !== "") {
+      projectPhotographBox.style.display = 'block'
+    } else projectPhotographBox.style.display = 'none';
+    if (projectMedia[0].children[1].textContent !== "") {
+      projectMedia[0].style.display = 'flex';
+    } else projectMedia[0].style.display = 'none'
+    if (projectMedia[1].href.indexOf("empty") > -1) {
+      projectMedia[1].style.display = 'none';
+    } else projectMedia[1].style.display = 'flex'
+    if (projectMedia[2].href.indexOf("empty") > -1) {
+      projectMedia[2].style.display = 'none';
+    } else projectMedia[2].style.display = 'flex'
+    if (projectMedia[3].href.indexOf("empty") > -1) {
+      projectMedia[3].style.display = 'none';
+    } else projectMedia[3].style.display = 'flex'
+    if (projectMedia[0].children[1].textContent === "" && projectMedia[1].href.indexOf("empty") > -1 && projectMedia[2].href.indexOf("empty") > -1 && projectMedia[3].href.indexOf("empty") > -1) {
+      projectClient.style.display = 'none'
+      if (window.innerWidth > 1023) {
+        projectOurBox.style.alignItems = 'center'
+      }
+      if (window.innerWidth < 1024) {
+        projectTestimonials.style.alignSelf = 'flex-start';
+      }
+    } else  {
+      projectClient.style.display = 'block';
+      projectTestimonials.style.display = 'flex';
+    }
   };
 
 
   setTimeout(function() {
     changeContent();
-  }, 500)
+  }, 1000)
 };
 
 nextBtn.forEach(button => {
@@ -1315,6 +1438,8 @@ const closeWindow = () => {
     // Gallery Open//
 
   } else {
+    root.style.overflow = 'visible';
+    portNav.style.opacity = '0';
     if (phoneScreen.style.opacity === '1' || mailScreen.style.opacity === '1' || finishScreen.style.opacity === '1') {
       phoneScreen.style.opacity = '0';
       mailScreen.style.opacity = '0';
