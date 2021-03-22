@@ -1,4 +1,4 @@
-@media (min-width: 1920px) and (min-height: 1200px) {
+/* @media (min-width: 1920px) and (min-height: 1200px) {
     .bg-top {
         left: -10px;
         width: 85vw;
@@ -68,9 +68,13 @@
         width: 85vw;
         top: -21vw;
     }
-}
+} */
 
 @media (min-width: 1024px) {
+
+    .bg-top {
+        width: 99vwb;
+    }
 
     .loading img {
         width: 18.78%;
@@ -234,21 +238,23 @@
         stroke-linejoin: round;
         stroke-width: 1px;
         fill-rule: evenodd;
-        animation: drawtop 2s;
-        animation-delay: 3s;
-        stroke-dasharray: 12357.5;
-        stroke-dashoffset: 10794.5;
+        animation: drawtop 5s ease;
+        animation-delay: 1s;
+        stroke-dasharray: 14000;
+        /* animation-fill-mode: forwards; */
+        stroke-dashoffset: 17000;
+        /* stroke-dasharray: 14000;
+        stroke-dashoffset: 17000; */
         opacity: 0;
         transform: translate3d(0,0,0);
     }
     @keyframes drawtop {
         from {
-          stroke-dasharray: 10000;
-          stroke-dashoffset: 10000;
+          stroke-dashoffset: 0;
         }
+
         to {
-          stroke-dasharray: 12357.5;
-          stroke-dashoffset: 10794.5;
+            stroke-dashoffset: 17000;
         }
       }
 
@@ -272,7 +278,7 @@
         align-items: center;
         margin-bottom: 6.25vh;
         position: relative;
-        bottom: 3vh;
+        bottom: 4vh;
         left: 5px;
     }
 
@@ -366,7 +372,7 @@
     }
 
     .showroom .gallery {
-        grid-gap: 70px 28px;
+        grid-gap: 40px 28px;
         grid-auto-rows: 278px;
         grid-template-columns: repeat(auto-fit, minmax(444px, 0fr));
         width: 75%;
@@ -848,7 +854,7 @@
       }
 
       .contact .boxes div span {
-          font-weight: bolder;
+        font-family: 'Open Sans Bold'
       }
 
       .contact .boxes div:nth-child(3) button::after {
@@ -1377,13 +1383,13 @@ h1, header p {
     }
 
     .offer .offerbox p,
-    .offer .heading-text p:last-child {
+    .offer .heading-text p:last-child,
+    .offer h2 {
         transform: translateY(29px);
     }
 
     .offer p.desktop,
-    .offer .offerbox h3,
-    .offer h2 {
+    .offer .offerbox h3 {
         transform: translateY(-29px);
     }
 
@@ -2644,7 +2650,7 @@ h1, header p {
     .contact .hours span {
         margin-left: 8vw;
         font-family: 'Open Sans Bold';
-        font-weight: bolder;
+        font-weight: 700;
         color: #167172;
         font-size: 4.75vw;
     }
