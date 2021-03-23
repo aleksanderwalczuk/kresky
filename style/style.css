@@ -152,7 +152,7 @@ nav hr.blue {
   font-size: 1.725vw;
 }
 
-.phone-screen svg {
+.phone-screen svg:not(.phone-screen p svg) {
   position: absolute;
   bottom: 0;
 }
@@ -757,6 +757,28 @@ footer {
 footer img {
   width: fit-content;
   height: fit-content;
+}
+
+footer .wrapper div:nth-child(2) a:nth-child(4),
+footer .wrapper div:nth-child(2) a:nth-child(5) {
+  /* opacity: 0; */
+  z-index: -1;
+}
+
+footer .wrapper div:nth-child(2) a:hover {
+  animation: pulse .74s ease infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .35;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 

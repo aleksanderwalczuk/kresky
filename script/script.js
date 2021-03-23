@@ -215,7 +215,7 @@ window.requestAnimationFrame(() => {
 
     const draw = lengthSvgTop * scrollpercent;
     if (window.innerWidth > 1300) {
-      svgTop.style.strokeDashoffset = (lengthSvgTop + 4400) + (draw * 6.85);
+      svgTop.style.strokeDashoffset = (lengthSvgTop + 4400) + (draw * 7.5);
     } else svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * 4.75);
     const drawMobile = lengthSvgTopMobile * scrollpercent * 6.25;
     svgTopMobile.style.strokeDashoffset = (lengthSvgTopMobile + 1000) - drawMobile;
@@ -260,7 +260,7 @@ $(window).scroll(function() {
     if ($(this).scrollTop() > $('.showroom').offset().top * 0.8) {
       $('.showroom').addClass('visible');
     }
-    if ($(this).scrollTop() > $('.about').offset().top) {
+    if ($(this).scrollTop() > $('.about').offset().top * 0.9) {
       $('.about').addClass('visible');
     }
     if ($(this).scrollTop() > $('.about').offset().top * 1.08) {

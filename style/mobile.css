@@ -73,7 +73,12 @@
 @media (min-width: 1024px) {
 
     .bg-top {
-        width: 99vwb;
+        width: 99vw;
+        height: auto;
+    }
+
+    .bg-top path {
+        transition: 1s ease;
     }
 
     .loading img {
@@ -270,7 +275,8 @@
     header {
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        /* height: 101.5vh; */
+        height: 51.25vw;
     }
 
     header .container {
@@ -300,7 +306,7 @@
 
 
     header a {
-        bottom: 9vh;
+        bottom: 5.3vw;
     }
 
     h2 {
@@ -320,14 +326,13 @@
     /* INTRO */
 
     .intro {
-        height: 93.05vh;
+        height: 46.96vw;
         justify-content: space-around;
-        padding-top: 12px;
     }
 
 
     .intro .heading-text {
-        margin-bottom: 11vh;
+        margin-bottom: 5.5vw;
     }
 
 
@@ -335,9 +340,9 @@
         align-self: center;
         justify-content: space-between;
         width: 97.1%;
-        margin:0 30vw 9vh 30vw;
+        margin:0 30vw 4.5vw 30vw;
         position: relative;
-        top: 3.35vh;
+        top: 3.05vw;
         right: 1vw;
     }
 
@@ -355,19 +360,19 @@
         left: 6px;
     }
 
-    .intro h3 {
-        margin: 0 0 2.3vh;
+    .intro div p {
+        margin-top: 1.15vw;
     }
 
     .intro a {
-        bottom: 3.25vw;
+        bottom: 1.5vw;
     }
 
     /* Gallery */
 
     .showroom {
         align-items: center;
-        padding-top: 8.15vw;
+        padding-top: 8.05vw;
         padding-bottom: 10.1vh;
     }
 
@@ -388,7 +393,7 @@
     }
 
     .showroom .info {
-        margin-top: 1.25vh;
+        margin-top: 1.5vh;
     }
 
     .showroom .info h5 {
@@ -396,7 +401,7 @@
     }
 
     .showroom .info p {
-        margin:3px 0 0;
+        margin:2px 0 0;
         font-size: .625vw;
     }
 
@@ -670,7 +675,7 @@
       }
 
       .about .numbers {
-        margin: 15.75vh 0 7.5vh;
+        margin: 25vh 0 7.5vh;
       }
 
       .about .numbers h2 {
@@ -680,7 +685,8 @@
 
 
       .charts {
-        margin-top: 13.6vh;
+        margin-top: 6.85vw;
+        margin-left: .5vw;
         width: 75vw;
         justify-content: space-around;
       }
@@ -693,7 +699,7 @@
       
       .charts div h3 {
         font-size: 3.85vw;
-        margin-bottom: .75vw;
+        margin-bottom: .55vw;
       }
 
       .charts div h3 span:first-of-type {
@@ -705,14 +711,16 @@
         bottom: -6vh;
         width: 20vw;
       }
+
       
       .charts div:first-child svg,
       .charts div:last-child svg {
-        left: 2.25vw;
+        left: 2.85vw;
+        bottom: -4.75vh;
       }
       
       .charts div:nth-child(2) svg {
-        left: 2.5vw;
+        left: 3vw;
       }
       
       .about .runicBtn {
@@ -800,7 +808,8 @@
       }
 
       .contact p.desktop:not(.boxes a p) {
-          margin-top: 2vh ;
+          margin-top: 2vh;
+          text-align: center;
       }
 
       .contact h2 {
@@ -825,6 +834,15 @@
       .contact .boxes div {
           margin-right: 3.05vw;
           width: 28%;
+      }
+
+      .contact .boxes div a p {
+          align-items: center;
+      }
+
+      .contact .phoneBtn .desktop {
+          text-transform: uppercase;
+          font-size: .75vw;
       }
 
       .contact .boxes div p:not(.boxes a p, .hours, .boxes div:nth-child(2) p) {
@@ -854,7 +872,7 @@
       }
 
       .contact .boxes div span {
-        font-family: 'Open Sans Bold'
+        font-family: 'OpenSans Bold'
       }
 
       .contact .boxes div:nth-child(3) button::after {
@@ -1117,9 +1135,19 @@
         margin-bottom: 22.5vh;
     }
 
-    .phone-screen svg {
+    .phone-screen svg:not(.phone-screen p svg) {
         left: 27.25vw;
     }
+
+    .phone-screen h2 {
+        bottom: -10px;
+    }
+
+    .phone-screen .wrapper div p:first-child {
+        bottom: 7px;
+        position: relative;
+    }
+
 
 
 /* Transitions */
@@ -1234,7 +1262,7 @@ h1, header p {
     transform: translateY(29px);
 }
 
-.about.visible p.desktop:not(.customers p.desktop, .numbers p.desktop),
+.about.visible p.desktop:not(.customers p.desktop, .numbers p.desktop, .passion .text .desktop),
 .about.visible .wrapper .content p,
 .about.visible h2:nth-child(2):not(.customers h2, .numbers h2),
 .about.visible .wrapper .content h3 {
@@ -1289,9 +1317,19 @@ h1, header p {
     .passion h2,
     .passion h3,
     .passion p,
-    .passion img {
+    .passion img,
+    .passion .text .desktop {
         opacity: 0;
         transition: .74s ease;
+    }
+
+    .passion .angel {
+        opacity: 0;
+        transition: .74 ease;
+    }
+
+    .about.visibleNext .angel {
+        opacity: 1;
     }
 
     .passion h2,
@@ -1299,7 +1337,8 @@ h1, header p {
         transform: translateY(29px);
     }
 
-    .passion p {
+    .passion p,
+    .passion .text .desktop {
         transform: translateY(-29px);
     }
 
@@ -1319,7 +1358,8 @@ h1, header p {
     }
 
     .about.visibleNext .author:first-child .text h3,
-    .about.visibleNext .author:first-child .text p {
+    .about.visibleNext .author:first-child .text p,
+    .about.visibleNext .author:first-child .text .desktop {
         opacity: 1;
         transform: translateY(0);
         transition-delay: .56s;
@@ -1342,7 +1382,8 @@ h1, header p {
 
     .about .customers h2,
     .about .customers h3,
-    .about .customers p {
+    .about .customers p,
+    .about .customers img {
         transition: .74s ease;
         opacity: 0;
     }
@@ -1358,6 +1399,7 @@ h1, header p {
 
     .about.visibleNextTwo .customers h2,
     .about.visibleNextTwo .customers h3,
+    .about.visibleNextTwo .customers img,
     .about.visibleNextTwo .customers p {
         opacity: 1;
         transform: translateY(0);
@@ -1508,7 +1550,7 @@ h1, header p {
 
     .contact.visible .boxes div:nth-child(1) h3,
     .contact.visible .boxes div:nth-child(1) p,
-    .contact.visible .boxes div:nth-child(1) button {
+    .contact.visible .boxes div:nth-child(1) a {
       transition-delay: .84s;
     }
     
@@ -1731,6 +1773,10 @@ h1, header p {
 
         .offer p {
             line-height: 1.35vw;
+        }
+
+        .offer .heading-text svg {
+            top: 15.25vw;
         }
 
         .offer .offers {
