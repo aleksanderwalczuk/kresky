@@ -242,7 +242,6 @@
     height: 21px;
     transition: cubic-bezier(.33,.14,.35,.97) .2s;
     transition-delay: 0s;
-    overflow: hidden;
     display: block;
     opacity: 0;
 }
@@ -257,8 +256,16 @@
   transform: rotate(90deg);
 }
 
+.close path {
+  transition: .18s ease-in;
+}
+
+.close:hover svg path {
+  stroke: #00ffea;
+}
+
 .close svg {
-  transition: .2s ease-in;
+  transition: .1s ease-in;
 }
 
 .close svg:first-child {
@@ -269,14 +276,6 @@
 .close svg:last-child {
   left: 0px;
   top: 0px;
-}
-
-.close:hover svg:first-child {
-  transform: translate(25px, -25px);
-}
-
-.close:hover svg:last-child {
-  transform: translate(-25px, -25px);
 }
 
 

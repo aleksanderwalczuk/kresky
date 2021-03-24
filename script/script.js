@@ -214,9 +214,9 @@ window.requestAnimationFrame(() => {
         document.documentElement.clientHeight);
 
     const draw = lengthSvgTop * scrollpercent;
-    if (window.innerWidth > 1300) {
-      svgTop.style.strokeDashoffset = (lengthSvgTop + 4400) + (draw * 7.5);
-    } else svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * 4.75);
+    // if (window.innerWidth > 1300) {
+    //   svgTop.style.strokeDashoffset = (lengthSvgTop + 4400) + (draw * 7.4);
+    // } else svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * 4.75);
     const drawMobile = lengthSvgTopMobile * scrollpercent * 6.25;
     svgTopMobile.style.strokeDashoffset = (lengthSvgTopMobile + 1000) - drawMobile;
   });
@@ -348,7 +348,7 @@ $(window).scroll(function() {
     if ($(this).scrollTop() > $('.offer').offset().top * 0.95) {
       $('.offer').addClass('visible');
     }
-    if ($(this).scrollTop() > $('.offer').offset().top * 0.975) {
+    if ($(this).scrollTop() > $('.offer').offset().top) {
       $('.offer').addClass('visibleNext');
     }
     if ($(this).scrollTop() > $('.offer').offset().top * 1.05) {
@@ -1189,7 +1189,7 @@ closeGalleryBtn.addEventListener('click', closeGallery);
 
 
 
-const prevBtn = document.querySelectorAll('.prev')
+const prevBtn = document.querySelectorAll('.next')
 
 
 const prevProject = () => {
@@ -1298,7 +1298,7 @@ prevBtn.forEach(button => {
 
 
 
-const nextBtn = document.querySelectorAll('.next')
+const nextBtn = document.querySelectorAll('.prev')
 
 
 const nextProject = () => {

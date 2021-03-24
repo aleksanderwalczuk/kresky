@@ -136,6 +136,19 @@ nav hr.blue {
   opacity: 0;
 }
 
+.phone-number {
+  position: relative;
+  left: 21px;
+}
+
+.phone-number svg {
+  margin-right: 10px;
+}
+
+.phone-number svg path {
+  fill: #0c3c3a;
+}
+
 
 .phone-screen .wrapper div {
   display: flex;
@@ -678,6 +691,11 @@ header {
   display: flex;
 }
 
+
+.msgBtn {
+  align-items: center;
+}
+
 /* .contact .boxes p:not(a p) {
   margin: 2.5vh 0;
 } */
@@ -789,6 +807,10 @@ footer .wrapper div:nth-child(2) a:hover {
 .project .close {
   z-index: 2;
   transition: .2s ease;
+}
+
+.project .close {
+  right: 47px;
 }
 
 .project {

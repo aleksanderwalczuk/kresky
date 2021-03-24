@@ -245,7 +245,7 @@
         fill-rule: evenodd;
         animation: drawtop 5s ease;
         animation-delay: 1s;
-        stroke-dasharray: 14000;
+        stroke-dasharray: 30000;
         /* animation-fill-mode: forwards; */
         stroke-dashoffset: 17000;
         /* stroke-dasharray: 14000;
@@ -284,7 +284,7 @@
         align-items: center;
         margin-bottom: 6.25vh;
         position: relative;
-        bottom: 4vh;
+        bottom: 6vh;
         left: 5px;
     }
 
@@ -326,7 +326,7 @@
     /* INTRO */
 
     .intro {
-        height: 46.96vw;
+        height: 45.96vw;
         justify-content: space-around;
     }
 
@@ -372,7 +372,7 @@
 
     .showroom {
         align-items: center;
-        padding-top: 8.05vw;
+        padding-top: 9.05vw;
         padding-bottom: 10.1vh;
     }
 
@@ -493,7 +493,7 @@
 
     .angel {
         left: 3.9vw;
-        bottom: 56.5%;
+        bottom: 22.95vw;
         width: 57.093%
     }
 
@@ -511,13 +511,17 @@
     }
 
     .passion .title h2 {
-        line-height: 11.1vh;
+        line-height: 5.6vw;
         text-align: left;
     }
 
     .passion .title p {
         margin-top: 5.1vh;
         line-height: 1.4vw;
+    }
+
+    .passion .title p span {
+        font-family: 'OpenSans Bold';
     }
 
     .about .container {
@@ -846,7 +850,7 @@
       }
 
       .contact .boxes div p:not(.boxes a p, .hours, .boxes div:nth-child(2) p) {
-          margin: 2.5vh 0 1.35vh;
+          margin: 2.5vh 0 1.55vh;
       }
 
       .contact .boxes div:nth-child(2) p:not(.hours, .contact .desktop) {
@@ -880,7 +884,7 @@
       }
 
       .contact .boxes div:nth-child(2) a p {
-        margin-left: 5px;
+        /* margin-left: 5px; */
       }
 
 
@@ -1143,6 +1147,10 @@
         bottom: -10px;
     }
 
+    .phone-number {
+        display: flex;
+    }
+
     .phone-screen .wrapper div p:first-child {
         bottom: 7px;
         position: relative;
@@ -1221,7 +1229,7 @@ h1, header p {
   /* Showroom */
 
   .showroom h2 {
-      transform: translateY(-29px);
+      transform: translateY(29px);
   }
 
   .showroom h2,
@@ -1250,10 +1258,12 @@ h1, header p {
     transform: translateY(-29px);
 }
 
+
 .about h2,
 .about .content p,
 .about p.desktop,
-.about .content h3 {
+.about .content h3,
+.about .flexbox h3 {
     opacity: 0;
 }
 
@@ -1265,7 +1275,8 @@ h1, header p {
 .about.visible p.desktop:not(.customers p.desktop, .numbers p.desktop, .passion .text .desktop),
 .about.visible .wrapper .content p,
 .about.visible h2:nth-child(2):not(.customers h2, .numbers h2),
-.about.visible .wrapper .content h3 {
+.about.visible .wrapper .content h3,
+.about.visible .flexbox h3 {
     opacity: 1;
     transform: translateY(0);
     transition: .74s ease;
@@ -1388,12 +1399,12 @@ h1, header p {
         opacity: 0;
     }
 
-    .about .customers h2 {
+    .about .customers h2,
+    .about .customers .quote h3 {
         transform: translateY(29px);
     }
 
-    .about .customers p,
-    .about .customers .quote h3 {
+    .about .customers p {
         transform: translateY(-29px);
     }
 
@@ -1427,12 +1438,12 @@ h1, header p {
     .offer .offerbox p,
     .offer .heading-text p:last-child,
     .offer h2 {
-        transform: translateY(29px);
+        transform: translateY(-29px);
     }
 
     .offer p.desktop,
     .offer .offerbox h3 {
-        transform: translateY(-29px);
+        transform: translateY(29px);
     }
 
     .offer.visible h2,
@@ -1521,15 +1532,15 @@ h1, header p {
     }
 
     .contact h2,
-    .contact .boxes h3,
-    .contact .boxes p {
-        transform: translateY(29px);
+    .contact .boxes h3 {
+        transform: translateY(-29px);
     }
 
     .contact p.desktop,
     .contact button,
+    .contact .boxes p,
     .contact a {
-        transform: translateY(-29px);
+        transform: translateY(29px);
     }
 
     .contact.visible h2,

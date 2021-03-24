@@ -1,0 +1,14 @@
+<svg id="ico_X" data-name="ico X" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #0c3c3a;
+        stroke-width: 3px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="icon_x1" class="cls-1" d="M1.956,1.951L21.048,21.043"/>
+  <path id="icon_x2" class="cls-1" d="M21.044,1.951L1.952,21.043"/>
+</svg>
