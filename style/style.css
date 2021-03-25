@@ -809,10 +809,6 @@ footer .wrapper div:nth-child(2) a:hover {
   transition: .2s ease;
 }
 
-.project .close {
-  right: 47px;
-}
-
 .project {
   overflow: hidden;
   transition-delay: 2s;
@@ -981,7 +977,7 @@ footer .wrapper div:nth-child(2) a:hover {
 
 
 .numbers.visible .charts div:nth-child(3) svg path {
-  animation-delay: 6.3s;
+  animation-delay: 7.4s;
 }
 
 

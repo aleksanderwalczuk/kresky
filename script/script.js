@@ -214,11 +214,11 @@ window.requestAnimationFrame(() => {
         document.documentElement.clientHeight);
 
     const draw = lengthSvgTop * scrollpercent;
-    // if (window.innerWidth > 1300) {
-    //   svgTop.style.strokeDashoffset = (lengthSvgTop + 4400) + (draw * 7.4);
-    // } else svgTop.style.strokeDashoffset = (lengthSvgTop - 1800) - (draw * 4.75);
+    if (window.innerWidth > 1300) {
+      svgTop.style.strokeDasharray = (lengthSvgTop - 2000) + (draw * 7.3);
+    } else svgTop.style.strokeDasharray = (lengthSvgTop - 2000) + (draw * 4.75);
     const drawMobile = lengthSvgTopMobile * scrollpercent * 6.25;
-    svgTopMobile.style.strokeDashoffset = (lengthSvgTopMobile + 1000) - drawMobile;
+    svgTopMobile.style.strokeDashoffset = (lengthSvgTopMobile + 1000) - (drawMobile * 1.125);
   });
 
 
@@ -266,7 +266,7 @@ $(window).scroll(function() {
     if ($(this).scrollTop() > $('.about').offset().top * 1.08) {
       $('.about').addClass('visibleNext');
     }
-    if ($(this).scrollTop() > $('.about').offset().top * 1.4) {
+    if ($(this).scrollTop() > $('.about').offset().top * 1.325) {
       $('.about').addClass('visibleNextTwo');
     }
     if ($(this).scrollTop() > $('.about').offset().top * 1.6) {
@@ -838,7 +838,7 @@ const galleryContents = {
 
   "Miejsce, które opisać można w trzech słowach - dotyk, piękno, harmonia. Projekt logo Holistic Studio łączy w sobie te trzy aspekty. Stworzony z połączenia personalizowanego symbolu harmonii, formy “koru” i sylwetki osoby realizującej masaż (widzianej od góry).", 
   
-  "Projekt logo i strony internetowej dla firmy zajmującej się wynajmem łodzi motorowych na Teneryfie. Sygnet logo tworzy zestawienie fal, litery A oraz kształtu łodzi dostępnych we flocie Atlanca. Kolorystyka w bezpośredni sposób nawiązuje do gorącego klimatu hiszpańskiej wyspy i aktywnej formy wypoczynku. Mocny czerwony kolor aktywizuje do działania."],
+  "Jest Słodko to manufaktura czekolady.Logo nawiązuje do kształtu owocu kakaowca, który przedstawia jednocześnie literę J. W środek wpisana została litera S, tworząc akronim nazwy. Harmonijna forma powstała w oparciu o złotą proporcję jest także akronimem. Kompozycja złotego logo na czarnym tle pozwoliła uzyskać ponadczasowy, elegacki charakter identyfikacji wizualnej."],
   
   photos: ["assets/images/portfolio/1.jpg",
            "assets/images/portfolio/2.jpg", 
@@ -1168,8 +1168,8 @@ const closeGallery = () => {
   setTimeout(() => {
     body.classList.remove('project')
     globalWrapper.classList.remove('off')
-    body.style.overflow = 'visible';
-    root.style.overflow ='visible';
+    body.style.overflowX = 'hidden';
+    root.style.overflowX ='visible';
   }, 300);
   setTimeout(() => {
     globalBox.style.zIndex = '-1'
@@ -1406,6 +1406,7 @@ nextBtn.forEach(button => {
 // Close Button //
 
 const closeWindow = () => {
+  
 
   // Gallery Close
 
@@ -1438,6 +1439,7 @@ const closeWindow = () => {
     // Gallery Open//
 
   } else {
+    body.style.overflowX = 'hidden';
     root.style.overflow = 'visible';
     portNav.style.opacity = '0';
     if (phoneScreen.style.opacity === '1' || mailScreen.style.opacity === '1' || finishScreen.style.opacity === '1') {

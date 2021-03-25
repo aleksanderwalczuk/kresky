@@ -78,7 +78,7 @@
     }
 
     .bg-top path {
-        transition: 1s ease;
+        transition: .925s ease;
     }
 
     .loading img {
@@ -244,22 +244,22 @@
         stroke-width: 1px;
         fill-rule: evenodd;
         animation: drawtop 5s ease;
-        animation-delay: 1s;
+        animation-delay: 1.25s;
         stroke-dasharray: 30000;
-        /* animation-fill-mode: forwards; */
+        animation-fill-mode: forwards;
         stroke-dashoffset: 17000;
-        /* stroke-dasharray: 14000;
-        stroke-dashoffset: 17000; */
+        stroke-dasharray: 10550;
+        stroke-dashoffset: 8950;
         opacity: 0;
         transform: translate3d(0,0,0);
     }
     @keyframes drawtop {
         from {
-          stroke-dashoffset: 0;
+          stroke-dashoffset: 17000;
         }
 
         to {
-            stroke-dashoffset: 17000;
+            stroke-dashoffset: 8950;
         }
       }
 
@@ -648,30 +648,33 @@
     }
     
     .about .first .quote:nth-child(1) .name {
-      left: -7.5vw;
-      bottom: 5.75vh;
+        left: -7.65vw;
+        bottom: 2.8vw;
     }
-    
+
     .about .first .quote:nth-child(2) .name {
-      left: -8.3vw;
-      bottom: 1.75vh;
+        left: -8.5vw;
+        bottom: .8vw;
     }
-    
-    
+
     .about .first .quote:nth-child(3) .name {
-      left: -11.25vw;
-      bottom: -2vh;
+        left: -11.5vw;
+        bottom: -.95vw;
     }
-      
-      .about .second .quote:nth-child(1) .name {
-        left: -10vw;
-        bottom: 3.25vh;
-      }
-      
-      .about .second .quote:nth-child(2) .name {
-        left: -6.9vw;
-        bottom: 17.5vh;
-      }
+    
+    .about .first .quote:nth-child(2) {
+        margin-bottom: 10.25vh;
+    }
+
+    .about .second .quote:nth-child(1) .name {
+        left: -10.25vw;
+        bottom: 1.7vw;
+    }
+
+    .about .second .quote:nth-child(2) .name {
+        left: -7.15vw;
+        bottom: 8.75vw;
+    }
       
       .about .quote .name p {
         align-self: flex-end;
@@ -1029,6 +1032,10 @@
 
       /* PROJECTS */
 
+      .project .close {
+        right: 47px;
+      }
+
 
       .projects .testimonial {
         margin: 9vh 8vw 7.5vh 8vw;
@@ -1189,12 +1196,13 @@ h1, header p {
   /* Intro */
 
   .intro h3,
-  .intro h2 {
-      transform: translateY(-29px);
+  .intro p.desktop {
+      transform: translateY(29px);
   }
 
-  .intro p {
-      transform: translateY(29px);
+  .intro .flexbox p,
+  .intro h2 {
+      transform: translateY(-29px);
   }
 
   .intro p,
@@ -1229,7 +1237,7 @@ h1, header p {
   /* Showroom */
 
   .showroom h2 {
-      transform: translateY(29px);
+      transform: translateY(-29px);
   }
 
   .showroom h2,
@@ -1254,7 +1262,7 @@ h1, header p {
   /* About */
 
 .about h2,
-.about .content h3 {
+.about .content p {
     transform: translateY(-29px);
 }
 
@@ -1267,7 +1275,7 @@ h1, header p {
     opacity: 0;
 }
 
-.about .content p,
+.about .content h3,
 .about p.desktop {
     transform: translateY(29px);
 }
@@ -1399,8 +1407,16 @@ h1, header p {
         opacity: 0;
     }
 
-    .about .customers h2,
     .about .customers .quote h3 {
+        transform: translateY(29px);
+
+    }
+
+    .about .customers h2 {
+        transform: translateY(-29px);
+    }
+
+    .about .customers p.desktop {
         transform: translateY(29px);
     }
 
@@ -1531,15 +1547,24 @@ h1, header p {
         transition: .74s ease;
     }
 
+    .contact .boxes a p,
+    .contact .boxes button p {
+        transform: translateY(0);
+    }
+
     .contact h2,
-    .contact .boxes h3 {
+    .contact .boxes p,
+    .contact button,
+    .contact a {
+        transform: translateY(-29px);
+    }
+
+    .contact p.desktop:nth-child(3):not(.contact a p.desktop) {
         transform: translateY(-29px);
     }
 
     .contact p.desktop,
-    .contact button,
-    .contact .boxes p,
-    .contact a {
+    .contact h3 {
         transform: translateY(29px);
     }
 
@@ -1548,7 +1573,8 @@ h1, header p {
     .contact.visible p,
     .contact.visible button,
     .contact.visible a,
-    .contact.visible svg {
+    .contact.visible svg,
+    .contact.visible p.desktop:nth-child(3) {
         opacity: 1;
         transform: translateY(0);
     }
@@ -1594,11 +1620,11 @@ h1, header p {
         .chrome {
             display: none;
         }
-
+/* 
         header {
             height: 100.6vh;
             /* padding-top: 1.4vh; */
-        }
+        /* } */ */
 
         .logo_sygnet {
             left: 22px;
@@ -1617,7 +1643,7 @@ h1, header p {
         }
 
         header .container {
-            bottom: 1.7vh;
+            /* bottom: 1.7vh; */
         }
 
         header .container p {
@@ -1631,7 +1657,7 @@ h1, header p {
         }
 
         header a {
-            bottom: 6.6vh;
+            /* bottom: 6.6vh; */
         }
 
         .intro .flexbox {
@@ -1643,9 +1669,9 @@ h1, header p {
         }
 
         .intro {
-            padding-bottom: 7vh;
-            height: 87.8vh;
-            padding-top: 28px;
+            /* padding-bottom: 7vh; */
+            /* height: 87.8vh; */
+            /* padding-top: 28px; */
         }
 
         .intro h3 {
@@ -1714,6 +1740,35 @@ h1, header p {
             margin: 7.4vh 0 0 2vw;
         }
 
+        .about .first .quote:nth-child(1) .name {
+            left: -7.65vw;
+            bottom: 2.8vw;
+        }
+
+        .about .first .quote:nth-child(2) .name {
+            left: -8.5vw;
+            bottom: -.65vw;
+        }
+
+        .about .first .quote:nth-child(3) .name {
+            left: -11.5vw;
+            bottom: -1vw;
+        }
+        
+        .about .first .quote:nth-child(2) {
+            margin-bottom: 12.5vh;
+        }
+
+        .about .second .quote:nth-child(1) .name {
+            left: -10.25vw;
+            bottom: 1.7vw;
+        }
+
+        .about .second .quote:nth-child(2) .name {
+            left: -7.15vw;
+            bottom: 7.35vw;
+        }
+
         .about article:first-of-type {
             margin-top: 21.05vh;
         }
@@ -1753,34 +1808,6 @@ h1, header p {
             line-height: 1.35vw;
         } 
         
-        .about .first .quote:nth-child(1) .name {
-            left: -7.65vw;
-            bottom: 6.15vh;
-        }
-
-        .about .first .quote:nth-child(2) .name {
-            left: -8.5vw;
-            bottom: -1vh;
-        }
-
-        .about .first .quote:nth-child(3) .name {
-            left: -11.5vw;
-            bottom: -1.9vh;
-        }
-        
-        .about .first .quote:nth-child(2) {
-            margin-bottom: 9.75vh;
-        }
-
-        .about .second .quote:nth-child(1) .name {
-            left: -10.25vw;
-            bottom: 3.8vh;
-        }
-
-        .about .second .quote:nth-child(2) .name {
-            left: -7.15vw;
-            bottom: 15vh;
-        }
 
         .offer p {
             line-height: 1.35vw;
@@ -1877,8 +1904,8 @@ h1, header p {
 
 
     .close {
-        right: 23px;
-        top: 30px;
+        right: 15px;
+        top: 15px;
       }
 
     .logo_sygnet {
@@ -1957,6 +1984,7 @@ h1, header p {
         /* animation-delay: 3s; */
         stroke-dasharray: 14357.5;
         stroke-dashoffset: 13194.5;
+        transition: .9s ease;
       }
     
       @keyframes drawtop {
@@ -2117,7 +2145,7 @@ h1, header p {
         display: none;
     }
 
-    header, section {
+    header, section:not(.showroom) {
         /* margin: 0 29px 0 30px; */
         margin: 0 25px 0 30px;
     }
@@ -2143,7 +2171,7 @@ h1, header p {
     }
 
     header a {
-        bottom: 7.5vw;
+        bottom: 11.75vw;
     }
 
     /* Intro */
@@ -2180,7 +2208,7 @@ h1, header p {
     }
 
     .intro a {
-        bottom: 11vw;
+        bottom: 19.25vw;
     }
 
     /* Showroom */
@@ -2189,6 +2217,7 @@ h1, header p {
         padding-top: 30.25vw;
         align-items: center;
         padding-bottom: 11vw;
+        margin: 0 30px 0 30px;
     }
 
     .showroom h1 {
@@ -2204,11 +2233,11 @@ h1, header p {
     }
 
     .showroom .info {
-        margin: 5vh 0;
+        margin: 4.7vw 0 8.1vw;
     }
 
     .showroom .info p {
-        margin-top: 1.25vw;
+        margin-top: .9vw;
         font-size: 3.35vw;
     }
 
@@ -2260,7 +2289,7 @@ h1, header p {
     }
 
     .about .first {
-        top: -95vw;
+        top: -90vw;
         width: 100%;
         left: -50px;
     }
@@ -2407,8 +2436,10 @@ h1, header p {
         padding-bottom: 10px;
         border: none;
         position: relative;
-        left: 14px;
+        /* left: 14px; */
         bottom: 6px;
+        align-items: center;
+        margin-right: 1.3vw;
       }
 
       .about .quotebox button span {
@@ -2431,7 +2462,7 @@ h1, header p {
       }
 
       .about .quotebox button:before {
-        width: 85%;
+        width: 100%;
         background-color: #0c3c3a;
       }
 
@@ -2441,7 +2472,7 @@ h1, header p {
       }
 
       .about .quotebox button:hover::after {
-        width: 85%;
+        width: 100%;
       }
 
       .about .quotebox button.extend span:after {
@@ -2915,7 +2946,7 @@ h1, header p {
     /* PROJECTS */
 
     .project .projects {
-        height: 86.5vh;
+        height: 91.5vh;
     }
 
     /* .projects .quote div:last-child span {
@@ -3002,9 +3033,9 @@ h1, header p {
         transition-delay: .74s;
         z-index: 3;
         background-color: white;
-        height: 15vh;
+        height: 9vh;
         align-items: center;
-        width: 90%;
+        width: 95%;
     }
 
     .projects .port-nav .styledBtn {
