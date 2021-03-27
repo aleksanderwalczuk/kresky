@@ -1184,7 +1184,9 @@ galleryProjects.forEach(project => {
 
 
   const changeContent = () => {
-    projectOurBox.style.marginTop = '19vw';
+    if (window.innerWidth < 1024) {
+      projectOurBox.style.marginTop = '19vw';
+    }
     projectHeader.textContent = galleryContents.headers[indexOfActiveContent];
     projectTitle.textContent = galleryContents.titles[indexOfActiveContent];
     projectDescription.textContent = galleryContents.descriptionsDesk[indexOfActiveContent];
@@ -1324,6 +1326,9 @@ const prevProject = () => {
   console.log(indexOfActiveContent)
 
   const changeContent = () => {
+    if (window.innerWidth < 1024) {
+      projectOurBox.style.marginTop = '19vw';
+    }
     projectHeader.textContent = galleryContents.headers[indexOfActiveContent];
     projectTitle.textContent = galleryContents.titles[indexOfActiveContent];
     projectDescription.textContent = galleryContents.descriptionsDesk[indexOfActiveContent];
@@ -1337,7 +1342,6 @@ const prevProject = () => {
     projectQuote.textContent = galleryContents.clientQuotes[indexOfActiveContent];
     projectQuoteAuthor.textContent = galleryContents.quoteAuthors[indexOfActiveContent];
     projectPhoto.src = galleryContents.photos[indexOfActiveContent];
-    projectOurBox.style.marginTop = '19vw';
     if (projectClientFanPage.href !== "") {
       projectClientFanPage.style.display = 'flex';
     } else projectClientFanPage.style.display ="none";
@@ -1434,7 +1438,9 @@ const nextProject = () => {
   }, 1800);    
 
   const changeContent = () => {
-    projectOurBox.style.marginTop = '19vw';
+    if (window.innerWidth < 1024) {
+      projectOurBox.style.marginTop = '19vw';
+    }
     projectHeader.textContent = galleryContents.headers[indexOfActiveContent];
     projectTitle.textContent = galleryContents.titles[indexOfActiveContent];
     projectDescription.textContent = galleryContents.descriptionsDesk[indexOfActiveContent];
