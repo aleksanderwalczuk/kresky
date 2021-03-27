@@ -108,10 +108,12 @@ document.addEventListener('mousemove', mousemovemethod);
 
   $('.logo_sygnet').click(function(e) {
     e.preventDefault();
+    if (!body.classList.contains('project')) {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
+  } else return false
   });
 
 
@@ -406,10 +408,10 @@ $(window).scroll(function() {
 
       // Passion
 
-      if ($(this).scrollTop() > $('.about').offset().top * 1.25) {
+      if ($(this).scrollTop() > $('.about').offset().top * 1.24) {
         $('.passion').addClass('visible');
       }
-      if ($(this).scrollTop() > $('.about').offset().top * 1.375) {
+      if ($(this).scrollTop() > $('.about').offset().top * 1.35) {
         $('.passion').addClass('visibleNext');
       }
       if ($(this).scrollTop() > $('.about').offset().top * 1.425) {
@@ -418,16 +420,16 @@ $(window).scroll(function() {
 
       // Customers
 
-      if ($(this).scrollTop() > $('.about').offset().top * 1.45 ) {
+      if ($(this).scrollTop() > $('.about').offset().top * 1.5 ) {
         $('.customers').addClass('visible');
       }
-      if ($(this).scrollTop() > $('.about').offset().top * 1.55) {
+      if ($(this).scrollTop() > $('.about').offset().top * 1.6) {
         $('.customers').addClass('visibleNext');
       }
-      if ($(this).scrollTop() > $('.about').offset().top * 1.575) {
+      if ($(this).scrollTop() > $('.about').offset().top * 1.63) {
         $('.customers').addClass('visibleNextTwo');
       }
-      if ($(this).scrollTop() > $('.about').offset().top * 1.6) {
+      if ($(this).scrollTop() > $('.about').offset().top * 1.66) {
         $('.customers').addClass('visibleNextTwo');
       }
 
@@ -462,7 +464,7 @@ $(window).scroll(function() {
           });
         });
       }
-      if ($(this).scrollTop() > $('.numbers').offset().top * 1.04) {
+      if ($(this).scrollTop() > $('.numbers').offset().top * 1.035) {
         $('.numbers').addClass('visibleNextTwo');
           $('.counterTwo').each(function() {
             var $this = $(this),
@@ -487,7 +489,7 @@ $(window).scroll(function() {
             });
           });
       }
-      if ($(this).scrollTop() > $('.numbers').offset().top * 1.07) {
+      if ($(this).scrollTop() > $('.numbers').offset().top * 1.065) {
         $('.numbers').addClass('visibleNextThree');
           $('.counterThree').each(function() {
             var $this = $(this),
@@ -514,7 +516,7 @@ $(window).scroll(function() {
       }
 
 
-      if ($(this).scrollTop() > $('.offer').offset().top * 0.95) {
+      if ($(this).scrollTop() > $('.offer').offset().top * 0.985) {
         $('.offer').addClass('visible');
       }
       if ($(this).scrollTop() > $('.offer').offset().top * 1.005) {
@@ -532,7 +534,7 @@ $(window).scroll(function() {
       if ($(this).scrollTop() > $('.offer').offset().top * 1.13) {
         $('.offer').addClass('visibleNextFive');
       }
-      if ($(this).scrollTop() > $('.offer').offset().top * 1.15) {
+      if ($(this).scrollTop() > $('.offer').offset().top * 1.165) {
         $('.offer').addClass('visibleNextSix');
       }
 
@@ -540,13 +542,13 @@ $(window).scroll(function() {
       if ($(this).scrollTop() > $('.contact').offset().top * 0.99) {
         $('.contact').addClass('visible');
       }
-      if ($(this).scrollTop() > $('.contact').offset().top * 1.02) {
+      if ($(this).scrollTop() > $('.contact').offset().top * 1.015) {
         $('.contact').addClass('visibleNext');
       }
-      if ($(this).scrollTop() > $('.contact').offset().top * 1.04) {
+      if ($(this).scrollTop() > $('.contact').offset().top * 1.035) {
         $('.contact').addClass('visibleNextTwo');
       }
-      if ($(this).scrollTop() > $('.contact').offset().top * 1.06) {
+      if ($(this).scrollTop() > $('.contact').offset().top * 1.055) {
         $('.contact').addClass('visibleNextThree');
       }
 
@@ -918,7 +920,7 @@ const galleryContents = {
   
   "Projekt logo dla oficjalnego polskiego dystrybutora koparek CARTER. Koncept oparty jest o stylizację litery A na kształt ramienia koparki.", 
   
-  "Logo i nagłówek strony internetowej skierowanej do osób szukających swojej pierwszej pracy w branży IT. Ze względu na młodą grupę odbiorczą, logo tworzy połączenie kształtu emotikony z aktówką. Swobodny charakter pozwala na zminimalizowanie stresu związanego z poszukiwaniem nowej pracy, natomiast mocna forma daje wyraz solidnego podejścia do selekcji ogłoszeń. racy.",
+  "Logo i nagłówek strony internetowej skierowanej do osób szukających swojej pierwszej pracy w branży IT. Ze względu na młodą grupę odbiorczą, logo tworzy połączenie kształtu emotikony z aktówką. Swobodny charakter pozwala na zminimalizowanie stresu związanego z poszukiwaniem nowej pracy, natomiast mocna forma daje wyraz solidnego podejścia do selekcji ogłoszeń.",
   
   "Fachowy kontakt pozwolił na sprawne określenie potrzeb, a także specyfiki projektu. Świetna współpraca zaowocowała realizacją dedykowanego logo i funkcjonalego sklepu internetowego. W trakcie realizacji projekt ewoluował. Dzięki umiejętności uważnego słuchania oraz dostosowania widoków strony internetowej do pojawiających się sugestii i nowych wytycznych, finalnie udało się uzyskać efekt, którego oczekiwałem. Polecam.", 
   
@@ -955,9 +957,9 @@ const galleryContents = {
 
                "", 
 
-               "juniorjobsonly.com", 
+               "JuniorJobsOnly.com", 
 
-               "kominki.eu", 
+               "Kominki.eu", 
 
                "", 
 
@@ -980,13 +982,13 @@ const galleryContents = {
 
     "empty",
 
-    "juniorjobsonly.com", 
+    "https://juniorjobsonly.com", 
 
-     "kominki.eu", 
+     "https://kominki.eu", 
 
      "empty", 
 
-     "redtarget.pl", 
+     "https://redtarget.pl", 
 
      "empty",
 
@@ -1021,7 +1023,7 @@ const galleryContents = {
   ytLinks : [
     "https://www.youtube.com/watch?v=15UxnqtNyf8&list=PLde9Fg2kiWvOK8aND20bi6EpNhj9BW7L7",
 
-     "HTTPS://WWW.YOUTUBE.COM/USER/DAMAGESEED",
+     "https://www.youtube.com/user/DamageSEED",
 
       "empty", 
 
@@ -1073,7 +1075,7 @@ const galleryContents = {
 
                    "", 
 
-                   "Anna Sincini [http://www.annasincini.pl]",
+                   "AnnaSincini.pl",
 
                    "",
 
@@ -1133,7 +1135,7 @@ const galleryContents = {
 
       "",
 
-      "Dawid Zamkowski, Founder & CEO: Junior Jobs Only",
+      "Dawid Zamkowski, CEO Junior Jobs Only",
 
       "Michał Miś, CEO kominki.eu",
 
@@ -1153,19 +1155,23 @@ const galleryContents = {
 
 // Events //
 
+const logo = document.querySelector('.logo_sygnet')
+
 const portNav = document.querySelector('.port-nav');
 
 
 // Open Gallery Event//
 
-galleryProjects.forEach(project => {    
+galleryProjects.forEach(project => {  
   project.addEventListener('click', () => {
-  body.classList.add('project');
   globalBox.style.zIndex = '5';
   root.style.scrollBehavior = 'unset';
   portNav.style.opacity = '1';
   targetElm.scrollIntoView()
   project.classList.add('active');
+  setTimeout(() => {
+    body.classList.add('project');
+  }, 500);
   setTimeout(() => {
     body.style.overflow = 'hidden';
     root.style.overflowY = 'hidden';
@@ -1178,6 +1184,7 @@ galleryProjects.forEach(project => {
 
 
   const changeContent = () => {
+    projectOurBox.style.marginTop = '19vw';
     projectHeader.textContent = galleryContents.headers[indexOfActiveContent];
     projectTitle.textContent = galleryContents.titles[indexOfActiveContent];
     projectDescription.textContent = galleryContents.descriptionsDesk[indexOfActiveContent];
@@ -1228,6 +1235,7 @@ galleryProjects.forEach(project => {
       }
       if (window.innerWidth < 1024) {
         projectTestimonials.style.alignSelf = 'flex-start';
+        projectOurBox.style.marginTop = '-8vw';
       }
     } else  {
       projectClient.style.display = 'block';
@@ -1329,6 +1337,7 @@ const prevProject = () => {
     projectQuote.textContent = galleryContents.clientQuotes[indexOfActiveContent];
     projectQuoteAuthor.textContent = galleryContents.quoteAuthors[indexOfActiveContent];
     projectPhoto.src = galleryContents.photos[indexOfActiveContent];
+    projectOurBox.style.marginTop = '19vw';
     if (projectClientFanPage.href !== "") {
       projectClientFanPage.style.display = 'flex';
     } else projectClientFanPage.style.display ="none";
@@ -1366,6 +1375,7 @@ const prevProject = () => {
       }
       if (window.innerWidth < 1024) {
         projectTestimonials.style.alignSelf = 'flex-start';
+        projectOurBox.style.marginTop = '-8vw';
       }
     } else  {
       projectClient.style.display = 'block';
@@ -1424,6 +1434,7 @@ const nextProject = () => {
   }, 1800);    
 
   const changeContent = () => {
+    projectOurBox.style.marginTop = '19vw';
     projectHeader.textContent = galleryContents.headers[indexOfActiveContent];
     projectTitle.textContent = galleryContents.titles[indexOfActiveContent];
     projectDescription.textContent = galleryContents.descriptionsDesk[indexOfActiveContent];
@@ -1474,6 +1485,7 @@ const nextProject = () => {
       }
       if (window.innerWidth < 1024) {
         projectTestimonials.style.alignSelf = 'flex-start';
+        projectOurBox.style.marginTop = '-8vw';
       }
     } else  {
       projectClient.style.display = 'block';

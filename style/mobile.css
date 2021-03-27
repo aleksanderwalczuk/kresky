@@ -709,8 +709,8 @@
         margin-bottom: .55vw;
       }
 
-      .numbers.visible .charts div:nth-child(1) svg path,
-      .numbers.visible .charts div:nth-child(3) svg path {
+      .numbers.visibleNext .charts div:nth-child(1) svg path,
+      .numbers.visibleNextThree .charts div:nth-child(3) svg path {
         animation: circles 1s ease;
         animation-fill-mode: forwards;
         animation-delay: 1s; 
@@ -718,7 +718,7 @@
         stroke-dashoffset: 1000;
       }
       
-      .numbers.visible .charts div:nth-child(2) svg path {
+      .numbers.visibleNextTwo .charts div:nth-child(2) svg path {
         animation: circlesBig 1s ease;
         animation-fill-mode: forwards;
         animation-delay: 4.2s; 
@@ -1096,7 +1096,12 @@
       
       .projects .quote div:last-child {
           display: flex;
-          margin: 2vh 0px 0px 1.25vw;
+          margin: 2vh 0px 0px 0px;
+      }
+
+      .projects .quote div:last-child span {
+        border-top: 1px solid #0C3C3A;
+        display: block;
       }
 
 
@@ -1144,7 +1149,7 @@
         display: block;
         align-self: center;
         width: 10%;
-        margin-left: 1.1vw;
+        margin-left: 2.37vw;
     }
 
     .projects .client div:last-child div {
@@ -1850,12 +1855,12 @@ h1, header p {
 
 
     hr {
-        width: 5px;
+        width: 3px;
     }
 
     hr.black {
-        top: 22px;
-        transform: translateX(-15.5vw);
+        top: 5.03vw;
+        transform: translateX(-13.3vw);
         opacity: 0;
         transition: all 0.74s ease;
     }
@@ -1864,36 +1869,36 @@ h1, header p {
         opacity: 1;
     }
 
-    nav a.int.active ~ hr.black,
+    /* nav a.int.active ~ hr.black,
     nav a.int:hover ~ hr.blue {
       height: 120px;
-    }
+    } */
     
     nav a.int.active ~ hr.black {
-      max-height: 135px;
+      max-height: 19.1vh;
     }
     
     nav a.sho.active ~ hr.black {
-      max-height: 183px;
+        max-height: 29.2vh;
     }
     
     nav a.tea.active ~ hr.black {
-      max-height: 270px;
+      max-height: 42.25vh;
     }
     
     nav a.off.active ~ hr.black {
-      max-height: 340px;
+      max-height: 53.25vh;
     }
     
     nav a.con.active ~ hr.black {
-      max-height: 400px;
+      max-height: 63vh;
     }
     
       header nav.open hr.black {
         /* max-height: 190px; */
       }
     
-      nav a.sho:hover ~ hr.blue {
+      /* nav a.sho:hover ~ hr.blue {
         max-height: 252px !important;
       }
     
@@ -1907,7 +1912,7 @@ h1, header p {
     
       nav a.con:hover ~ hr.blue {
         max-height: 575px !important;
-      }
+      } */
     
 
 
@@ -1960,6 +1965,7 @@ h1, header p {
         bottom: 0;
         right: 0;
         z-index: -1;
+        height: 100vh;
     }
 
     .open nav::after {
@@ -2043,6 +2049,12 @@ h1, header p {
         z-index: 6;
         text-shadow: 1.5px 1.5px #00ffea;
         transition: .3s ease;
+        position: relative;
+        top: 9vw;
+    }
+
+    nav hr.black {
+        background: #0C3C3A;
     }
 
     .links {
@@ -2076,6 +2088,10 @@ h1, header p {
 
     .after .menuBtn {
         transform: translateY(-15px);
+    }
+
+    nav hr.black {
+        background: #00ffea;
     }
 
     .menuBtn span {
@@ -2236,6 +2252,10 @@ h1, header p {
 
     .showroom .gallery {
         margin-bottom: 10vh;
+    }
+
+    .showroom .hoverbox .window {
+        position: relative;
     }
 
     .showroom .gallery img {
@@ -2515,7 +2535,7 @@ h1, header p {
     }
 
       .about .numbers {
-          margin-top: 3.5vw;
+          margin-top: 7.5vw;
       }
 
       .second .quote {
@@ -2561,14 +2581,22 @@ h1, header p {
           margin-top: 2.5vw;
       }
 
+      .numbers .charts div:nth-child(1) svg path,
+      .numbers .charts div:nth-child(3) svg path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+      }
+
       .numbers.visibleNext .charts div:nth-child(1) svg path,
       .numbers.visibleNextThree .charts div:nth-child(3) svg path {
         animation: circles 1s ease;
         animation-fill-mode: forwards;
-        animation-delay: 1s; 
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-        opacity: 1;
+        animation-delay: 4s; 
+      }
+
+      .numbers .charts div:nth-child(2) svg path {
+        stroke-dasharray: 1100;
+        stroke-dashoffset: 1100;
       }
       
       .numbers.visibleNextTwo .charts div:nth-child(2) svg path {
@@ -2701,14 +2729,10 @@ h1, header p {
       }
 
       .contact svg {
-        top: 77.75vw;
+        top: 103vw;
         width: 43.21%;
-        transform: scaleX(-1);
+        /* transform: scaleX(-1); */
         right: 32%;
-    }
-
-    .contact svg path {
-        stroke-width: 1px;
     }
 
       .contact .boxes {
@@ -2767,14 +2791,14 @@ h1, header p {
     }
 
     .contact .hours {
-        margin: 0 0 6vw;
+        margin: -2vw 0 0;
         position: relative;
         bottom: 4px;
     }
 
     .contact .hours span {
         margin-left: 8vw;
-        font-family: 'Open Sans Bold';
+        font-family: 'Open Sans';
         font-weight: 700;
         color: #167172;
         font-size: 4.75vw;
@@ -2921,7 +2945,7 @@ h1, header p {
 
       form {
           width: 85%;
-          margin-top: 14vh;
+          margin-top: 7.5vh;
           opacity: 0;
       }
 
@@ -3004,7 +3028,7 @@ h1, header p {
 
     .projects h2 {
         text-align: left;
-        margin: 0 0 9.75vw;
+        margin: 0 0 4.75vw;
     }
 
     .projects .heading-text p {
@@ -3025,9 +3049,9 @@ h1, header p {
         width: 5.8%;
     }
 
-    .projects div span {
+    /* .projects div span {
         width: 19.181%;
-    }
+    } */
 
     .projects .client p:first-child, .projects .ourbox p:first-child {
         margin-bottom: 25px;
@@ -3035,7 +3059,8 @@ h1, header p {
 
     .projects .author {
         margin-top: 0;
-        margin-left: 4vw;
+        /* margin-left: 4vw; */
+        font-size: 4vw;
     }
 
     .projects .testimonial {
@@ -3209,7 +3234,7 @@ h1, header p {
     .about h3,
     .about p,
     .about img,
-    .about svg:not(.numbers svg) {
+    .about .bg-about {
         opacity: 0;
         transition: .74s ease;
     }
@@ -3239,7 +3264,7 @@ h1, header p {
     }
 
     .about.visible svg.first {
-        transition-delay: .34s
+        transition-delay: .36s
     }
 
     .about.visibleNext .content div:nth-child(1) h3,
@@ -3249,11 +3274,19 @@ h1, header p {
         transform: translateY(0);    
     }
 
+    .about.visibleNext svg.second {
+        transition-delay: .74s;
+    }
+
     .about.visibleNextTwo .content div:nth-child(2) h3,
     .about.visibleNextTwo  svg.third,
     .about.visibleNextTwo .content div:nth-child(2) p {
         opacity: 1;
         transform: translateY(0);    
+    }
+
+    .about.visibleNextTwo svg.third {
+        transition-delay: .74s;
     }
 
     .about.visibleNextThree .content div:nth-child(3) h3,
@@ -3269,6 +3302,14 @@ h1, header p {
     .passion.visible .title p {
         opacity: 1;
         transform: translateY(0);
+    }
+
+    .passion.visible .title h2 {
+        transition-delay: .47s;
+    }
+
+    .passion.visible .title p {
+        transition-delay: .92s;
     }
 
     .passion.visibleNext .container .author:nth-child(1) img,
@@ -3316,21 +3357,26 @@ h1, header p {
 
     /* Numbers */
 
-    .numbers.visible h2,
-    .numbers.visible .charts div:nth-child(1) h3,
-    .numbers.visible .charts div:nth-child(1) p {
+    .numbers.visible h2 {
         opacity: 1;
         transform: translateY(0);
     }
 
-    .numbers.visibleNext .charts div:nth-child(2) h3,
-    .numbers.visibleNext .charts div:nth-child(2) p {
+    .numbers.visibleNext .charts div:nth-child(1) h3,
+    .numbers.visibleNext .charts div:nth-child(1) p {
+        transition-delay: .74s;
         opacity: 1;
         transform: translateY(0);
     }
 
-    .numbers.visibleNextTwo .charts div:nth-child(3) h3,
-    .numbers.visibleNextTwo .charts div:nth-child(3) p {
+    .numbers.visibleNextTwo .charts div:nth-child(2) h3,
+    .numbers.visibleNextTwo .charts div:nth-child(2) p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .numbers.visibleNextThree .charts div:nth-child(3) h3,
+    .numbers.visibleNextThree .charts div:nth-child(3) p {
         opacity: 1;
         transform: translateY(0);
     }
@@ -3428,7 +3474,7 @@ h1, header p {
     .contact.visible p.mobile,
     .contact.visibleNext .boxes div:first-child p,
     .contact.visibleNext .boxes div:first-child h3,
-    .contact.visibleNext .boxes div:first-child a {
+    .contact.visibleNext .boxes div:nth-child(1) a {
         opacity: 1;
         transform: translateY(0);
     }
@@ -3439,16 +3485,26 @@ h1, header p {
 
     .contact.visibleNextThree .boxes div:nth-child(2) p,
     .contact.visibleNextThree .boxes div:nth-child(2) h3,
-    .contact.visibleNextThree .boxes div:nth-child(2) button {
+    .contact.visibleNextThree .phoneBtn {
         opacity: 1;
         transform: translateY(0);
     }
 
     .contact.visibleNextTwo .boxes div:last-child p,
     .contact.visibleNextTwo .boxes div:last-child h3,
-    .contact.visibleNextTwo .boxes div:last-child a {
+    .contact.visibleNextTwo .mailBtn {
         opacity: 1;
         transform: translateY(0);
     }
+
+
+        /* Mozilla */
+
+
+        @supports (-moz-appearance:none) {
+            .projects .ourbox {
+                margin-bottom: 22vw;
+            }
+        }
 
 }

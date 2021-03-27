@@ -48,10 +48,10 @@ nav hr {
 
 nav hr.black {
     position: absolute;
-    background: #0c3c3a;
     max-height: 0;
     height: 100%;
     transition: all 0.74s ease;
+    background: #0C3C3A;
     z-index: 2;
 }
 
@@ -305,7 +305,7 @@ header {
 .logo_sygnet {
     transition: .36s ease;
     position: fixed;
-    z-index: 2;
+    z-index: 5;
 }
 
 .logo_sygnet img {
@@ -923,7 +923,7 @@ footer .wrapper div:nth-child(2) a:hover {
 
 .projects .quote div:last-child span {
   border-top: 1px solid #0C3C3A;
-  display: block;
+  margin: 0 0 0 1.25vw;
 }
 
 .projects .quote div:last-child {
@@ -964,7 +964,7 @@ footer .wrapper div:nth-child(2) a:hover {
 
 @keyframes circles {
   from {
-    stroke-dashoffset: 960;
+    stroke-dashoffset: 1000;
   }
   to {
     stroke-dashoffset: 0;
