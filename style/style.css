@@ -364,6 +364,16 @@ header {
   position: relative;
 }
 
+.pTransition {
+  opacity: 0;
+  transition-delay: .5s;
+}
+
+header p.disappear {
+  opacity: 0;
+}
+
+
 /* Intro */
 
 .intro {
@@ -952,35 +962,6 @@ footer .wrapper div:nth-child(2) a:hover {
 /* Charts */
 
 
-.numbers.visible .charts svg {
-  opacity: 1;
-  transition: .36s ease;
-  transition-delay: .5s;
-}
-
-.numbers.visible .charts div:nth-child(1) svg path,
-.numbers.visible .charts div:nth-child(3) svg path {
-  animation: circles 1s ease;
-  animation-fill-mode: forwards;
-  animation-delay: 1s; 
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-}
-
-.numbers.visible .charts div:nth-child(2) svg path {
-  animation: circlesBig 1s ease;
-  animation-fill-mode: forwards;
-  animation-delay: 4.2s; 
-  stroke-dasharray: 1100;
-  stroke-dashoffset: 1100;
-}
-
-
-.numbers.visible .charts div:nth-child(3) svg path {
-  animation-delay: 7.4s;
-}
-
-
 @keyframes circles {
   from {
     stroke-dashoffset: 960;
@@ -998,5 +979,5 @@ footer .wrapper div:nth-child(2) a:hover {
   to {
     stroke-dashoffset: 0;
   }
-
+}
 

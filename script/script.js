@@ -218,7 +218,7 @@ window.requestAnimationFrame(() => {
       svgTop.style.strokeDasharray = (lengthSvgTop - 2000) + (draw * 7.3);
     } else svgTop.style.strokeDasharray = (lengthSvgTop - 2000) + (draw * 4.75);
     const drawMobile = lengthSvgTopMobile * scrollpercent * 6.25;
-    svgTopMobile.style.strokeDashoffset = (lengthSvgTopMobile + 1000) - (drawMobile * 1.125);
+    svgTopMobile.style.strokeDashoffset = (lengthSvgTopMobile + 530) - (drawMobile * 1.125);
   });
 
 
@@ -249,6 +249,7 @@ $(window).scroll(function() {
     pHeader.classList.remove('disappear');
     body.classList.add('rewind');
   };
+  if (window.innerWidth > 1023) {
   if ($(this).scrollTop() > $('.intro').offset().top * 0.9) {
     $('.intro').addClass('visible');
     }
@@ -357,6 +358,7 @@ $(window).scroll(function() {
     if ($(this).scrollTop() > $('.contact').offset().top * 0.95) {
       $('.contact').addClass('visible');
     }
+  }
   if (window.innerWidth < 1024) {
     if ($(this).scrollTop() > $('.contact').offset().top) {
       $('.icon-box-btn').addClass('visible');
@@ -364,25 +366,79 @@ $(window).scroll(function() {
       $('.icon-box-btn').removeClass('open visible');
       $('.icon-box').removeClass('open');
       }
-      if ($(this).scrollTop() > $('.intro').offset().top * 0.8) {
+
+
+      if ($(this).scrollTop() > $('.intro').offset().top * 0.95) {
         $('.intro').addClass('visible');
       }
+      if ($(this).scrollTop() > $('.intro').offset().top * 1.8) {
+        $('.intro').addClass('visibleNext');
+      }
+      if ($(this).scrollTop() > $('.intro').offset().top * 2.7) {
+        $('.intro').addClass('visibleNextTwo');
+      }
+
+
       if ($(this).scrollTop() > $('header').innerHeight() * 0.9 && $(this).scrollTop() < $('header').innerHeight()) {
         $('.apla').addClass('transparent');
       } else {
          $('.apla').removeClass('transparent');
       }
+
+
       if ($(this).scrollTop() > $('.showroom').offset().top * 0.9) {
         $('.showroom').addClass('visible');
       }
+
+
       if ($(this).scrollTop() > $('.about').offset().top * 0.95) {
         $('.about').addClass('visible');
       }
-      if ($(this).scrollTop() > $('.about').offset().top * 1.45) {
+      if ($(this).scrollTop() > $('.about').offset().top * 1.02) {
+        $('.about').addClass('visibleNext');
+      }
+      if ($(this).scrollTop() > $('.about').offset().top * 1.09) {
+        $('.about').addClass('visibleNextTwo');
+      }
+      if ($(this).scrollTop() > $('.about').offset().top * 1.185) {
+        $('.about').addClass('visibleNextThree');
+      }
+
+      // Passion
+
+      if ($(this).scrollTop() > $('.about').offset().top * 1.25) {
+        $('.passion').addClass('visible');
+      }
+      if ($(this).scrollTop() > $('.about').offset().top * 1.375) {
+        $('.passion').addClass('visibleNext');
+      }
+      if ($(this).scrollTop() > $('.about').offset().top * 1.425) {
+        $('.passion').addClass('visibleNextTwo');
+      }
+
+      // Customers
+
+      if ($(this).scrollTop() > $('.about').offset().top * 1.45 ) {
         $('.customers').addClass('visible');
       }
-      if ($(this).scrollTop() > $('.numbers').offset().top) {
+      if ($(this).scrollTop() > $('.about').offset().top * 1.55) {
+        $('.customers').addClass('visibleNext');
+      }
+      if ($(this).scrollTop() > $('.about').offset().top * 1.575) {
+        $('.customers').addClass('visibleNextTwo');
+      }
+      if ($(this).scrollTop() > $('.about').offset().top * 1.6) {
+        $('.customers').addClass('visibleNextTwo');
+      }
+
+      // Numbers
+
+
+      if ($(this).scrollTop() > $('.numbers').offset().top * 0.975) {
         $('.numbers').addClass('visible');
+      };
+      if ($(this).scrollTop() > $('.numbers').offset().top) {
+        $('.numbers').addClass('visibleNext');
         $('.counter').each(function() {
           var $this = $(this),
               countTo = $this.attr('data-count');
@@ -405,7 +461,9 @@ $(window).scroll(function() {
         
           });
         });
-        setTimeout(function() {
+      }
+      if ($(this).scrollTop() > $('.numbers').offset().top * 1.04) {
+        $('.numbers').addClass('visibleNextTwo');
           $('.counterTwo').each(function() {
             var $this = $(this),
                 countTo = $this.attr('data-count');
@@ -428,8 +486,9 @@ $(window).scroll(function() {
           
             });
           });
-        }, 3500);
-        setTimeout(function() {
+      }
+      if ($(this).scrollTop() > $('.numbers').offset().top * 1.07) {
+        $('.numbers').addClass('visibleNextThree');
           $('.counterThree').each(function() {
             var $this = $(this),
                 countTo = $this.attr('data-count');
@@ -452,17 +511,46 @@ $(window).scroll(function() {
           
             });
           });
-        }, 7000);
-      };
+      }
+
+
       if ($(this).scrollTop() > $('.offer').offset().top * 0.95) {
         $('.offer').addClass('visible');
       }
+      if ($(this).scrollTop() > $('.offer').offset().top * 1.005) {
+        $('.offer').addClass('visibleNext');
+      }
+      if ($(this).scrollTop() > $('.offer').offset().top * 1.025) {
+        $('.offer').addClass('visibleNextTwo');
+      }
+      if ($(this).scrollTop() > $('.offer').offset().top * 1.06) {
+        $('.offer').addClass('visibleNextThree');
+      }
+      if ($(this).scrollTop() > $('.offer').offset().top * 1.09) {
+        $('.offer').addClass('visibleNextFour');
+      }
+      if ($(this).scrollTop() > $('.offer').offset().top * 1.13) {
+        $('.offer').addClass('visibleNextFive');
+      }
+      if ($(this).scrollTop() > $('.offer').offset().top * 1.15) {
+        $('.offer').addClass('visibleNextSix');
+      }
+
+
       if ($(this).scrollTop() > $('.contact').offset().top * 0.99) {
         $('.contact').addClass('visible');
       }
       if ($(this).scrollTop() > $('.contact').offset().top * 1.02) {
         $('.contact').addClass('visibleNext');
       }
+      if ($(this).scrollTop() > $('.contact').offset().top * 1.04) {
+        $('.contact').addClass('visibleNextTwo');
+      }
+      if ($(this).scrollTop() > $('.contact').offset().top * 1.06) {
+        $('.contact').addClass('visibleNextThree');
+      }
+
+
       if ($(this).scrollTop() > $('.contact').offset().top) {
       $('.mannaz').addClass('visible');
       } else {
@@ -495,8 +583,8 @@ border[0].style.strokeDashoffset = dashoffset;
 border[0].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3000}`;
 border[1].style.strokeDashoffset = dashoffset;
 border[1].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3000}`;
-border[2].style.strokeDashoffset = dashoffset;
-border[2].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 4000}`;
+border[2].style.strokeDashoffset = -dashoffset;
+border[2].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3000}`;
 border[3].style.strokeDashoffset = dashoffset;
 border[3].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3000}`;
 border[4].style.strokeDashoffset = dashoffset;
@@ -528,7 +616,7 @@ function Animate() {
   dashoffset -= speed;
   border[0].style.strokeDashoffset = dashoffset * 2.3;
   border[1].style.strokeDashoffset = dashoffset * 2.5;
-  border[2].style.strokeDashoffset = dashoffset * 2.5;
+  border[2].style.strokeDashoffset = -dashoffset * 2.5;
   border[3].style.strokeDashoffset = dashoffset * 2.3;
   border[4].style.strokeDashoffset = dashoffset * 2.3;
   border[5].style.strokeDashoffset = dashoffset * 2.3;
@@ -648,6 +736,7 @@ const mailBox = () => {
   globalBox.style.zIndex = '10';
   setTimeout(() => {
     mailScreen.style.opacity = '1'
+    mailScreen.classList.add('on')
     closeBtn.style.opacity = '1'
   }, 200);
 };
@@ -734,6 +823,9 @@ backBtn.addEventListener('click', () => {
     globalBox.style.zIndex = '-1'
   }, 900);
 } else {
+  setTimeout(() => {
+    finishScreen.style.opacity = '0';
+  }, 650);
   setTimeout(() => {
     finishScreen.style.zIndex = '-1'
   }, 800);
@@ -1076,7 +1168,7 @@ galleryProjects.forEach(project => {
   project.classList.add('active');
   setTimeout(() => {
     body.style.overflow = 'hidden';
-    root.style.overflow = 'hidden';
+    root.style.overflowY = 'hidden';
     closeBtn.style.opacity = '1';
   }, 800);
 
@@ -1169,7 +1261,7 @@ const closeGallery = () => {
     body.classList.remove('project')
     globalWrapper.classList.remove('off')
     body.style.overflowX = 'hidden';
-    root.style.overflowX ='visible';
+    root.style.overflowY ='visible';
   }, 300);
   setTimeout(() => {
     globalBox.style.zIndex = '-1'
@@ -1432,6 +1524,7 @@ const closeWindow = () => {
       setTimeout(() => {
         globalBox.style.zIndex = '-1'
         mailScreen.style.zIndex = '-1'
+        mailScreen.classList.remove('on');
       }, 800);
       closeBtn.style.opacity = '0'
     }
@@ -1439,9 +1532,6 @@ const closeWindow = () => {
     // Gallery Open//
 
   } else {
-    body.style.overflowX = 'hidden';
-    root.style.overflow = 'visible';
-    portNav.style.opacity = '0';
     if (phoneScreen.style.opacity === '1' || mailScreen.style.opacity === '1' || finishScreen.style.opacity === '1') {
       phoneScreen.style.opacity = '0';
       mailScreen.style.opacity = '0';
@@ -1450,9 +1540,13 @@ const closeWindow = () => {
         phoneScreen.style.zIndex = '0';
         mailScreen.style.zIndex = '0';
         finishScreen.style.zIndex = '0';
+        mailScreen.classList.remove('on');
       }, 100);
     } else if (phoneScreen.style.opacity === '0' || mailScreen.style.opacity === '0' || finishScreen.style.opacity === '0') {
       closeBtn.style.opacity = '0';
+      portNav.style.opacity = '0';
+      body.style.overflowX = 'hidden';
+      root.style.overflowY = 'visible';
       setTimeout(() => {
         body.classList.remove('project')
         globalWrapper.classList.remove('off')
@@ -1493,5 +1587,5 @@ window.onload = () => {
   }, 3400);
   setTimeout(() => {
     pHeader.classList.remove('pTransition');
-  }, 6000);
+  }, 4400);
 }

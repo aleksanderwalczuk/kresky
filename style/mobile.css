@@ -709,6 +709,23 @@
         margin-bottom: .55vw;
       }
 
+      .numbers.visible .charts div:nth-child(1) svg path,
+      .numbers.visible .charts div:nth-child(3) svg path {
+        animation: circles 1s ease;
+        animation-fill-mode: forwards;
+        animation-delay: 1s; 
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+      }
+      
+      .numbers.visible .charts div:nth-child(2) svg path {
+        animation: circlesBig 1s ease;
+        animation-fill-mode: forwards;
+        animation-delay: 4.2s; 
+        stroke-dasharray: 1100;
+        stroke-dashoffset: 1100;
+      }
+
       .charts div h3 span:first-of-type {
           position: relative;
           left: 18px;
@@ -1181,15 +1198,6 @@ h1, header p {
   
   h1.disappear {
     line-height: 2vw;
-    opacity: 0;
-  }
-  
-  .pTransition {
-    opacity: 0;
-    transition-delay: .5s;
-  }
-  
-  header p.disappear {
     opacity: 0;
   }
 
@@ -1981,10 +1989,10 @@ h1, header p {
 
     #bgTopMobile {
         animation: drawtop 2s;
-        /* animation-delay: 3s; */
+        animation-delay: 3.25s;
         stroke-dasharray: 14357.5;
         stroke-dashoffset: 13194.5;
-        transition: .9s ease;
+        transition: 1.3s ease;
       }
     
       @keyframes drawtop {
@@ -2050,6 +2058,7 @@ h1, header p {
 
     .open nav a {
         transform: translateX(-100vw);
+        transition-delay: .5s;
     }
 
     .menuBtn {
@@ -2163,8 +2172,9 @@ h1, header p {
     }
 
     header .container img {
-        margin-left: .75vw;
+    margin-left: .75vw;
     }
+    
 
     header p {
         margin: 15.25vw 0 0 1px;
@@ -2290,7 +2300,7 @@ h1, header p {
 
     .about .first {
         top: -90vw;
-        width: 100%;
+        width: 92%;
         left: -50px;
     }
 
@@ -2301,7 +2311,7 @@ h1, header p {
 
     .about .third {
         top: 296vw;
-        left: -32px;
+        left: -40px;
     }
 
     .about .flexbox {
@@ -2359,7 +2369,7 @@ h1, header p {
     }
 
     .customers {
-        margin-top: 27vw;
+        margin-top: 22vw;
     }
 
     .customers h2 {
@@ -2415,18 +2425,18 @@ h1, header p {
 
     .about .first .quote:nth-child(1) .name {
         left: -13vw;
-        bottom: 50.25vw;
+        bottom: 51vw;
       }
       
       .about .first .quote:nth-child(2) .name {
         left: -15.5vw;
-        bottom: 25vw;
+        bottom: 33.25vw;
       }
       
       
       .about .first .quote:nth-child(3) .name {
         left: -27.5vw;
-        bottom: 27vw;
+        bottom: 42.4vw;
       }
       
       .about .quotebox button {
@@ -2490,18 +2500,18 @@ h1, header p {
       }
 
       .about .second.extend div:nth-child(1) {
-        margin-top: 29vw;
+        /* margin-top: 29vw; */
         margin-bottom: 10.75vw;
       }
       
       .about .second .quote:nth-child(1) .name {
         left: -22vw;
-        bottom: 112vw;
+        bottom: 96.5vw;
       }
       
       .about .second .quote:nth-child(2) .name {
         left: -9.25vw;
-        bottom: 141.5vw;
+        bottom: 145.6vw;
     }
 
       .about .numbers {
@@ -2551,6 +2561,24 @@ h1, header p {
           margin-top: 2.5vw;
       }
 
+      .numbers.visibleNext .charts div:nth-child(1) svg path,
+      .numbers.visibleNextThree .charts div:nth-child(3) svg path {
+        animation: circles 1s ease;
+        animation-fill-mode: forwards;
+        animation-delay: 1s; 
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        opacity: 1;
+      }
+      
+      .numbers.visibleNextTwo .charts div:nth-child(2) svg path {
+        animation: circlesBig 1s ease;
+        animation-fill-mode: forwards;
+        animation-delay: 4.2s; 
+        stroke-dasharray: 1100;
+        stroke-dashoffset: 1100;
+      }
+
       .about a {
         bottom: 6vh;
       }
@@ -2581,6 +2609,11 @@ h1, header p {
           position: relative;
           width: 50%;
       }
+
+      .offers .offerbox:nth-child(2) svg {
+          position: relative;
+          right: 2.85vw;
+      } 
 
       .offer .offerbox h3 {
           margin-bottom: 2vw;
@@ -2655,7 +2688,7 @@ h1, header p {
 
       .contact {
           align-items: center;
-          padding-top: 16.9vw;
+          padding-top: 20.9vw;
       }
 
       .contact h2 {
@@ -2668,14 +2701,14 @@ h1, header p {
       }
 
       .contact svg {
-        top: 73.75vw;
+        top: 77.75vw;
         width: 43.21%;
         transform: scaleX(-1);
         right: 32%;
     }
 
     .contact svg path {
-        stroke-width: 2px;
+        stroke-width: 1px;
     }
 
       .contact .boxes {
@@ -2690,6 +2723,10 @@ h1, header p {
       .contact .boxes div {
           width: auto;
           margin-bottom: 24.75vw;
+      }
+
+      .contact .msgBtn::after {
+          margin-left: 3.1vw;
       }
 
       .contact .boxes p:not(.hours) {
@@ -2885,6 +2922,13 @@ h1, header p {
       form {
           width: 85%;
           margin-top: 14vh;
+          opacity: 0;
+      }
+
+      .mail-screen.on form {
+          opacity: 1;
+          transition: .74s ease;
+          transition-delay: .24s;
       }
 
       form h2 {
@@ -3059,14 +3103,6 @@ h1, header p {
 
     /* Transitions */
 
-
-    #bgTopMobile {
-        animation: drawtop 2s;
-        animation-delay: 3s;
-        stroke-dasharray:14784.5;
-        stroke-dashoffset: 13194.5;
-    }
-
     header img.start {
         transform: translateX(-16px);
         opacity: 0;
@@ -3103,66 +3139,316 @@ h1, header p {
         transition-delay: 2.3s;
     }
 
+
+    /* Intro */
+
     .intro h2,
-    .intro p,
-    .intro h3 {
-        transition: cubic-bezier(.33,.14,.35,.97) .87s;
-    }
-
-    .intro h2 {
-        transform: translateY(-29px);
-    }
-
-    .intro p, .intro h3, .intro h2 {
+    .intro h3,
+    .intro p {
         opacity: 0;
+        transition: .74s ease;
+    }
+
+    .intro p {
+        transform: translateY(-26px);
+    }
+
+    .intro h2, .intro h3 {
+        transform: translateY(26px);
     }
 
     .intro.visible h2 {
         transform: translateY(0);
-    }
-
-    .intro.visible p,
-    .intro.visible h3,
-    .intro.visible h2 {
         opacity: 1;
     }
 
-    .intro.visible h3,
-    .intro.visible p {
-        transition-delay: .54s;
+    .intro.visible .flexbox div:nth-child(1) h3,
+    .intro.visible .flexbox div:nth-child(1) p {
+        transform: translateY(0);
+        opacity: 1;
     }
 
+    .intro.visibleNext .flexbox div:nth-child(2) h3,
+    .intro.visibleNext .flexbox div:nth-child(2) p {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .intro.visibleNextTwo .flexbox div:nth-child(3) h3,
+    .intro.visibleNextTwo .flexbox div:nth-child(3) p {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    /* Showroom */
+
     .showroom h2,
-    .about h2,
-    .customers h2,
-    .numbers h2,
-    .offer h2,
-    .contact h2 {
+    .showroom .gallery {
         opacity: 0;
-        transform: translateY(-29px);
-        transition: cubic-bezier(.33,.14,.35,.97) .87s;
+        transition: .74s ease;
+    }
+
+    .showroom h2 {
+        transform: translateY(26px);
+    }
+
+    .showroom.visible h2 {
+        transform: translateY(0);
     }
 
     .showroom.visible h2,
-    .about.visible h2:not(.customers h2, .numbers h2),
-    .customers.visible h2,
-    .numbers.visible h2,
-    .offer.visible h2,
-    .contact.visible h2 {
+    .showroom.visible .gallery {
+        opacity: 1;
+    }
+
+
+    /* About */
+
+
+    .about h2,
+    .about h3,
+    .about p,
+    .about img,
+    .about svg:not(.numbers svg) {
+        opacity: 0;
+        transition: .74s ease;
+    }
+
+    .about h2,
+    .about h3 {
+        transform: translateY(26px);
+    }
+
+    .about .flexbox p,
+    .about .flexbox h3 {
+        transform: translateY(0);
+    }
+
+    .about p{
+        transform: translateY(-26px);
+    }
+
+    /* About visible */
+
+    .about.visible .aboutHeader,
+    .about.visible .flexbox h3,
+    .about.visible .flexbox p,
+    .about.visible svg.first {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .about.visible svg.first {
+        transition-delay: .34s
+    }
+
+    .about.visibleNext .content div:nth-child(1) h3,
+    .about.visibleNext svg.second,
+    .about.visibleNext .content div:nth-child(1) p {
+        opacity: 1;
+        transform: translateY(0);    
+    }
+
+    .about.visibleNextTwo .content div:nth-child(2) h3,
+    .about.visibleNextTwo  svg.third,
+    .about.visibleNextTwo .content div:nth-child(2) p {
+        opacity: 1;
+        transform: translateY(0);    
+    }
+
+    .about.visibleNextThree .content div:nth-child(3) h3,
+    .about.visibleNextThree .content div:nth-child(3) p {
+        opacity: 1;
+        transform: translateY(0);    
+    }
+
+    /* About Passion */
+
+    .passion.visible .angel,
+    .passion.visible .title h2,
+    .passion.visible .title p {
         opacity: 1;
         transform: translateY(0);
     }
 
+    .passion.visibleNext .container .author:nth-child(1) img,
+    .passion.visibleNext .container .author:nth-child(1) p,
+    .passion.visibleNext .container .author:nth-child(1) h3 {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .passion.visibleNextTwo .container .author:nth-child(2) img,
+    .passion.visibleNextTwo .container .author:nth-child(2) p,
+    .passion.visibleNextTwo .container .author:nth-child(2) h3 {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Customers */
+
+
+    .customers.visible h2,
+    .customers.visible .quotebox .first .quote:nth-child(1) h3,
+    .customers.visible .quotebox .first .quote:nth-child(1) p,
+    .customers.visible .quotebox .first .quote:nth-child(1) img {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .customers.visibleNext .quotebox .first .quote:nth-child(2) h3,
+    .customers.visibleNext .quotebox .first .quote:nth-child(2) p,
+    .customers.visibleNext .quotebox .first .quote:nth-child(2) img {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .customers.visibleNextTwo .quotebox .first .quote:nth-child(3) h3,
+    .customers.visibleNextTwo .quotebox .first .quote:nth-child(3) p,
+    .customers.visibleNextTwo .quotebox .first .quote:nth-child(3) img,
+    .customers.visibleNextTwo .quotebox .second .quote h3,
+    .customers.visibleNextTwo .quotebox .second p,
+    .customers.visibleNextTwo .quotebox .second img {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    /* Numbers */
+
+    .numbers.visible h2,
+    .numbers.visible .charts div:nth-child(1) h3,
+    .numbers.visible .charts div:nth-child(1) p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .numbers.visibleNext .charts div:nth-child(2) h3,
+    .numbers.visibleNext .charts div:nth-child(2) p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .numbers.visibleNextTwo .charts div:nth-child(3) h3,
+    .numbers.visibleNextTwo .charts div:nth-child(3) p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    /* OFFER */
+
+    .offer h2,
+    .offer h3,
     .offer p,
-    .contact p {
+    .offer svg {
         opacity: 0;
+        transition: .74s ease;
+    }
+
+    .offer h2,
+    .offer h3 {
         transform: translateY(29px);
     }
 
-    .offer.visible p,
-    .contact.visible p {
+    .offer p {
+        transform: translateY(-29px);
+    }
+
+    .offer.visible h2,
+    .offer.visible .heading-text p  {
         opacity: 1;
         transform: translateY(0);
-    } 
+    }
+
+    .offer.visibleNext .offers .offerbox:nth-child(1) h3,
+    .offer.visibleNext .offers .offerbox:nth-child(1) p,
+    .offer.visibleNext .offers .offerbox:nth-child(1) svg {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .offer.visibleNextTwo .offers .offerbox:nth-child(2) h3,
+    .offer.visibleNextTwo .offers .offerbox:nth-child(2) p,
+    .offer.visibleNextTwo .offers .offerbox:nth-child(2) svg {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .offer.visibleNextThree .offers .offerbox:nth-child(3) h3,
+    .offer.visibleNextThree .offers .offerbox:nth-child(3) p,
+    .offer.visibleNextThree .offers .offerbox:nth-child(3) svg {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .offer.visibleNextFour .offers .offerbox:nth-child(4) h3,
+    .offer.visibleNextFour .offers .offerbox:nth-child(4) p,
+    .offer.visibleNextFour .offers .offerbox:nth-child(4) svg {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .offer.visibleNextFive .offers .offerbox:nth-child(5) h3,
+    .offer.visibleNextFive .offers .offerbox:nth-child(5) p,
+    .offer.visibleNextFive .offers .offerbox:nth-child(5) svg {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .offer.visibleNextSix .offers .offerbox:nth-child(6) h3,
+    .offer.visibleNextSix .offers .offerbox:nth-child(6) p,
+    .offer.visibleNextSix .offers .offerbox:nth-child(6) svg {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Contact */
+
+    .contact h2,
+    .contact h3,
+    .contact p,
+    .contact svg,
+    .contact a,
+    .contact button {
+        opacity: 0;
+        transition: .74s ease;
+    }
+
+    .contact h2,
+    .contact h3 {
+        transform: translateY(29px);
+    }
+
+    .contact p {
+        transform: translateY(-29px);
+    }
+
+    .contact.visible h2,
+    .contact.visible p.mobile,
+    .contact.visibleNext .boxes div:first-child p,
+    .contact.visibleNext .boxes div:first-child h3,
+    .contact.visibleNext .boxes div:first-child a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .contact.visible svg {
+        opacity: 1;
+    }
+
+    .contact.visibleNextThree .boxes div:nth-child(2) p,
+    .contact.visibleNextThree .boxes div:nth-child(2) h3,
+    .contact.visibleNextThree .boxes div:nth-child(2) button {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .contact.visibleNextTwo .boxes div:last-child p,
+    .contact.visibleNextTwo .boxes div:last-child h3,
+    .contact.visibleNextTwo .boxes div:last-child a {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
 }
