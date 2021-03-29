@@ -187,48 +187,48 @@
     
     nav a.int.active ~ hr.black,
     nav a.int:hover ~ hr.blue {
-      height: 60px;
+      height: 3.15vw;
     }
     
     nav a.sho.active ~ hr.black,
     nav a.sho:hover ~ hr.blue {
-      height: 100px;
+      height: 5.15vw;
     }
     
     nav a.tea.active ~ hr.black,
     nav a.tea:hover ~ hr.blue {
-      height: 146px;
+      height: 7.85vw;
     }
     
     nav a.off.active ~ hr.black,
     nav a.off:hover ~ hr.blue {
-      height: 185px;
+      height: 10vw;
     }
 
     nav a.con.active ~ hr.black,
     nav a.con:hover ~ hr.blue {
-      height: 235px;
+      height: 12.2vw;
     }
     
     nav a.int.active ~ hr.black {
-      max-height: 60px;
+      max-height: 3.15vw;
     }
     
     nav a.sho.active ~ hr.black {
-      max-height: 100px;
+      max-height: 5.15vw;
     }
     
     nav a.tea.active ~ hr.black {
-      max-height: 146px;
+      max-height: 7.85vw;
     }
     
     nav a.off.active ~ hr.black {
-      max-height: 185px;
+      max-height: 10vw;
     }
 
     
     nav a.con.active ~ hr.black {
-      max-height: 235px;
+      max-height: 12.2vw;
     }
 
     .lineWrapper {
@@ -413,7 +413,7 @@
     /* About */
 
     .about {
-        padding: 10vh 0 31vh;
+        padding: 10vh 0 33vh;
     }
 
     .about .wrapper {
@@ -464,10 +464,9 @@
 
     .bg-about {
         position: relative;
-        left: 5.4vw;
-        top: 2px;
+        left: 5.5vw;
         width: 88.178%;
-        height: 25.182vh;
+        height: auto;
     }
 
     .about .first,
@@ -493,8 +492,9 @@
 
     .angel {
         left: 3.9vw;
-        bottom: 22.95vw;
-        width: 57.093%
+        top: -3.9vw;
+        width: 57.093%;
+        height: auto;
     }
 
     .passion {
@@ -748,19 +748,21 @@
       }
       
       .about .runicBtn {
-        bottom: 19.75vh;
+        bottom: 1vh;
       }
 
       /* Offer */
 
       .offer {
-          padding: 3.5vh 0 0;
+          padding: 11.5vh 0 0;
       }
 
 
       .offer .heading-text svg {
-        top: 30.85vh;
+        top: 15.315vw;
         left: 7.25vw;
+        width: 31.674vw;
+        height: auto;
       }
 
       .offer .heading-text {
@@ -769,7 +771,7 @@
       
       
       .offer .heading-text p {
-        margin-top: 7.85vh;
+        margin-top: 3.95vw;
       }
       
       .offer .offers {
@@ -809,7 +811,32 @@
 
       .offerbox svg {
           margin: 1vw 0 0 0;
+          height: auto;
       }
+
+      .offers .offerbox:nth-child(1) svg {
+        width: 5.209vw;
+    }
+
+    .offers .offerbox:nth-child(2) svg {
+        width: 4.74vw;
+    }
+
+    .offers .offerbox:nth-child(3) svg {
+        width: 5.157vw;
+    }
+
+    .offers .offerbox:nth-child(4) svg {
+        width: 6.875vw;
+    }
+
+    .offers .offerbox:nth-child(5) svg {
+        width: 4.896vw;
+    }
+
+    .offers .offerbox:nth-child(6) svg {
+        width: 6.25vw;
+    }
 
       .offerbox div:last-child {
         width: 66%;
@@ -934,6 +961,11 @@
         width: fit-content;
         height: fit-content;
       }
+
+      footer .wrapper div:nth-child(2) img {
+        width: 1.407vw;
+        height: fit-content;
+      }
       
       
       footer .wrapper div:nth-child(1) {
@@ -979,7 +1011,12 @@
       
       footer .wrapper .arrowUp img:first-child {
         position: absolute;
-        top: 16px;
+        top: .85vw;
+        width: 1.198vw;
+      }
+
+      footer .wrapper .arrowUp img:last-child {
+        width: .157vw;
       }
 
       /* Mail Screen */
@@ -1711,18 +1748,8 @@ h1, header p {
             margin-top: 4.75vh;
         }
 
-        .bg-about {
-            left: 1vw;
-            width: 100%;
-            height: 26vh;
-        }
-
         .about .content {
             margin-top: 3.1vh;
-        }
-
-        .passion .title h2 {
-            line-height: 11.4vh;
         }
 
         .passion {
@@ -1826,20 +1853,8 @@ h1, header p {
             line-height: 1.35vw;
         }
 
-        .offer .heading-text svg {
-            top: 15.25vw;
-        }
-
         .offer .offers {
             margin: 32.75vh 0 27.5vh;
-        }
-
-        .offer .heading-text p {
-            margin-top: 8vh;
-        }
-
-        .offer .heading-text svg {
-            top: 31.25vh;
         }
         
 
@@ -1875,23 +1890,23 @@ h1, header p {
     } */
     
     nav a.int.active ~ hr.black {
-      max-height: 19.1vh;
+      max-height: 36.1vw;
     }
     
     nav a.sho.active ~ hr.black {
-        max-height: 29.2vh;
+        max-height: 52.2vw;
     }
     
     nav a.tea.active ~ hr.black {
-      max-height: 42.25vh;
+      max-height: 76.25vw;
     }
     
     nav a.off.active ~ hr.black {
-      max-height: 53.25vh;
+      max-height: 96vw;
     }
     
     nav a.con.active ~ hr.black {
-      max-height: 63vh;
+      max-height: 113.75vw;
     }
     
       header nav.open hr.black {
@@ -2282,7 +2297,7 @@ h1, header p {
     /* About */
 
     .about {
-        padding-top: 8.5vw;
+        padding: 8.5vw 0 39vw;
         align-items: center;
     }
 
@@ -2641,7 +2656,7 @@ h1, header p {
       .offers .offerbox:nth-child(2) svg {
           position: relative;
           right: 2.85vw;
-      } 
+      }
 
       .offer .offerbox h3 {
           margin-bottom: 2vw;

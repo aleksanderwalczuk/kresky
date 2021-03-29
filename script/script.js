@@ -272,82 +272,82 @@ $(window).scroll(function() {
     if ($(this).scrollTop() > $('.about').offset().top * 1.325) {
       $('.about').addClass('visibleNextTwo');
     }
-    if ($(this).scrollTop() > $('.about').offset().top * 1.6) {
-      $('.numbers').addClass('visible');
-    }
-    if ($(this).scrollTop() > $('.numbers').offset().top * 0.95) {
-      $('.numbers').addClass('visible');
-      $('.counter').each(function() {
-        var $this = $(this),
-            countTo = $this.attr('data-count');
+    // if ($(this).scrollTop() > $('.about').offset().top * 1.6) {
+    //   $('.numbers').addClass('visible');
+    // }
+    // if ($(this).scrollTop() > $('.numbers').offset().top * 0.95) {
+    //   $('.numbers').addClass('visible');
+    //   $('.counter').each(function() {
+    //     var $this = $(this),
+    //         countTo = $this.attr('data-count');
         
-        $({ countNum: $this.text()}).animate({
-          countNum: countTo
-        },
+    //     $({ countNum: $this.text()}).animate({
+    //       countNum: countTo
+    //     },
       
-        {
+    //     {
       
-          duration: 1000,
-          easing:'linear',
-          step: function() {
-            $this.text(Math.floor(this.countNum));
-          },
-          complete: function() {
-            $this.text(this.countNum);
-            //alert('finished');
-          }
+    //       duration: 1000,
+    //       easing:'linear',
+    //       step: function() {
+    //         $this.text(Math.floor(this.countNum));
+    //       },
+    //       complete: function() {
+    //         $this.text(this.countNum);
+    //         //alert('finished');
+    //       }
       
-        });
-      });
-      setTimeout(function() {
-        $('.counterTwo').each(function() {
-          var $this = $(this),
-              countTo = $this.attr('data-count');
+    //     });
+    //   });
+    //   setTimeout(function() {
+    //     $('.counterTwo').each(function() {
+    //       var $this = $(this),
+    //           countTo = $this.attr('data-count');
           
-          $({ countNum: $this.text()}).animate({
-            countNum: countTo
-          },
+    //       $({ countNum: $this.text()}).animate({
+    //         countNum: countTo
+    //       },
         
-          {
+    //       {
         
-            duration: 3000,
-            easing:'linear',
-            step: function() {
-              $this.text(Math.floor(this.countNum));
-            },
-            complete: function() {
-              $this.text(this.countNum);
-              //alert('finished');
-            }
+    //         duration: 3000,
+    //         easing:'linear',
+    //         step: function() {
+    //           $this.text(Math.floor(this.countNum));
+    //         },
+    //         complete: function() {
+    //           $this.text(this.countNum);
+    //           //alert('finished');
+    //         }
         
-          });
-        });
-      }, 1150);
-      setTimeout(function() {
-        $('.counterThree').each(function() {
-          var $this = $(this),
-              countTo = $this.attr('data-count');
+    //       });
+    //     });
+    //   }, 1150);
+    //   setTimeout(function() {
+    //     $('.counterThree').each(function() {
+    //       var $this = $(this),
+    //           countTo = $this.attr('data-count');
           
-          $({ countNum: $this.text()}).animate({
-            countNum: countTo
-          },
+    //       $({ countNum: $this.text()}).animate({
+    //         countNum: countTo
+    //       },
         
-          {
+    //       {
         
-            duration: 2000,
-            easing:'linear',
-            step: function() {
-              $this.text(Math.floor(this.countNum));
-            },
-            complete: function() {
-              $this.text(this.countNum);
-              //alert('finished');
-            }
+    //         duration: 2000,
+    //         easing:'linear',
+    //         step: function() {
+    //           $this.text(Math.floor(this.countNum));
+    //         },
+    //         complete: function() {
+    //           $this.text(this.countNum);
+    //           //alert('finished');
+    //         }
         
-          });
-        });
-      }, 4200);
-    };
+    //       });
+    //     });
+    //   }, 4200);
+    // };
     if ($(this).scrollTop() > $('.offer').offset().top * 0.95) {
       $('.offer').addClass('visible');
     }
@@ -436,84 +436,84 @@ $(window).scroll(function() {
       // Numbers
 
 
-      if ($(this).scrollTop() > $('.numbers').offset().top * 0.975) {
-        $('.numbers').addClass('visible');
-      };
-      if ($(this).scrollTop() > $('.numbers').offset().top) {
-        $('.numbers').addClass('visibleNext');
-        $('.counter').each(function() {
-          var $this = $(this),
-              countTo = $this.attr('data-count');
+      // if ($(this).scrollTop() > $('.numbers').offset().top * 0.975) {
+      //   $('.numbers').addClass('visible');
+      // };
+      // if ($(this).scrollTop() > $('.numbers').offset().top) {
+      //   $('.numbers').addClass('visibleNext');
+      //   $('.counter').each(function() {
+      //     var $this = $(this),
+      //         countTo = $this.attr('data-count');
           
-          $({ countNum: $this.text()}).animate({
-            countNum: countTo
-          },
+      //     $({ countNum: $this.text()}).animate({
+      //       countNum: countTo
+      //     },
         
-          {
+      //     {
         
-            duration: 3000,
-            easing:'linear',
-            step: function() {
-              $this.text(Math.floor(this.countNum));
-            },
-            complete: function() {
-              $this.text(this.countNum);
-              //alert('finished');
-            }
+      //       duration: 3000,
+      //       easing:'linear',
+      //       step: function() {
+      //         $this.text(Math.floor(this.countNum));
+      //       },
+      //       complete: function() {
+      //         $this.text(this.countNum);
+      //         //alert('finished');
+      //       }
         
-          });
-        });
-      }
-      if ($(this).scrollTop() > $('.numbers').offset().top * 1.035) {
-        $('.numbers').addClass('visibleNextTwo');
-          $('.counterTwo').each(function() {
-            var $this = $(this),
-                countTo = $this.attr('data-count');
+      //     });
+      //   });
+      // }
+      // if ($(this).scrollTop() > $('.numbers').offset().top * 1.035) {
+      //   $('.numbers').addClass('visibleNextTwo');
+      //     $('.counterTwo').each(function() {
+      //       var $this = $(this),
+      //           countTo = $this.attr('data-count');
             
-            $({ countNum: $this.text()}).animate({
-              countNum: countTo
-            },
+      //       $({ countNum: $this.text()}).animate({
+      //         countNum: countTo
+      //       },
           
-            {
+      //       {
           
-              duration: 3000,
-              easing:'linear',
-              step: function() {
-                $this.text(Math.floor(this.countNum));
-              },
-              complete: function() {
-                $this.text(this.countNum);
-                //alert('finished');
-              }
+      //         duration: 3000,
+      //         easing:'linear',
+      //         step: function() {
+      //           $this.text(Math.floor(this.countNum));
+      //         },
+      //         complete: function() {
+      //           $this.text(this.countNum);
+      //           //alert('finished');
+      //         }
           
-            });
-          });
-      }
-      if ($(this).scrollTop() > $('.numbers').offset().top * 1.065) {
-        $('.numbers').addClass('visibleNextThree');
-          $('.counterThree').each(function() {
-            var $this = $(this),
-                countTo = $this.attr('data-count');
+      //       });
+      //     });
+      // }
+      // if ($(this).scrollTop() > $('.numbers').offset().top * 1.065) {
+      //   $('.numbers').addClass('visibleNextThree');
+      //     $('.counterThree').each(function() {
+      //       var $this = $(this),
+      //           countTo = $this.attr('data-count');
             
-            $({ countNum: $this.text()}).animate({
-              countNum: countTo
-            },
+      //       $({ countNum: $this.text()}).animate({
+      //         countNum: countTo
+      //       },
           
-            {
+      //       {
           
-              duration: 3000,
-              easing:'linear',
-              step: function() {
-                $this.text(Math.floor(this.countNum));
-              },
-              complete: function() {
-                $this.text(this.countNum);
-                //alert('finished');
-              }
+      //         duration: 3000,
+      //         easing:'linear',
+      //         step: function() {
+      //           $this.text(Math.floor(this.countNum));
+      //         },
+      //         complete: function() {
+      //           $this.text(this.countNum);
+      //           //alert('finished');
+      //         }
           
-            });
-          });
-      }
+      //       });
+      //     });
+      // }
 
 
       if ($(this).scrollTop() > $('.offer').offset().top * 0.985) {
@@ -607,6 +607,8 @@ border[11].style.strokeDashoffset = dashoffset;
 border[11].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3100}`;
 border[12].style.strokeDashoffset = dashoffset;
 border[12].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3100}`;
+border[13].style.strokeDashoffset = dashoffset;
+border[13].style.strokeDasharray = `${strokeLength},${pathLength - strokeLength - 3100}`;
 borderDesk[0].style.strokeDashoffset = dashoffset;
 borderDesk[0].style.strokeDasharray = `${strokeLengthBigger + 450},${pathLength - strokeLength - 4000}`;
 borderDesk[1].style.strokeDashoffset = dashoffset;
@@ -629,6 +631,7 @@ function Animate() {
   border[10].style.strokeDashoffset = dashoffset * 1.25;
   border[11].style.strokeDashoffset = dashoffset * 1.25;
   border[12].style.strokeDashoffset = dashoffset * 1.25;
+  border[13].style.strokeDashoffset = dashoffset * 1.25;
   borderDesk[0].style.strokeDashoffset = dashoffset * 1.35;
   borderDesk[1].style.strokeDashoffset = dashoffset * 0.85;
   borderDesk[2].style.strokeDashoffset = dashoffset * 1.15;
@@ -922,7 +925,7 @@ const galleryContents = {
   
   "Logo i nagłówek strony internetowej skierowanej do osób szukających swojej pierwszej pracy w branży IT. Ze względu na młodą grupę odbiorczą, logo tworzy połączenie kształtu emotikony z aktówką. Swobodny charakter pozwala na zminimalizowanie stresu związanego z poszukiwaniem nowej pracy, natomiast mocna forma daje wyraz solidnego podejścia do selekcji ogłoszeń.",
   
-  "Fachowy kontakt pozwolił na sprawne określenie potrzeb, a także specyfiki projektu. Świetna współpraca zaowocowała realizacją dedykowanego logo i funkcjonalego sklepu internetowego. W trakcie realizacji projekt ewoluował. Dzięki umiejętności uważnego słuchania oraz dostosowania widoków strony internetowej do pojawiających się sugestii i nowych wytycznych, finalnie udało się uzyskać efekt, którego oczekiwałem. Polecam.", 
+  "Projekt logo i sklepu internetowego oficjalnego dystrybutora kominków. Solidna typografia z nazwą sklepu oraz sygnet z charakterystycznym akcentem tematycznym. Jako podkreślenie międzynarodowego charakteru działalności, rozszerzenie domeny (.eu) stylizowane na zasadzie Trade Mark (TM).", 
   
   "Projekt logo i strony internetowej dla firmy zajmującej się wynajmem łodzi motorowych na Teneryfie. Sygnet logo tworzy zestawienie fal, litery A oraz kształtu łodzi dostępnych we flocie Atlanca. Kolorystyka w bezpośredni sposób nawiązuje do gorącego klimatu hiszpańskiej wyspy i aktywnej formy wypoczynku. Mocny czerwony kolor aktywizuje do działania.",
 
@@ -1095,7 +1098,7 @@ const galleryContents = {
 
                    ""],
 
-   clientQuotes : ["Miałem bardzo wygórowane oczekiwania odnosnie szaty graficznej do mojego albumu. W sumie to mialem tylko zarys informacji, które chciałem, aby się tam pojawiły. Sama wspólpraca przebiegła na najwyższym poziomie! Pełne zrozumienie, choć nie musiałem robić/podpowiadać zbyt wiele, co jest mega ważne, bo nie każdy potrafi dokładnie przekazać to, czego oczekuje! (tak też było w moim przypadku). Oprócz samego wizualnego efektu w okładce została zawarta ukryta treść, dostepna tylko dla spostrzegawczego oka. WOW! Efekt końcowy przerósł wielokrotnie moje najsmielsze oczekiwania. Moje oczy zobaczyły to, co wcześniej widział tylko umysł. Rewelacja.",
+   clientQuotes : ["Miałem bardzo wygórowane oczekiwania odnosnie szaty graficznej do mojego albumu. W sumie to mialem tylko zarys informacji, które chciałem, aby się tam pojawiły. Sama wspólpraca przebiegła na najwyższym poziomie! Pełne zrozumienie, choć nie musiałem robić/podpowiadać zbyt wiele, co jest mega ważne, bo nie każdy potrafi dokładnie przekazać to, czego oczekuje! (tak też było w moim przypadku). Oprócz samego wizualnego efektu w okładce została zawarta ukryta treść, dostepna tylko dla spostrzegawczego oka. WOW! Efekt końcowy przerósł wielokrotnie moje najśmielsze oczekiwania. Moje oczy zobaczyły to, co wcześniej widział tylko umysł. Rewelacja.",
 
   "Jestem bardzo zadowolony z przebiegu i efektów naszej współpracy. Po przedstawieniu mojego pomysłu przeszliśmy z Łukaszem do omawiania szczegółów i konkretów, by wszystko było jasne i żebyśmy oboje wiedzieli na czym stoimy. W trakcie realizowania mojego zamówienia byłem informowany o postępach i mogłem na bieżąco śledzić etapy powstawania. Dzieło, które otrzymałem na końcu spełniło, a wręcz wykroczyło poza moje oczekiwania. Z czystym sumieniem mogę polecić Łukasza każdemu - osobie potrzebującej logotypu firmy, ilustracji, czy komuś, kto po prostu potrzebuje kreatywnego grafika, który pomoże, naprowadzi i rozwinie podany mu pomysł tak, by efekt był satysfakcjonujący dla obu stron.",
 
