@@ -1,4 +1,4 @@
-KRESKY ᛉ Creative Agency
+KRESKY ᛉ Creative Agency / www.kresky.pl
 
 Each project starts with Kresky. How we lead the shape determines the dimension of success. We implement projects tailored to your needs.
 
